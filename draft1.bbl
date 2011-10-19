@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{30}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -140,6 +140,14 @@
   {Snedden}, S.~A., {Sollerman}, J., {Stoughton}, C., {Stritzinger}, M., {Subba
   Rao}, M., {Tucker}, D., {Vaisanen}, P., {Watson}, L.~C., {Watters}, S.,
   {Wheeler}, J.~C., {Yanny}, B., \& {York}, D. 2008, \aj, 135, 338
+
+\bibitem[{{Fryer} {et~al.}(2009){Fryer}, {Brown}, {Bufano}, {Dahl}, {Fontes},
+  {Frey}, {Holland}, {Hungerford}, {Immler}, {Mazzali}, {Milne}, {Scannapieco},
+  {Weinberg}, \& {Young}}]{2009ApJ...707..193F}
+{Fryer}, C.~L., {Brown}, P.~J., {Bufano}, F., {Dahl}, J.~A., {Fontes}, C.~J.,
+  {Frey}, L.~H., {Holland}, S.~T., {Hungerford}, A.~L., {Immler}, S.,
+  {Mazzali}, P., {Milne}, P.~A., {Scannapieco}, E., {Weinberg}, N., \& {Young},
+  P.~A. 2009, \apj, 707, 193
 
 \bibitem[{{Groot} {et~al.}(2003){Groot}, {Vreeswijk}, {Huber}, {Everett},
   {Howell}, {Nelemans}, {van Paradijs}, {van den Heuvel}, {Augusteijn},
@@ -285,6 +293,15 @@
   {Malanushenko}, E., {Malanushenko}, V., {McMillan}, R.~J., {Morokuma}, T.,
   {Nitta}, A., {Pan}, K., {Saurage}, G., \& {Snedden}, S.~A. 2008, \aj, 135,
   348
+
+\bibitem[{{Sesar} {et~al.}(2010){Sesar}, {Ivezi{\'c}}, {Grammer}, {Morgan},
+  {\bf {Becker}, A.~C.}, {Juri{\'c}}, {De Lee}, {Annis}, {Beers}, {Fan},
+  {Lupton}, {Gunn}, {Knapp}, {Jiang}, {Jester}, {Johnston}, \&
+  {Lampeitl}}]{2010ApJ...708..717S}
+{Sesar}, B., {Ivezi{\'c}}, {\v Z}., {Grammer}, S.~H., {Morgan}, D.~P., {\bf
+  {Becker}, A.~C.}, {Juri{\'c}}, M., {De Lee}, N., {Annis}, J., {Beers}, T.~C.,
+  {Fan}, X., {Lupton}, R.~H., {Gunn}, J.~E., {Knapp}, G.~R., {Jiang}, L.,
+  {Jester}, S., {Johnston}, D.~E., \& {Lampeitl}, H. 2010, \apj, 708, 717
 
 \bibitem[{{Udalski} {et~al.}(1994){Udalski}, {Szymanski}, {Kaluzny}, {Kubiak},
   {Mateo}, {Krzeminski}, \& {Paczynski}}]{1994AcA....44..227U}

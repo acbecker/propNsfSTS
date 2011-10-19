@@ -111,9 +111,10 @@
 %\addcontentsline{toc}{part}{A.\hspace {1em}Cover Page}
 
 % Project Summary
-\centerline{\bf B. Project Summary}
-\bigskip
-\addcontentsline{toc}{part}{B.\hspace {1em}Project Summary}
+%\centerline{\bf B. Project Summary}
+%\bigskip
+\setcounter{page}{1}
+%\addcontentsline{toc}{part}{B.\hspace {1em}Project Summary}
 \input{summary.tex}
 \vfill
 \break
@@ -124,17 +125,19 @@
 %\tableofcontents
 
 % 15 pages
-\centerline{\bf D. Project Description}
-\bigskip
-\addcontentsline{toc}{part}{D.\hspace {1em}Project Description}
+\setcounter{page}{1}
+%\centerline{\bf D. Project Description}
+%\bigskip
+%\addcontentsline{toc}{part}{D.\hspace {1em}Project Description}
 \input{description.tex}
 \vfill
 \break
 
 % N pages
-\centerline{\bf E. References and Citations}
-\bigskip 
-\addcontentsline{toc}{part}{E.\hspace {1em}References and Citations}
+\setcounter{page}{1}
+%\centerline{\bf E. References and Citations}
+%\bigskip 
+%\addcontentsline{toc}{part}{E.\hspace {1em}References and Citations}
 \bibliographystyle{apj}
 \bibliography{references}
 \vfill
@@ -151,28 +154,30 @@
 %\input{bio.tex}
 
 % Budget Justification - 
-\centerline{\bf G. Budget Justification}
-\bigskip 
-\addcontentsline{toc}{part}{G.\hspace {1em}Budget Justification}
+\setcounter{page}{1}
+%\centerline{\bf G. Budget Justification}
+%\bigskip 
+%\addcontentsline{toc}{part}{G.\hspace {1em}Budget Justification}
 \input{budget.tex}
 \vfill
 \eject
 
 % Current and Pending Support - Generate mine here
-\centerline{\bf H. Current and Pending Support}
-\bigskip 
-\addcontentsline{toc}{part}{H.\hspace {1em}Current and Pending Support}
+\setcounter{page}{1}
+%\centerline{\bf H. Current and Pending Support}
+%\bigskip 
+%\addcontentsline{toc}{part}{H.\hspace {1em}Current and Pending Support}
 \input{support.tex}
 \vfill
 \eject
 
 % Facilities, Equipment and Other Resources 
-\centerline{\bf I. Facilities, Equipment and Other Resources}
-\bigskip 
-\addcontentsline{toc}{part}{I.\hspace {1em}Facilities, Equipment and Other Resources}
-\input{facilities.tex}
-\vfill
-\eject
+%\centerline{\bf I. Facilities, Equipment and Other Resources}
+%\bigskip 
+%\addcontentsline{toc}{part}{I.\hspace {1em}Facilities, Equipment and Other Resources}
+%\input{facilities.tex}
+%\vfill
+%\eject
 
 
 \end{document}
