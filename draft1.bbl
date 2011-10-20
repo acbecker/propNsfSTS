@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{29}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -56,15 +56,6 @@
   {Clocchiatti}, {Dell'Antonio}, {Frail}, {Halpern}, {Margoniner}, {Norman},
   {Tyson}, \& {Schommer}}]{2004ApJ...611..418B}
 ---. 2004{\natexlab{b}}, \apj, 611, 418
-
-\bibitem[{{Blomme} {et~al.}(2010){Blomme}, {Debosscher}, {De Ridder}, {Aerts},
-  {Gilliland}, {Christensen-Dalsgaard}, {Kjeldsen}, {Brown}, {Borucki}, {Koch},
-  {Jenkins}, {Kurtz}, {Stello}, {Stevens}, {Suran}, \&
-  {Derekas}}]{2010ApJ...713L.204B}
-{Blomme}, J., {Debosscher}, J., {De Ridder}, J., {Aerts}, C., {Gilliland},
-  R.~L., {Christensen-Dalsgaard}, J., {Kjeldsen}, H., {Brown}, T.~M.,
-  {Borucki}, W.~J., {Koch}, D., {Jenkins}, J.~M., {Kurtz}, D.~W., {Stello}, D.,
-  {Stevens}, I.~R., {Suran}, M.~D., \& {Derekas}, A. 2010, \apjl, 713, L204
 
 \bibitem[{{Connolly} {et~al.}(2010){Connolly}, {Peterson}, {Jernigan}, {Abel},
   {Bankert}, {Chang}, {Claver}, {Gibson}, {Gilmore}, {Grace}, {Jones},
