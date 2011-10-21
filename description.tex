@@ -78,12 +78,12 @@ telescope or remotely using web--based visual classification tools.  More recent
 time--domain surveys such as the Palomar--Quest survey
 \citep{2008AN....329..263D} and Catalina Real-Time Transient Survey
 \citep{2011arXiv1102.5004D} have begun to adopt modern statistical techniques to
-classify events.  This includes morphological classification of the image--level
+classify events.  This includes morphological classification of the pixel--level
 flux that triggered the event \citep{2008AIPC.1082..252D}, as well as contextual
 information regarding the location of the variability
 \citep{2010ASPC..434..115M}.  We note that colors of the quiescent objects are
 used in these classification schemes, but {\it not} the time--varying color of
-the variabile flux.
+the variable flux.
 
 %Kepler classification? \citep{2010ApJ...713L.204B}
 
@@ -95,14 +95,14 @@ In all surveys mentioned above, the volume of data being collected made the
 surveys sensitive to new types of astrophysical phenomena, with a rapid response
 component that enabled immediate and early study.  It is also the case that many
 of these efforts designed their event filters based upon the particular survey
-design (event subtype, passbands) they were being applied to.  To continue this
-trend into the future, where surveys such as Gaia \citep{X} and LSST \citep{X}
-will report on {\it all} classes of variability, a class of models needs to be
-generated that match the ambitious designs of the surveys (heavy data rate,
-sparse sampling in time, inhomogeneous sampling in wavelength).  This is
-particularly important for driving the next generation of autonomous follow--up
-resources, such as LCOGT \citep{2008AN....329..269H}, that must algorithmically
-sift through the data streams to achieve their particular science goals.
+design they were being applied to.  To continue this trend into the future,
+where surveys such as Gaia \citep{X} and LSST \citep{X} will report on {\it all}
+classes of variability, a class of models needs to be generated that match the
+ambitious designs of the surveys (massive data rates, sparse sampling in time,
+inhomogeneous sampling in wavelength).  This is particularly important for
+driving the next generation of autonomous follow--up resources, such as LCOGT
+\citep{2008AN....329..269H}, that must algorithmically sift through the data
+streams to achieve their particular science goals.
 
 \medskip {\centerline{\ub{\sc Strides Towards Spectral--Temporal Event
 Classification (1.5p)}}} \smallskip
@@ -120,9 +120,9 @@ modeling is in the field of supernova studies. The pioneering work of
 spectroscopy of Ia supernovae into a single representation of the Ia phenomena.
 This integrated model represented the behavior of a typical "Branch--normal"
 Type Ia supernova, and defined the spectrum of a typical event at all integer
-wavelengths between 1000~\AA and 25000~\AA, 1 per day for 90 days after
+wavelengths between 1000~\AA~and 25000~\AA, 1 per day for 90 days after
 explosion.  Nugent subsequently expanded his template set to include separate
-models for intrinsically bright and faint Ia, supernova Type Ib/c, and Types II
+models for intrinsically bright and faint Ia, supernovae Type Ib/c, and Types II
 P/L/n. Such templates played a crucial role in real--time event classification
 for the SDSS-II Supernova Survey \citep{2008AJ....135..338F}, and enabled a
 $90\%$ targeting efficiency for Type Ia supernova \citep{2008AJ....135..348S}.
@@ -130,42 +130,44 @@ However, since they only existed for supernova--class events, all events that
 did not conform to the spectral and temporal behavior of these models were
 subsequently ignored.
 
-This notion of spectral--temporal event models was expanded upon in the
-generation of the SALT--II supernova model by \cite{2007A&A...466...11G} (see
-also \cite{2007ApJ...663.1187H}).  This model incorporated spectroscopic {\it
-and} photometric data from low-- and high--redshift supernovae to yield a set of
-lightcurve templates describing the behavior of {\it all} Type Ia supernovae.
-The spectroscopic data constrained the templates coarsely in time but finely in
-wavelength, while the photometric data constrained the templates more densely in
-time, but coarsely in wavelength.  The photometric data were also able to be
-calibrated, in an absolute sense, to a much higher accuracy than the
-spectroscopic data, and were used to bootstrap the overall calibration of the
-model.  These data in combination yielded a highly constrained two--dimensional
-surface in time and wavelength that describes the temporal evolution of the
-rest-frame spectral energy distribution (SED) for SNe Ia. Importantly, the
-SALT--II model yields not just the average behavior of the Type Ia sample,
-equivalent to the \cite{2002PASP..114..803N} data, but also includes a first
-"principal component" about the mean, which captures the spectral--temporal
-behavior of the diversity (intrinsically bright to intrinsically faint) of Ia.
-This single model -- mean surface plus a first moment -- fully captures the
-diversity of behaviors seen in the Ia population, including the Phillips
-relation, etc.  That the diversity between all events may be captured by the
-additional of this secondary surface reflects the fact that Ia supernova are an
-intrinsically one--parameter family (delta M15, stretch, etc).
+This notion of spectral--temporal event representations was expanded upon  by
+\cite{2007A&A...466...11G} in the generation of their SALT--II supernova model
+(see also \cite{2007ApJ...663.1187H}).  This model incorporated spectroscopic
+{\it and} photometric data from low-- and high--redshift supernovae to yield a
+set of lightcurve templates describing the behavior of {\it all} Type Ia
+supernovae. The spectroscopic data constrained the templates coarsely in time
+but finely in wavelength, while the photometric data constrained the templates
+more densely in time, but coarsely in wavelength.  The photometric data were
+also able to be calibrated, in an absolute sense, to a much higher accuracy than
+the spectroscopic data, and were used to bootstrap the overall calibration of
+the model.  These data in combination yielded a highly constrained
+two--dimensional surface in time and wavelength that describes the temporal
+evolution of the rest-frame spectral energy distribution (SED) for SNe Ia.
+Importantly, the SALT--II model yields not just the average behavior of the Type
+Ia sample, equivalent to the \cite{2002PASP..114..803N} data, but also includes
+a first "principal component" about the mean, which captures the
+spectral--temporal behavior of the diversity (intrinsically bright to
+intrinsically faint) of Ia. This single model -- mean surface plus a first
+moment -- fully captures the diversity of behaviors and correlations seen in the
+Ia population such as the $\delta m_{15}$ brightness--decline
+\cite{1993ApJ...413L.105P} or brightness--stretch \citep{1998AJ....116.1009R}
+relations.  The need for only a single principal component reflects the fact
+that Ia supernova are intrinsically a one--parameter family; the SALT--II model
+captures this in a spectral--temporal representation.
 
 Figure~\ref{fig:salt2} displays the mean surface ({\it left}) and first
 principal component surface ({\it right}) from the SALT--II model.  The behavior
 for a given Ia lightcurve may be generated by an overall scaling of the mean
 surface (representing distance modulus) with a contribution from the secondary
 surface representing its place within the 1--parameter family of Ia supernovae.
-Importantly, an incoming data stream can be compared to these surfaces, and an
-assessment made whether or not it is behaving in accordance with this model.  A
-statistical likelihood may be generated using the surfaces, the photometric
-uncertainty on the incoming data, and priors on the amplitude of the second
-surface indicated by the best--fit.  This is the process we envision resulting
-from this proposal : {\bf an incoming event stream will be evaluated against an
-ensemble of these surfaces to yield a statistical likelihood that the event is
-of each class.}
+Importantly, an incoming data stream can be compared to these surfaces, and a
+statistical assessment made whether or not it is behaving in accordance with
+this model.  This likelihood may be generated using the surfaces, the
+photometric uncertainty on the incoming data, and (optionally) priors on the
+amplitude of the second surface indicated by the best--fit.  This is the process
+we envision resulting from this proposal : {\bf an incoming event stream will be
+evaluated against an ensemble of these surfaces to yield a statistical
+likelihood that the event is of each class.}
 
 
 \begin{figure}[t]
@@ -173,7 +175,7 @@ of each class.}
 \psfig{figure=figures/surface1.eps,width=0.5\textwidth}} \smallskip
 \caption[]{\footnotesize Spectral--temporal surfaces of Type Ia supernovae from
 the SALT--II model of \cite{2007A&A...466...11G}.  Surfaces are generated from
-the aggregation of photometric and specroscopic data on several hundred vetted
+the aggregation of photometric and spectroscopic data on several hundred vetted
 Ia supernova.  The leftmost figure represents the mean behavior of the sample,
 defined every 10~\AA~between 2000~\AA~and 9200~\AA, and in daily intervals from
 -20 days from B--band peak brightness to +50 days.  The right figure displays
@@ -210,12 +212,12 @@ stream is consistent with each variability model;
 spectral--temporal models as part of an overall (single--epoch and multi--epoch)
 event assessment.
 
-\end{itemize}
-Below we describe in detail each step in this process.
+\end{itemize} Below we describe in detail each step in this process.
 
 
-\medskip {\centerline{\ub{\sc Aggregation of Data (2p)}}}
-\smallskip {\bf UW}
+\medskip {\centerline{\ub{\sc Aggregation of Data (2p)}}} \smallskip {\bf UW}
+
+Carnegie SN project
 
 \medskip {\centerline{\ub{\sc Generation of Spectral--Temporal Surfaces (2p)}}}
 \smallskip {\bf UW}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{30}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -251,6 +251,9 @@
   B., {Boyle}, B.~J., {Filippenko}, A.~V., {Matheson}, T., {Fruchter}, A.~S.,
   {Panagia}, N., {Newberg}, H.~J.~M., {Couch}, W.~J., \& {The Supernova
   Cosmology Project}. 1999, \apj, 517, 565
+
+\bibitem[{{Phillips}(1993)}]{1993ApJ...413L.105P}
+{Phillips}, M.~M. 1993, \apjl, 413, L105
 
 \bibitem[{{Riess} {et~al.}(1998){Riess}, {Filippenko}, {Challis},
   {Clocchiatti}, {Diercks}, {Garnavich}, {Gilliland}, {Hogan}, {Jha},
