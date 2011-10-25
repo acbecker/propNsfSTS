@@ -190,9 +190,8 @@ the common currency in general event classification efforts.}} \medskip \hrule
 
 \bigskip \centerline{\bf II. Proposed Work} \smallskip
 
-We propose to make spectral--temporal surfaces for {\it all} major classes of
-astronomical variability. These will serve as the common currency in future
-event classification efforts.  The individual components of this effort include:
+We propose to make spectral--temporal (ST) surfaces for {\it all} major classes
+of astronomical variability.  The individual components of this effort include:
 
 \begin{itemize}
 
@@ -212,15 +211,103 @@ stream is consistent with each variability model;
 spectral--temporal models as part of an overall (single--epoch and multi--epoch)
 event assessment.
 
-\end{itemize} Below we describe in detail each step in this process.
+\end{itemize}
+
+These surfaces will serve as common currency in future event classification
+efforts, alongside extant efforts such as: Artificial Neural Network
+\citep{2008AN....329..263D}, Support Vector Machine \citep{2007ApJ...665.1246B},
+and human--vetted \citep{2011arXiv1106.5491B} classifiers of pixel--level
+artifacts; contextual understanding of new single--epoch events using Markov
+Logic Networks \citep{2011arXiv1110.4655D} and feature--based classifiers
+\citep{2011arXiv1106.5491B}; and shape--based Random Forest
+\citep{2011ApJ...733...10R} classifiers of lightcurves in a single passband. Our
+effort will add an extra dimensionality to these state--of--the--art
+classification efforts, allowing the incorporation of information at multiple
+epochs and wavelengths into the overall classification scheme.  Below we
+describe in detail each step in this process.
 
 
-\medskip {\centerline{\ub{\sc Aggregation of Data (2p)}}} \smallskip {\bf UW}
+\medskip {\centerline{\ub{\sc Aggregation of Data (2p)}}} \smallskip
 
-Carnegie SN project
+The first step in this process is to aggregate the diversity of time--domain
+data on the phenomena of interest.  These data will serve as inputs to the
+model--building process.
+
+All photometric data {\it must} be accompanied by a filter profile corresponding
+to the transmission profile of the filter of observation, as well as a time
+stamp corresponding to the epoch of observation.  We will convert each filter
+profile into an overall atmosphere plus system throughput representing the
+dimensionless probability that a photon of wavelength $\lambda$ reaches the
+detector.  We will use each filter profile to convert (if necessary) the flux to
+the AB magnitude system.  We will convert each input time stamp to correspond to
+the mid--point of observation, in Barycentric Julian Date in the Barycentric
+Dynamical Time standard \citep{2010PASP..122..935E}.
+
+All spectroscopic data will have the same requirement on epoch of obseravtion,
+with the additional requirement that it has been spectrophotometrically
+calibrated.  This is difficult.
+
+
+This is required to properly weight each contribution to the ST surface.
+
+The requirements on these data are that they have been classified on variability
+type, are acquired
+
+Input data sources will include:
+
+\begin{itemize}
+
+% Variable stars
+
+\item SDSS Stripe--82 where we will use the six {\it ugriz} per--camera column
+filter profiles for SDSS \citep{2007AJ....134..973I}.
+
+\item Variable stars from the OGLE and Hipparcos surveys cataloged by
+\cite{2007A&A...475.1159D}.
+
+% Supernova
+
+\item SDSS Stripe--82 supernova
+
+\item Carnegie SN project
+
+\item The on--line supernova spectrum archive
+
+\item Saurabh's data
+
+\item Time--domain spectroscopy projects TDSS if it happens.
+
+% Transients
+
+\item PTF
+
+\end{itemize}
+
 
 \medskip {\centerline{\ub{\sc Generation of Spectral--Temporal Surfaces (2p)}}}
-\smallskip {\bf UW}
+\smallskip
+
+We proceed using the following underlying model for astrophysical variability:
+the flux from an astronomical object may be represented as $F_\nu(\lambda, t)$
+with $F_\nu$ the specific flux of an object above the atmosphere, in Janskys (1
+Jy = $10^{-23}$ erg cm$^{-2}$ s$^{-1}$ Hz$^{-1}$), as a function of wavelength
+and time.  This flux is attenuated by a (typically unknown) atmospheric
+transmission function $S^{atm}(\lambda, t)$, the probability that a photon of
+wavelength $\lambda$ successfully propagates through the atmosphere.  The total
+counts transmitted through the optical system are then: $$F^{obs}_{filt} (t) =
+\int F_\nu(\lambda, t) ~~ S^{atm}(\lambda, t) ~~ S^{sys}_{filt} (\lambda, t) ~~
+\lambda^{-1} d\lambda$$ where $S^{sys}_{filt}(\lambda, t)$ is the system
+transmission probability per unit photon \footnote{The term $\lambda^{-1}$ comes
+from the conversion of energy per unit frequency into the number of photons per
+unit wavelength}.   This ideally should take into account the wavelength
+dependence of the mirror reflectivity, lens and filter transmission, and
+detection sensitivity.  To place this flux measurement on the AB magnitude
+system, we normalize this integral by $F_{AB} = 3631$ Jy.
+
+An additional complication is that for objects at cosmological distances, we
+must blue--shift the observed data to generate a model in the event rest--frame.
+ This has the advantage that the rest--frame model in the u--band may be
+constrained by data at longer wavelengths in the observer--frame.
 
 Periodic objects.
 

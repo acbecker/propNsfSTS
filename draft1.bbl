@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{37}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -41,6 +41,11 @@
   {Pratt}, M.~R., {Quinn}, P.~J., {Stubbs}, C.~W., {Sutherland}, W., {Tomaney},
   A.~B., {Vandehei}, T., \& {Welch}, D. 2000, \apj, 542, 281
 
+\bibitem[{{Bailey} {et~al.}(2007){Bailey}, {Aragon}, {Romano}, {Thomas},
+  {Weaver}, \& {Wong}}]{2007ApJ...665.1246B}
+{Bailey}, S., {Aragon}, C., {Romano}, R., {Thomas}, R.~C., {Weaver}, B.~A., \&
+  {Wong}, D. 2007, \apj, 665, 1246
+
 \bibitem[{{Becker}(2000)}]{2000PhDT.......258B}
 {Becker}, A.~C. 2000, PhD thesis, University of Washington
 
@@ -57,6 +62,14 @@
   {Tyson}, \& {Schommer}}]{2004ApJ...611..418B}
 ---. 2004{\natexlab{b}}, \apj, 611, 418
 
+\bibitem[{{Bloom} {et~al.}(2011){Bloom}, {Richards}, {Nugent}, {Quimby},
+  {Kasliwal}, {Starr}, {Poznanski}, {Ofek}, {Cenko}, {Butler}, {Kulkarni},
+  {Gal-Yam}, \& {Law}}]{2011arXiv1106.5491B}
+{Bloom}, J.~S., {Richards}, J.~W., {Nugent}, P.~E., {Quimby}, R.~M.,
+  {Kasliwal}, M.~M., {Starr}, D.~L., {Poznanski}, D., {Ofek}, E.~O., {Cenko},
+  S.~B., {Butler}, N.~R., {Kulkarni}, S.~R., {Gal-Yam}, A., \& {Law}, N. 2011,
+  ArXiv e-prints
+
 \bibitem[{{Connolly} {et~al.}(2010){Connolly}, {Peterson}, {Jernigan}, {Abel},
   {Bankert}, {Chang}, {Claver}, {Gibson}, {Gilmore}, {Grace}, {Jones},
   {Ivezic}, {Jee}, {Juric}, {Kahn}, {Krabbendam}, {Krughoff}, {Lorenz},
@@ -70,6 +83,11 @@
   7738, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference
   Series
 
+\bibitem[{{Debosscher} {et~al.}(2007){Debosscher}, {Sarro}, {Aerts}, {Cuypers},
+  {Vandenbussche}, {Garrido}, \& {Solano}}]{2007A&A...475.1159D}
+{Debosscher}, J., {Sarro}, L.~M., {Aerts}, C., {Cuypers}, J., {Vandenbussche},
+  B., {Garrido}, R., \& {Solano}, E. 2007, \aap, 475, 1159
+
 \bibitem[{{Djorgovski} {et~al.}(2008){Djorgovski}, {Baltay}, {Mahabal},
   {Drake}, {Williams}, {Rabinowitz}, {Graham}, {Donalek}, {Glikman}, {Bauer},
   {Scalzo}, \& {Ellman}}]{2008AN....329..263D}
@@ -78,13 +96,20 @@
   E., {Bauer}, A., {Scalzo}, R., \& {Ellman}, N. 2008, Astronomische
   Nachrichten, 329, 263
 
-\bibitem[{{Djorgovski} {et~al.}(2011){Djorgovski}, {Drake}, {Mahabal},
-  {Graham}, {Donalek}, {Williams}, {Beshore}, {Larson}, {Prieto}, {Catelan},
-  {Christensen}, \& {McNaught}}]{2011arXiv1102.5004D}
+\bibitem[{{Djorgovski} {et~al.}(2011{\natexlab{a}}){Djorgovski}, {Donalek},
+  {Mahabal}, {Moghaddam}, {Turmon}, {Graham}, {Drake}, {Sharma}, \&
+  {Chen}}]{2011arXiv1110.4655D}
+{Djorgovski}, S.~G., {Donalek}, C., {Mahabal}, A., {Moghaddam}, B., {Turmon},
+  M., {Graham}, M., {Drake}, A., {Sharma}, N., \& {Chen}, Y.
+  2011{\natexlab{a}}, ArXiv e-prints
+
+\bibitem[{{Djorgovski} {et~al.}(2011{\natexlab{b}}){Djorgovski}, {Drake},
+  {Mahabal}, {Graham}, {Donalek}, {Williams}, {Beshore}, {Larson}, {Prieto},
+  {Catelan}, {Christensen}, \& {McNaught}}]{2011arXiv1102.5004D}
 {Djorgovski}, S.~G., {Drake}, A.~J., {Mahabal}, A.~A., {Graham}, M.~J.,
   {Donalek}, C., {Williams}, R., {Beshore}, E.~C., {Larson}, S.~M., {Prieto},
-  J., {Catelan}, M., {Christensen}, E., \& {McNaught}, R.~H. 2011, ArXiv
-  e-prints
+  J., {Catelan}, M., {Christensen}, E., \& {McNaught}, R.~H.
+  2011{\natexlab{b}}, ArXiv e-prints
 
 \bibitem[{{Donalek} {et~al.}(2008){Donalek}, {Mahabal}, {Djorgovski}, {Marney},
   {Drake}, {Glikman}, {Graham}, \& {Williams}}]{2008AIPC.1082..252D}
@@ -92,6 +117,10 @@
   {Glikman}, E., {Graham}, M.~J., \& {Williams}, R. 2008, in American Institute
   of Physics Conference Series, Vol. 1082, American Institute of Physics
   Conference Series, ed. {C.~A.~L.~Bailer-Jones}, 252--256
+
+\bibitem[{{Eastman} {et~al.}(2010){Eastman}, {Siverd}, \&
+  {Gaudi}}]{2010PASP..122..935E}
+{Eastman}, J., {Siverd}, R., \& {Gaudi}, B.~S. 2010, \pasp, 122, 935
 
 \bibitem[{{Frieman} {et~al.}(2008){Frieman}, {Bassett}, {Becker}, {Choi},
   {Cinabro}, {DeJongh}, {Depoy}, {Dilday}, {Doi}, {Garnavich}, {Hogan},
@@ -176,6 +205,20 @@
   C.~J., {Carlberg}, R.~G., {Nugent}, P.~E., \& {Phillips}, M.~M. 2007, \apj,
   663, 1187
 
+\bibitem[{{Ivezi{\'c}} {et~al.}(2007){Ivezi{\'c}}, {Smith}, {Miknaitis}, {Lin},
+  {Tucker}, {Lupton}, {Gunn}, {Knapp}, {Strauss}, {Sesar}, {Doi}, {Tanaka},
+  {Fukugita}, {Holtzman}, {Kent}, {Yanny}, {Schlegel}, {Finkbeiner},
+  {Padmanabhan}, {Rockosi}, {Juri{\'c}}, {Bond}, {Lee}, {Stoughton}, {Jester},
+  {Harris}, {Harding}, {Morrison}, {Brinkmann}, {Schneider}, \&
+  {York}}]{2007AJ....134..973I}
+{Ivezi{\'c}}, {\v Z}., {Smith}, J.~A., {Miknaitis}, G., {Lin}, H., {Tucker},
+  D., {Lupton}, R.~H., {Gunn}, J.~E., {Knapp}, G.~R., {Strauss}, M.~A.,
+  {Sesar}, B., {Doi}, M., {Tanaka}, M., {Fukugita}, M., {Holtzman}, J., {Kent},
+  S., {Yanny}, B., {Schlegel}, D., {Finkbeiner}, D., {Padmanabhan}, N.,
+  {Rockosi}, C.~M., {Juri{\'c}}, M., {Bond}, N., {Lee}, B., {Stoughton}, C.,
+  {Jester}, S., {Harris}, H., {Harding}, P., {Morrison}, H., {Brinkmann}, J.,
+  {Schneider}, D.~P., \& {York}, D. 2007, \aj, 134, 973
+
 \bibitem[{{Kessler} {et~al.}(2009){Kessler}, {Becker}, {Cinabro}, {Vanderplas},
   {Frieman}, {Marriner}, {Davis}, {Dilday}, {Holtzman}, {Jha}, {Lampeitl},
   {Sako}, {Smith}, {Zheng}, {Nichol}, {Bassett}, {Bender}, {Depoy}, {Doi},
@@ -255,6 +298,13 @@
 \bibitem[{{Phillips}(1993)}]{1993ApJ...413L.105P}
 {Phillips}, M.~M. 1993, \apjl, 413, L105
 
+\bibitem[{{Richards} {et~al.}(2011){Richards}, {Starr}, {Butler}, {Bloom},
+  {Brewer}, {Crellin-Quick}, {Higgins}, {Kennedy}, \&
+  {Rischard}}]{2011ApJ...733...10R}
+{Richards}, J.~W., {Starr}, D.~L., {Butler}, N.~R., {Bloom}, J.~S., {Brewer},
+  J.~M., {Crellin-Quick}, A., {Higgins}, J., {Kennedy}, R., \& {Rischard}, M.
+  2011, \apj, 733, 10
+
 \bibitem[{{Riess} {et~al.}(1998){Riess}, {Filippenko}, {Challis},
   {Clocchiatti}, {Diercks}, {Garnavich}, {Gilliland}, {Hogan}, {Jha},
   {Kirshner}, {Leibundgut}, {Phillips}, {Reiss}, {Schmidt}, {Schommer},
@@ -289,11 +339,10 @@
   348
 
 \bibitem[{{Sesar} {et~al.}(2010){Sesar}, {Ivezi{\'c}}, {Grammer}, {Morgan},
-  {\bf {Becker}, A.~C.}, {Juri{\'c}}, {De Lee}, {Annis}, {Beers}, {Fan},
-  {Lupton}, {Gunn}, {Knapp}, {Jiang}, {Jester}, {Johnston}, \&
-  {Lampeitl}}]{2010ApJ...708..717S}
-{Sesar}, B., {Ivezi{\'c}}, {\v Z}., {Grammer}, S.~H., {Morgan}, D.~P., {\bf
-  {Becker}, A.~C.}, {Juri{\'c}}, M., {De Lee}, N., {Annis}, J., {Beers}, T.~C.,
+  {Becker}, {Juri{\'c}}, {De Lee}, {Annis}, {Beers}, {Fan}, {Lupton}, {Gunn},
+  {Knapp}, {Jiang}, {Jester}, {Johnston}, \& {Lampeitl}}]{2010ApJ...708..717S}
+{Sesar}, B., {Ivezi{\'c}}, {\v Z}., {Grammer}, S.~H., {Morgan}, D.~P.,
+  {Becker}, A.~C., {Juri{\'c}}, M., {De Lee}, N., {Annis}, J., {Beers}, T.~C.,
   {Fan}, X., {Lupton}, R.~H., {Gunn}, J.~E., {Knapp}, G.~R., {Jiang}, L.,
   {Jester}, S., {Johnston}, D.~E., \& {Lampeitl}, H. 2010, \apj, 708, 717
 
