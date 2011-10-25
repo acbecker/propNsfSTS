@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{44}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -41,6 +41,9 @@
   {Pratt}, M.~R., {Quinn}, P.~J., {Stubbs}, C.~W., {Sutherland}, W., {Tomaney},
   A.~B., {Vandehei}, T., \& {Welch}, D. 2000, \apj, 542, 281
 
+\bibitem[{{Asensio Ramos} \& {Allende Prieto}(2010)}]{2010ApJ...719.1759A}
+{Asensio Ramos}, A. \& {Allende Prieto}, C. 2010, \apj, 719, 1759
+
 \bibitem[{{Bailey} {et~al.}(2007){Bailey}, {Aragon}, {Romano}, {Thomas},
   {Weaver}, \& {Wong}}]{2007ApJ...665.1246B}
 {Bailey}, S., {Aragon}, C., {Romano}, R., {Thomas}, R.~C., {Weaver}, B.~A., \&
@@ -62,6 +65,16 @@
   {Tyson}, \& {Schommer}}]{2004ApJ...611..418B}
 ---. 2004{\natexlab{b}}, \apj, 611, 418
 
+\bibitem[{{Berk} {et~al.}(1999){Berk}, {Anderson}, {Bernstein}, {Acharya},
+  {Dothe}, {Matthew}, {Adler-Golden}, {Chetwynd}, {Richtsmeier}, {Pukall},
+  {Allred}, {Jeong}, \& {Hoke}}]{1999SPIE.3756..348B}
+{Berk}, A., {Anderson}, G.~P., {Bernstein}, L.~S., {Acharya}, P.~K., {Dothe},
+  H., {Matthew}, M.~W., {Adler-Golden}, S.~M., {Chetwynd}, J.~H.,
+  {Richtsmeier}, S.~C., {Pukall}, B., {Allred}, C.~L., {Jeong}, L.~S., \&
+  {Hoke}, M.~L. 1999, in Society of Photo-Optical Instrumentation Engineers
+  (SPIE) Conference Series, Vol. 3756, Society of Photo-Optical Instrumentation
+  Engineers (SPIE) Conference Series, ed. {A.~M.~Larar}, 348--353
+
 \bibitem[{{Bloom} {et~al.}(2011){Bloom}, {Richards}, {Nugent}, {Quimby},
   {Kasliwal}, {Starr}, {Poznanski}, {Ofek}, {Cenko}, {Butler}, {Kulkarni},
   {Gal-Yam}, \& {Law}}]{2011arXiv1106.5491B}
@@ -82,6 +95,11 @@
   of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol.
   7738, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference
   Series
+
+\bibitem[{{Connolly} {et~al.}(1995){Connolly}, {Szalay}, {Bershady}, {Kinney},
+  \& {Calzetti}}]{1995AJ....110.1071C}
+{Connolly}, A.~J., {Szalay}, A.~S., {Bershady}, M.~A., {Kinney}, A.~L., \&
+  {Calzetti}, D. 1995, \aj, 110, 1071
 
 \bibitem[{{Debosscher} {et~al.}(2007){Debosscher}, {Sarro}, {Aerts}, {Cuypers},
   {Vandenbussche}, {Garrido}, \& {Solano}}]{2007A&A...475.1159D}
@@ -199,6 +217,11 @@
 {Hidas}, M.~G., {Hawkins}, E., {Walker}, Z., {Brown}, T.~M., \& {Rosing}, W.~E.
   2008, Astronomische Nachrichten, 329, 269
 
+\bibitem[{{Hogg} {et~al.}(2002){Hogg}, {Baldry}, {Blanton}, \&
+  {Eisenstein}}]{2002astro.ph.10394H}
+{Hogg}, D.~W., {Baldry}, I.~K., {Blanton}, M.~R., \& {Eisenstein}, D.~J. 2002,
+  ArXiv Astrophysics e-prints
+
 \bibitem[{{Hsiao} {et~al.}(2007){Hsiao}, {Conley}, {Howell}, {Sullivan},
   {Pritchet}, {Carlberg}, {Nugent}, \& {Phillips}}]{2007ApJ...663.1187H}
 {Hsiao}, E.~Y., {Conley}, A., {Howell}, D.~A., {Sullivan}, M., {Pritchet},
@@ -218,6 +241,9 @@
   {Rockosi}, C.~M., {Juri{\'c}}, M., {Bond}, N., {Lee}, B., {Stoughton}, C.,
   {Jester}, S., {Harris}, H., {Harding}, P., {Morrison}, H., {Brinkmann}, J.,
   {Schneider}, D.~P., \& {York}, D. 2007, \aj, 134, 973
+
+\bibitem[{Karhunen(1947)}]{Karhunen:47}
+Karhunen, K. 1947, Ann. Acad. Sci. Fenn., Ser. A.1.: Math.-Phys., 37, 3
 
 \bibitem[{{Kessler} {et~al.}(2009){Kessler}, {Becker}, {Cinabro}, {Vanderplas},
   {Frieman}, {Marriner}, {Davis}, {Dilday}, {Holtzman}, {Jha}, {Lampeitl},
@@ -239,6 +265,19 @@
   Heyden}, K., {Wheeler}, J.~C., {Yasuda}, N., \& {York}, D. 2009, \apjs, 185,
   32
 
+\bibitem[{{Kessler} {et~al.}(2010){Kessler}, {Cinabro}, {Bassett}, {Dilday},
+  {Frieman}, {Garnavich}, {Jha}, {Marriner}, {Nichol}, {Sako}, {Smith},
+  {Bernstein}, {Bizyaev}, {Goobar}, {Kuhlmann}, {Schneider}, \&
+  {Stritzinger}}]{2010ApJ...717...40K}
+{Kessler}, R., {Cinabro}, D., {Bassett}, B., {Dilday}, B., {Frieman}, J.~A.,
+  {Garnavich}, P.~M., {Jha}, S., {Marriner}, J., {Nichol}, R.~C., {Sako}, M.,
+  {Smith}, M., {Bernstein}, J.~P., {Bizyaev}, D., {Goobar}, A., {Kuhlmann}, S.,
+  {Schneider}, D.~P., \& {Stritzinger}, M. 2010, \apj, 717, 40
+
+\bibitem[{Lo\`eve(1948)}]{Loeve:48}
+Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
+  (Gauthier-Villars)
+
 \bibitem[{{Mahabal} {et~al.}(2010){Mahabal}, {Djorgovski}, {Donalek}, {Drake},
   {Graham}, {Williams}, {Moghaddam}, \& {Turmon}}]{2010ASPC..434..115M}
 {Mahabal}, A., {Djorgovski}, S.~G., {Donalek}, C., {Drake}, A., {Graham}, M.,
@@ -251,34 +290,13 @@
   {Perlmutter}}]{2002PASP..114..803N}
 {Nugent}, P., {Kim}, A., \& {Perlmutter}, S. 2002, \pasp, 114, 803
 
-\bibitem[{{Oluseyi} {et~al.}(2010){Oluseyi}, {Allison}, {Becker}, {Culliton},
-  {Furqan}, \& {Hoadley}}]{2010AAS...21540118O}
-{Oluseyi}, H., {Allison}, I.~J., {Becker}, A., {Culliton}, C.~S., {Furqan}, M.,
-  \& {Hoadley}, K. 2010, in Bulletin of the American Astronomical Society,
-  Vol.~42, American Astronomical Society Meeting Abstracts \#215, 401.18--+
-
-\bibitem[{{Oluseyi} {et~al.}(2011{\natexlab{a}}){Oluseyi}, {Becker},
-  {Culliton}, {Furqan}, {Hoadley}, {Regencia}, {Wells}, {Allison}, {Jacoby},
-  {Ivezic}, {Jones}, {Krughoff}, \& {Sesar}}]{2011AAS...21725213O}
-{Oluseyi}, H., {Becker}, A., {Culliton}, C.~C., {Furqan}, M., {Hoadley}, K.~L.,
-  {Regencia}, P., {Wells}, A.~J., {Allison}, I.~J., {Jacoby}, S., {Ivezic}, Z.,
-  {Jones}, L., {Krughoff}, S., \& {Sesar}, B. 2011{\natexlab{a}}, in Bulletin
-  of the American Astronomical Society, Vol.~43, American Astronomical Society
-  Meeting Abstracts \#217, 252.13--+
-
-\bibitem[{{Oluseyi} {et~al.}(2009){Oluseyi}, {Culliton}, {Furqan}, \&
-  {Becker}}]{2009AAS...21346014O}
-{Oluseyi}, H., {Culliton}, C.~C., {Furqan}, M., \& {Becker}, A.~C. 2009, in
-  Bulletin of the American Astronomical Society, Vol.~41, American Astronomical
-  Society Meeting Abstracts \#213, 460.14--+
-
-\bibitem[{{Oluseyi} {et~al.}(2011{\natexlab{b}}){Oluseyi}, {Becker},
-  {Culliton}, {Furqan}, {Hoadley}, Regencia, {Wells}, {Ivezi$\acute{c}$},
-  {Jones}, Sesar, Jacoby, \& Allison}]{RRLyrae}
+\bibitem[{{Oluseyi} {et~al.}(2011){Oluseyi}, {Becker}, {Culliton}, {Furqan},
+  {Hoadley}, Regencia, {Wells}, {Ivezi$\acute{c}$}, {Jones}, Sesar, Jacoby, \&
+  Allison}]{RRLyrae}
 {Oluseyi}, H.~M., {Becker}, A.~C., {Culliton}, C., {Furqan}, M., {Hoadley},
   K.~L., Regencia, P., {Wells}, A.~J., {Ivezi$\acute{c}$}, b., {Jones}, R.
-  L.~{Krughoff}, K., Sesar, B., Jacoby, S., \& Allison, I.~J.
-  2011{\natexlab{b}}, \apj, Submitted
+  L.~{Krughoff}, K., Sesar, B., Jacoby, S., \& Allison, I.~J. 2011, \apj,
+  Submitted
 
 \bibitem[{{Perlmutter} {et~al.}(1999){Perlmutter}, {Aldering}, {Goldhaber},
   {Knop}, {Nugent}, {Castro}, {Deustua}, {Fabbro}, {Goobar}, {Groom}, {Hook},
@@ -346,9 +364,22 @@
   {Fan}, X., {Lupton}, R.~H., {Gunn}, J.~E., {Knapp}, G.~R., {Jiang}, L.,
   {Jester}, S., {Johnston}, D.~E., \& {Lampeitl}, H. 2010, \apj, 708, 717
 
+\bibitem[{{Stubbs} {et~al.}(2007){Stubbs}, {High}, {George}, {DeRose},
+  {Blondin}, {Tonry}, {Chambers}, {Granett}, {Burke}, \&
+  {Smith}}]{2007PASP..119.1163S}
+{Stubbs}, C.~W., {High}, F.~W., {George}, M.~R., {DeRose}, K.~L., {Blondin},
+  S., {Tonry}, J.~L., {Chambers}, K.~C., {Granett}, B.~R., {Burke}, D.~L., \&
+  {Smith}, R.~C. 2007, \pasp, 119, 1163
+
+\bibitem[{{Stubbs} \& {Tonry}(2006)}]{2006ApJ...646.1436S}
+{Stubbs}, C.~W. \& {Tonry}, J.~L. 2006, \apj, 646, 1436
+
 \bibitem[{{Udalski} {et~al.}(1994){Udalski}, {Szymanski}, {Kaluzny}, {Kubiak},
   {Mateo}, {Krzeminski}, \& {Paczynski}}]{1994AcA....44..227U}
 {Udalski}, A., {Szymanski}, M., {Kaluzny}, J., {Kubiak}, M., {Mateo}, M.,
   {Krzeminski}, W., \& {Paczynski}, B. 1994, \actaa, 44, 227
+
+\bibitem[{{Zechmeister} \& {K{\"u}rster}(2009)}]{2009A&A...496..577Z}
+{Zechmeister}, M. \& {K{\"u}rster}, M. 2009, \aap, 496, 577
 
 \end{thebibliography}

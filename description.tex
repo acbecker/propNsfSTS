@@ -230,30 +230,42 @@ describe in detail each step in this process.
 \medskip {\centerline{\ub{\sc Aggregation of Data (2p)}}} \smallskip
 
 The first step in this process is to aggregate the diversity of time--domain
-data on the phenomena of interest.  These data will serve as inputs to the
-model--building process.
+data above phenomena.  Since we will be incorporating data taken on different
+instruments, in different filters, and at different epochs, we must enforce a
+strict set of standards to ensure we can merge these data into a single ST
+model. In practice, this will limit our sources of data to archival resources
+where calibration metadata is included in the data curation.
 
-All photometric data {\it must} be accompanied by a filter profile corresponding
-to the transmission profile of the filter of observation, as well as a time
-stamp corresponding to the epoch of observation.  We will convert each filter
-profile into an overall atmosphere plus system throughput representing the
-dimensionless probability that a photon of wavelength $\lambda$ reaches the
-detector.  We will use each filter profile to convert (if necessary) the flux to
-the AB magnitude system.  We will convert each input time stamp to correspond to
-the mid--point of observation, in Barycentric Julian Date in the Barycentric
-Dynamical Time standard \citep{2010PASP..122..935E}.
+All incoming photometric data {\it must} be accompanied by a filter profile
+corresponding to the transmission profile of the filter of observation, as well
+as a time stamp corresponding to the epoch of observation.  We will convert each
+filter profile into an overall atmosphere plus system throughput representing
+the dimensionless probability that a photon of wavelength $\lambda$ reaches the
+detector.  This filter profile will be used to weight each data point's
+contribution to the ST surface.  We will also use each filter profile to convert
+(if necessary) the flux into the AB magnitude system.  We will convert each
+input time stamp to correspond to the mid--point of observation, in Barycentric
+Julian Date in the Barycentric Dynamical Time standard
+\citep{2010PASP..122..935E}.
 
-All spectroscopic data will have the same requirement on epoch of obseravtion,
-with the additional requirement that it has been spectrophotometrically
-calibrated.  This is difficult.
+All incoming spectroscopic data will have the same requirement on epoch of
+obseravtion, with the additional requirement that it has been
+spectrophotometrically calibrated.  This is difficult.
 
+An additional requirement for objects at cosmological distances is that any
+photometric data must be accompanied by a redshift to translate the
+observer--frame filter profile into a rest--frame window. This has the
+disadvantage that K--correction of the photometry \citep{2002astro.ph.10394H}
+requires an instantaneous spectrum of the event, which leads to a
+chicken--and--egg problem since that exact spectrum is expected to result from
+the ST modelling.  This will require a boot--strapping of the cosmological
+K--corrections with an initial ST surface.  However, these K--corrections will
+allow us to build ST surfaces that are well--calibrated in the u--band, where
+ground--based calibration is difficult and has in the past lead to systematics
+in event models \citep{2009ApJS..185...32K}, by using photometry of objects at
+moderate redshift.
 
-This is required to properly weight each contribution to the ST surface.
-
-The requirements on these data are that they have been classified on variability
-type, are acquired
-
-Input data sources will include:
+Identified input data sources include:
 
 \begin{itemize}
 
@@ -291,32 +303,127 @@ We proceed using the following underlying model for astrophysical variability:
 the flux from an astronomical object may be represented as $F_\nu(\lambda, t)$
 with $F_\nu$ the specific flux of an object above the atmosphere, in Janskys (1
 Jy = $10^{-23}$ erg cm$^{-2}$ s$^{-1}$ Hz$^{-1}$), as a function of wavelength
-and time.  This flux is attenuated by a (typically unknown) atmospheric
-transmission function $S^{atm}(\lambda, t)$, the probability that a photon of
-wavelength $\lambda$ successfully propagates through the atmosphere.  The total
-counts transmitted through the optical system are then: $$F^{obs}_{filt} (t) =
-\int F_\nu(\lambda, t) ~~ S^{atm}(\lambda, t) ~~ S^{sys}_{filt} (\lambda, t) ~~
-\lambda^{-1} d\lambda$$ where $S^{sys}_{filt}(\lambda, t)$ is the system
-transmission probability per unit photon \footnote{The term $\lambda^{-1}$ comes
-from the conversion of energy per unit frequency into the number of photons per
-unit wavelength}.   This ideally should take into account the wavelength
-dependence of the mirror reflectivity, lens and filter transmission, and
-detection sensitivity.  To place this flux measurement on the AB magnitude
-system, we normalize this integral by $F_{AB} = 3631$ Jy.
+and time.  Our spectral--temporal models will be defined over the grid of
+$\lambda$ and $t$, with the bin sizes dependent on the amount of input data
+available.  These models will be defined in the event rest--frame, and (to the
+best of our ability) above the Earths's atmosphere, meaning the data need to be
+calibrated in an {\it absolute} sense. Data on a single event will only coarsely
+sample this surface.  However, the phase space will be more densely sampled by
+an ensemble of data on different events of the same class.
 
-An additional complication is that for objects at cosmological distances, we
-must blue--shift the observed data to generate a model in the event rest--frame.
- This has the advantage that the rest--frame model in the u--band may be
-constrained by data at longer wavelengths in the observer--frame.
 
-Periodic objects.
+Between emission and measurement, $F_\nu$ is attenuated by a (typically unknown)
+atmospheric transmission function $T^{atm}(\lambda, t)$, the probability that a
+photon of wavelength $\lambda$ successfully propagates through the atmosphere,
+and a (typically measured, and occasionally well--measured) system transmission
+probability per unit photon $T^{sys}_{filt}(\lambda, t)$.  This latter term
+should include the wavelength dependence of the mirror reflectivity, lens and
+filter transmission, and detection sensitivity.  The product of these two
+defines the overall transmission profile of a given observation in a given
+filter $T_{filt}(\lambda, t)$.
 
-Objects at cosmological distances.  Translate observed data to rest--frame
-(requires redshifts) which is where we build the model.  When comparing event
-data to these models, redshift may be fixed due to spectroscopic observations or
-a free parameter that allows a photo--z estimate from the event data.
+Many surveys provide only measurements of $T^{sys}_{filt}(\lambda, t)$
+\citep[e.g.][]{2006ApJ...646.1436S} meaning we must synthesize the atmospheric
+transmission function for a given observation.  This is a difficult task, since
+the atmospheric components that contribute to $T^{atm}(\lambda, t)$ (including
+water vapor, aerosol scattering, Rayleigh scattering and molecular absorption)
+may vary on the order of $10\%$ per hour \citep{2007PASP..119.1163S}.  So as to
+not fall down the rabbit hole in terms of atmospheric calibration, we will adopt
+fiducial MODTRAN atmospheres \citep{1999SPIE.3756..348B} at the airmass of
+observation when reported or adopt a fiducial airmass of 1.3 when not.  We note
+that surveys such as SDSS define their filter profiles with the atmospheric
+component rolled in \citep{2007AJ....134..973I}.
 
-Basis surfaces (flux as a function of wavelength and time)
+The total counts transmitted through the optical system are: $$F^{obs}_{filt}
+(t) = \int F_\nu(\lambda, t) ~~ T_{filt} (\lambda, t) ~~ \lambda^{-1} d\lambda$$
+where $T_{filt}(\lambda, t)$ is the overall transmission probability per unit
+photon \footnote{The term $\lambda^{-1}$ comes from the conversion of energy per
+unit frequency into the number of photons per unit wavelength}. To place the
+final flux measurement on the AB magnitude system, this integral is normalized
+by $F_{AB} = 3631$ Jy.
+
+From the available data on each input training event, we will create a sparse
+surface labelled $f(\lambda, t)$ that constrains the overall model.  Spectral
+data will be rebinned to the wavelength resolution of our model, and photometric
+flux will added to the model across wavelengths with a weighting of
+$T_{filt}(\lambda, t)~\lambda^{-1}$.  To generate the ST model from these data,
+we proceed with the standard assumption that each dataset $f_0(\lambda, t),
+f_1(\lambda, t)~\ldots~f_i(\lambda, t)$ may be recovered from a linear
+combination of (as--yet unknown) basis surfaces $$f_i(\lambda, t) = \sum_{j=0}
+x_j \times {\bf S_j}$$ where $\bf S_j$ are said basis surfaces and $x_j$ are
+their weightings, which will be different for each given event.  By choosing the
+right basis, we may approximate each event with a finite number of surfaces $\bf
+S_j$. Principal Component Analysis (PCA) is an optimal way to select this basis
+from a ensemble of input data \cite[e.g.][for astrophysical application to
+galaxy spectra]{1995AJ....110.1071C}, and "sparse" or "gappy" PCA is a
+particular implementation to be used when the inputs sample only a small
+fraction of the model, such as here.  In this case of using PCA, we will first
+create a "mean" surface ${\bf S_M}$ and find the principal variations about this
+mean: $$f_i(\lambda, t) = {\bf S_M} + \sum_{j=1} x_j \times {\bf S_j}.$$ We
+emphasize that these basis surfaces (${\bf S_M}$,${\bf S_j}$) are the
+fundamental products of this proposal.
+
+Algorithmically, this process is as follows: accumulate data on each instance of
+the event type you want to model; for each instance, create a sparse data
+surface $f_i(\lambda, t)$; from the ensemble of $f_i(\lambda, t)$, find the mean
+${\bf S_M}$; subtract the mean ${\bf S_M}$ from all $f_i(\lambda, t)$; run a
+Karhunen--Loeve decomposition \citep{Karhunen:47,Loeve:48} on the
+mean--subtracted $f_i(\lambda, t)$, yielding principal surfaces ${\bf S_j}$;
+find the coefficients $x_{ij}$ for each $f_i(\lambda, t)$ through the dot
+product $x_{ij} = f_i(\lambda, t) \cdot {\bf S_j}$.
+
+\smallskip {\bf Intrinsic Dimensionality of each Basis:} The Principal Component
+Analysis is fundamentally an eigenvector analysis, with eigenvalues that
+represent the variance in the population that is represented by each surface.
+Surfaces that represent effects that dominate the behavior of the population
+(e.g. the brightness--decline for Supernova Ia) will have large eigenvalues,
+with secondary effects less important and thus having smaller corresponding
+eigenvalues in the PCA.  One can thus derive the intrinsic dimensionality of the
+population from the spectrum of eigenvalues. Correspondingly, one can well
+approximate any event within this population by using the first few bases sorted
+by eigenvalue.  We will use such a truncated expansion when creating our basis
+models; only surfaces representing the top $90\%$ (or $95\%$, or $99\%$,
+depending on the amount of input data) will be retained in the event modeling
+process described above.
+
+\smallskip {\bf Uncertainties on the Surfaces:} We with to capture excess
+variance in the models that is not represented by the surfaces, e.g. portions of
+large model uncertainty that we will want to deweight when fitting.  This excess
+variance will be modelled using a jackknife resampling procedure: for each input
+event, we will remove it from the training sample and re--create the model.  The
+variance of these residuals across all jackknife resamplings $V(\lambda, t)$
+will be used as an empirical estimate of the excess variance about our model.
+
+\smallskip {\bf Variants to this Procedure:} We recognize that for certain
+phenomena, this basic derivation of the surfaces is not sufficient to completely
+describe the events. For example, objects with periodic variability require
+folding at the correct period before fitting to these surfaces.  We must
+therefore construct periodograms for these lightcurves, optimally using the
+ensemble of event data to yield a single period assessment.  This will require
+development of multi--band period assessment tools.  Two options we will pursue
+are: the generation of periodograms for each passband of information, the
+conversion of these periodograms into likelihood functions using a false--alarm
+probability analysis \citep[e.g.][and references therein]{2009A&A...496..577Z},
+and using the product of these likelihood functions in a final period
+assessment; or to use priors on color--evolution derived from our ST surfaces to
+wrap all photometric data into a periodogram analysis.  Other classes of events
+such as supernovae undergo substantial extinction from their host galaxy, which
+will create a color--dependent non--intrinsic reddending of the underlying ST
+surface.  This will require an assessment of the reddening of each input vector,
+and an additional fit parameter on each incoming lightcurve representing the
+degree of extinction \cite[Equation 1][]{2007A&A...466...11G}.
+
+\smallskip {\bf Previous Work:} We note that this procedure follows very closely
+the SALT--II model of \cite{2007A&A...466...11G}.  In the SALT--II model, the
+degree to which the process captured the behavior of the training data is
+represented in the RMS dispersion of the Ia distance moduli in the Hubble
+diagram of $0.16$ magnitudes {\bf SO WHAT}.  In addition, for events where the
+redshfit of the event was not known, this extra redshfit parameter could be
+included in the $\chi^2$ calculation to provide a photometric redshift estimate.
+\cite{2007A&A...466...11G} finds an RMS dispersion of $\delta~z/(1 + z) =
+0.01--0.02$, which is comparable to the redshift that may be inferred from the
+spectra alone \citep[see also][]{2010ApJ...717...40K}.
+Spectral reconstruction in practice \citep{2010ApJ...719.1759A}.
 
 \begin{figure}[t]
 \centerline{\psfig{figure=figures/fall_blowd.eps,width=0.5\textwidth} \hfil
@@ -336,6 +443,11 @@ fill--in--the blanks when there are insufficient constraints.} \medskip \hrule
 
 \medskip {\centerline{\ub{\sc Statistical Infrastructure (2p)}}} \smallskip {\bf
 Berkeley}
+
+An incoming data stream $f_{i+1}(\lambda, t)$ may be modelled as $$f_{i+1} = x_0
+\times ({\bf S_M} + x_1 \times {\bf S_1} + \ldots)$$ with $x_0$ representing the
+inferred distance modulus to the event, and $x_1$ representing its location
+within the family of events.
 
 Efficient implementation.  Computational issues.  Portable to LSST code (C++ and
 Python).
@@ -383,22 +495,25 @@ during construction and operations.
 This proposal, ``The LSST FaST Program : Expanding Participation of
 Underrepresented Minorities in LSST'', was funded through Specific Program Order
 9 (AST-0551161) to the NSF-AURA (Association of Universities for Research in
-Astronomy) Cooperative Agreement AST-0132798.  Under this grant, Dr. Becker
-served as a mentor to Dr. H. Oluseyi from the Florida Institute of Technology,
-who visited the University of Washington with three sets of undergraduate
-students for 9 week work programs during the summers of 2008--2010.  The project
-involved simulating tens of millions of RR Lyrae lightcurves to investigate
-LSST's ability to recognize the periods and types of these events, as a function
-of distance (faintness) and survey duration.  This team delivered a technical
-report to LSST in Summer/Fall 2009 at the LSST ``All Hands'' meeting, presented
-the results at meetings of the American Astronomical Society
-\citep{2011AAS...21725213O,2010AAS...21540118O,2009AAS...21346014O}, and has
-submitted a paper to the Astrophysical Journal on the final results
-\citep{RRLyrae}.  Importantly, three of the six students funded by this proposal
-successfully applied to graduate school, with a fourth expected to apply this
-next year.
+Astronomy) Cooperative Agreement AST-0132798.  The project involved simulating
+tens of millions of RR Lyrae lightcurves to investigate LSST's ability to
+recognize the periods and types of these events, as a function of distance
+(faintness) and survey duration.  This team delivered a technical report to the
+LSST Transients and Variable Stars working group at the LSST Fall 2009 ``All
+Hands'' meeting and has submitted a paper to the Astrophysical Journal on the
+final results \citep{RRLyrae}.  Importantly, three of the six students funded by
+this proposal successfully applied to graduate school, with a fourth expected to
+apply this next year.
 
-\medskip {\centerline{\ub{\sc Dr. Bloom:}}} \smallskip
+\medskip {\centerline{\ub{\sc Dr. Bloom, PI : NSF grant No 0941742}}} \smallskip
+
+``Real-time Classification of Massive Time-series Data Streams'' (PI, J. Bloom;
+amount \$1,573,550; expires 07/12).  Three postdocs, six graduate students, and
+several undergraduates have been supported as part of that project, resulting in
+more than 10 publications to date.  The classification framework built as part
+of this proposal is used in the real-time pipeline of the Palomar Transient
+Factory, and has been responsible for the discovery of more than 15,000 new
+variable stars and transients.
 
 \medskip {\centerline{\ub{\sc Dr. Connolly:}}} \smallskip
 
