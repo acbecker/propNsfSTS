@@ -65,7 +65,9 @@ to waste precious follow--up resources on non--Ia events.  Contextual clues were
 used to assist in event classification, including proximity to host galaxy and
 host galaxy type.
 
-{\bf BLOOM: GRBs and real real--time followup.}
+Gamma-ray bursts, intense but evanescent flashes from exploding and colliding stars, are observable across the electromagnetic spectrum but only if discovered, disseminated, and followed up rapidly. Intense multi-color imaging coupled with synoptic spectroscopy in the minutes to hours after events are the state-of-the-art in the field. The most precious (scientifically) tend to be those events from the lowest and highest redshift, providing vistas on star formation, dust obscuration, and potentially serving as the bridge between the electromagnetic and gravity wave landscapes. However, at a discovery rate of $\sim$100/yr (primarily from NASA/Swift), the community cannot adequately followup all events with the available resources for target of opportunity observations. Knowing a priori which GRBs are likely to have the largest return given substantial telescope investment is crucial. We \citep{morgan} have begun to using machine learning tools to try to predict high-redshift events from immediately available burst data, couching the prediction as a resource maximization problem.
+
+%morgan: http://qmorgan.org.org/rategrbz/paper.html
 
 In the early 2000s surveys began to categorize and release {\it all} types of
 events found in their data, in near real--time. This includes the Deep Lens
@@ -86,10 +88,13 @@ used in these classification schemes, but {\it not} the time--varying color of
 the variable flux.
 
 %Kepler classification? \citep{2010ApJ...713L.204B}
+In the NSF-sponsored Palomar Transient Factory, we have begun to use machine learning techniques to discover new events through image differencing, identifying roughly 1000 variable stars and transients out of 1.5 million candidates per night. These events are, in real-time, classified with an ML classifier that makes use of contextual information (such as color of the nearest galaxy) and temporal metrics (such as difference in magnitude between the event and the quiescent counterpart brightness). We have shown \citep{bloom}  the ability to  distinguish between transients and variable stars with a 3.8\% overall error rate (with 1.7\% errors for imaging within the Sloan Digital Sky Survey footprint). At $>$96\% classification efficiency, the samples achieve 90\% purity. Determing just what sort of transient is found (e.g. supernova, nova, QSO event) has proven more challenging. Only with retrospective analysis, once sufficient data on a light curve has been obtained, that the classification errors begin to drop significantly \citep{rs} (see \citealt{rb} for a review).
 
-{\bf BLOOM The gold standard for event classification comes from the efforts of
-\cite{X} in analysis of the data stream from the Palomar Transient Factory
-\citep{X}}
+% rs http://arxiv.org/abs/1101.1959
+% rb http://arxiv.org/abs/1104.3142
+
+% bloom http://arxiv.org/abs/1106.5491
+
 
 In all surveys mentioned above, the volume of data being collected made the
 surveys sensitive to new types of astrophysical phenomena, with a rapid response
@@ -249,7 +254,7 @@ Julian Date in the Barycentric Dynamical Time standard
 \citep{2010PASP..122..935E}.
 
 All incoming spectroscopic data will have the same requirement on epoch of
-obseravtion, with the additional requirement that it has been
+observation, with the additional requirement that it has been
 spectrophotometrically calibrated.  This is difficult.
 
 An additional requirement for objects at cosmological distances is that any
@@ -481,11 +486,11 @@ during construction and operations.
 
 \medskip {\centerline{\ub{\sc Dr. Bloom}}} \smallskip
 
-{\bf CO-I Bloom is:}
+Co-PI Bloom is director of the Berkeley Center for Time-Domain Informatics, which focuses statisticians, computer scientists, and astronomers on matters of classification and regression on astronomical time-series.  The primary focus has been on the real-time and retrospective classification of the Palomar Transient Factory survey and other public datasets (e.g., Stripe 82). He has also worked on efficient discovery techniques of quasars through time variability and fast implementation of Lomb-Scargle periodograms with Bayesian cross validation. He has worked extensively on gamma-ray burst followup and characterization, predating the start of the GRB afterglow error in 1997.
 
 \medskip {\centerline{\ub{\sc Dr. Connolly}}} \smallskip
 
-{\bf CO-I Connolly is:}
+{\bf Co-PI Connolly is:}
 
 \bigskip \centerline{\bf IIIb. Previous Support (1.5p)} \smallskip
 
