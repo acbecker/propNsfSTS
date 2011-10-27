@@ -76,10 +76,10 @@ electromagnetic and gravity wave landscapes. However, at a discovery rate of
 $\sim$100/yr (primarily from NASA/Swift), the community cannot adequately
 followup all events with the available resources for target of opportunity
 observations. Knowing a priori which GRBs are likely to have the largest return
-given substantial telescope investment is crucial. We \citep{morgan} have begun
-to using machine learning tools to try to predict high-redshift events from
-immediately available burst data, couching the prediction as a resource
-maximization problem.
+given substantial telescope investment is crucial. We (Morgan et al., submitted)
+have begun to using machine learning tools to try to predict high-redshift
+events from immediately available burst data, couching the prediction as a
+resource maximization problem.
 
 %morgan: http://qmorgan.org.org/rategrbz/paper.html
 
@@ -101,21 +101,24 @@ information regarding the location of the variability
 used in these classification schemes, but {\it not} the time--varying color of
 the variable flux.
 
-%Kepler classification? \citep{2010ApJ...713L.204B} In the NSF-sponsored Palomar
-Transient Factory, we have begun to use machine learning techniques to discover
-new events through image differencing, identifying roughly 1000 variable stars
-and transients out of 1.5 million candidates per night. These events are, in
-real-time, classified with an ML classifier that makes use of contextual
-information (such as color of the nearest galaxy) and temporal metrics (such as
-difference in magnitude between the event and the quiescent counterpart
-brightness). We have shown \citep{bloom}  the ability to  distinguish between
-transients and variable stars with a 3.8\% overall error rate (with 1.7\% errors
-for imaging within the Sloan Digital Sky Survey footprint). At $>$96\%
-classification efficiency, the samples achieve 90\% purity. Determing just what
-sort of transient is found (e.g. supernova, nova, QSO event) has proven more
+%Kepler classification? \citep{2010ApJ...713L.204B}
+
+In the NSF-sponsored Palomar Transient Factory, we have begun to use machine
+learning techniques to discover new events through image differencing,
+identifying roughly 1000 variable stars and transients out of 1.5 million
+candidates per night. These events are, in real-time, classified with an ML
+classifier that makes use of contextual information (such as color of the
+nearest galaxy) and temporal metrics (such as difference in magnitude between
+the event and the quiescent counterpart brightness). We have shown
+\citep{2011arXiv1106.5491B} the ability to  distinguish between transients and
+variable stars with a 3.8\% overall error rate (with 1.7\% errors for imaging
+within the Sloan Digital Sky Survey footprint). At $>$96\% classification
+efficiency, the samples achieve 90\% purity. Determining just what sort of
+transient is found (e.g. supernova, nova, QSO event) has proven more
 challenging. Only with retrospective analysis, once sufficient data on a light
 curve has been obtained, that the classification errors begin to drop
-significantly \citep{rs} (see \citealt{rb} for a review).
+significantly \citep{2011ApJ...733...10R} (see \citealt{2011arXiv1104.3142B} for
+a review).
 
 % rs http://arxiv.org/abs/1101.1959 % rb http://arxiv.org/abs/1104.3142
 
@@ -127,9 +130,10 @@ surveys sensitive to new types of astrophysical phenomena, with a rapid response
 component that enabled immediate and early study.  It is also the case that many
 of these efforts designed their event filters based upon the particular survey
 design they were being applied to.  To continue this trend into the future,
-where surveys such as Gaia \citep{X} and LSST \citep{X} will report on {\it all}
-classes of variability, a class of models needs to be generated that match the
-ambitious designs of the surveys (massive data rates, sparse sampling in time,
+where surveys such as Gaia\footnote{http://gaia.esa.int} and
+LSST\footnote{http://www.lsst.org} will report on {\it all} classes of
+variability, a class of models needs to be generated that match the ambitious
+designs of the surveys (massive data rates, sparse sampling in time,
 inhomogeneous sampling in wavelength).  This is particularly important for
 driving the next generation of autonomous follow--up resources, such as LCOGT
 \citep{2008AN....329..269H}, that must algorithmically sift through the data
@@ -289,7 +293,7 @@ observer--frame filter profile into a rest--frame window. This has the
 disadvantage that K--correction of the photometry \citep{2002astro.ph.10394H}
 requires an instantaneous spectrum of the event, which leads to a
 chicken--and--egg problem since that exact spectrum is expected to result from
-the ST modelling.  This will require a boot--strapping of the cosmological
+the ST modeling.  This will require a boot--strapping of the cosmological
 K--corrections with an initial ST surface.  However, these K--corrections will
 allow us to build ST surfaces that are well--calibrated in the u--band, where
 ground--based calibration is difficult and has in the past lead to systematics
@@ -337,10 +341,10 @@ Jy = $10^{-23}$ erg cm$^{-2}$ s$^{-1}$ Hz$^{-1}$), as a function of wavelength
 and time.  Our spectral--temporal models will be defined over the grid of
 $\lambda$ and $t$, with the bin sizes dependent on the amount of input data
 available.  These models will be defined in the event rest--frame, and (to the
-best of our ability) above the Earths's atmosphere, meaning the data need to be
-calibrated in an {\it absolute} sense. Data on a single event will only coarsely
-sample this surface.  However, the phase space will be more densely sampled by
-an ensemble of data on different events of the same class.
+best of our ability) above the Earths's atmosphere, meaning the input data will
+need to be calibrated in an absolute sense. Data on a single event will only
+coarsely sample this surface.  However, the phase space will be more densely
+sampled by an ensemble of data on different events of the same class.
 
 
 Between emission and measurement, $F_\nu$ is attenuated by a (typically unknown)
@@ -361,8 +365,8 @@ water vapor, aerosol scattering, Rayleigh scattering and molecular absorption)
 may vary on the order of $10\%$ per hour \citep{2007PASP..119.1163S}.  So as to
 not fall down the rabbit hole in terms of atmospheric calibration, we will adopt
 fiducial MODTRAN atmospheres \citep{1999SPIE.3756..348B} at the airmass of
-observation when reported or adopt a fiducial airmass of 1.3 when not.  We note
-that surveys such as SDSS define their filter profiles with the atmospheric
+observation (when reported) or adopt a fiducial airmass of 1.3 when not.  We
+note that surveys such as SDSS define their filter profiles with the atmospheric
 component rolled in \citep{2007AJ....134..973I}.
 
 The total counts transmitted through the optical system are: $$F^{obs}_{filt}
@@ -381,23 +385,24 @@ $T_{filt}(\lambda, t)~\lambda^{-1}$.  To generate the ST model from these data,
 we proceed with the standard assumption that each dataset $f_0(\lambda, t),
 f_1(\lambda, t)~\ldots~f_i(\lambda, t)$ may be recovered from a linear
 combination of (as--yet unknown) basis surfaces $$f_i(\lambda, t) = \sum_{j=0}
-x_j \times {\bf S_j}$$ where $\bf S_j$ are said basis surfaces and $x_j$ are
-their weightings, which will be different for each given event.  By choosing the
-right basis, we may approximate each event with a finite number of surfaces $\bf
-S_j$. Principal Component Analysis (PCA) is an optimal way to select this basis
-from a ensemble of input data \cite[e.g.][for astrophysical application to
+x_{ij} \times {\bf S_j}$$ where $\bf S_j$ are said basis surfaces and $x_{ij}$
+are their weightings, which will be different for each given event.  By choosing
+the right basis, we may approximate each event with a finite number of surfaces
+$\bf S_j$. Principal Component Analysis (PCA) is an optimal way to select this
+basis from a ensemble of input data \cite[e.g.][for astrophysical application to
 galaxy spectra]{1995AJ....110.1071C}, and "sparse" or "gappy" PCA is a
 particular implementation to be used when the inputs sample only a small
-fraction of the model, such as here.  In this case of using PCA, we will first
-create a "mean" surface ${\bf S_M}$ and find the principal variations about this
-mean: $$f_i(\lambda, t) = {\bf S_M} + \sum_{j=1} x_j \times {\bf S_j}.$$ We
-emphasize that these basis surfaces (${\bf S_M}$,${\bf S_j}$) are the
-fundamental products of this proposal.
+fraction of the model \citep{zouht04}, such as here.  As is standard when using
+PCA decomposition, we will first create a "mean" surface ${\bf S_M}$ and find
+the principal variations about this mean: $$f_i(\lambda, t) = {\bf S_M} +
+\sum_{j=1} x_j \times {\bf S_j}.$$ We emphasize that these basis surfaces (${\bf
+S_M}$,${\bf S_1}$,${\bf S_2}$ $\ldots$ ${\bf S_j}$) are the fundamental products
+of this proposal.
 
 Algorithmically, this process is as follows: accumulate data on each instance of
-the event type you want to model; for each instance, create a sparse data
-surface $f_i(\lambda, t)$; from the ensemble of $f_i(\lambda, t)$, find the mean
-${\bf S_M}$; subtract the mean ${\bf S_M}$ from all $f_i(\lambda, t)$; run a
+the event type to be modelled; for each instance, create a sparse data surface
+$f_i(\lambda, t)$; from the ensemble of $f_i(\lambda, t)$, find the mean ${\bf
+S_M}$; subtract the mean ${\bf S_M}$ from all $f_i(\lambda, t)$; run a
 Karhunen--Loeve decomposition \citep{Karhunen:47,Loeve:48} on the
 mean--subtracted $f_i(\lambda, t)$, yielding principal surfaces ${\bf S_j}$;
 find the coefficients $x_{ij}$ for each $f_i(\lambda, t)$ through the dot
@@ -449,7 +454,7 @@ the SALT--II model of \cite{2007A&A...466...11G}.  In the SALT--II model, the
 degree to which the process captured the behavior of the training data is
 represented in the RMS dispersion of the Ia distance moduli in the Hubble
 diagram of $0.16$ magnitudes {\bf SO WHAT}.  In addition, for events where the
-redshfit of the event was not known, this extra redshfit parameter could be
+redshift of the event was not known, this extra redshift parameter could be
 included in the $\chi^2$ calculation to provide a photometric redshift estimate.
 \cite{2007A&A...466...11G} finds an RMS dispersion of $\delta~z/(1 + z) =
 0.01--0.02$, which is comparable to the redshift that may be inferred from the

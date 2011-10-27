@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{46}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -74,6 +74,9 @@
   {Hoke}, M.~L. 1999, in Society of Photo-Optical Instrumentation Engineers
   (SPIE) Conference Series, Vol. 3756, Society of Photo-Optical Instrumentation
   Engineers (SPIE) Conference Series, ed. {A.~M.~Larar}, 348--353
+
+\bibitem[{{Bloom} \& {Richards}(2011)}]{2011arXiv1104.3142B}
+{Bloom}, J.~S. \& {Richards}, J.~W. 2011, ArXiv e-prints
 
 \bibitem[{{Bloom} {et~al.}(2011){Bloom}, {Richards}, {Nugent}, {Quimby},
   {Kasliwal}, {Starr}, {Poznanski}, {Ofek}, {Cenko}, {Butler}, {Kulkarni},
@@ -381,5 +384,9 @@ Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
 
 \bibitem[{{Zechmeister} \& {K{\"u}rster}(2009)}]{2009A&A...496..577Z}
 {Zechmeister}, M. \& {K{\"u}rster}, M. 2009, \aap, 496, 577
+
+\bibitem[{Zou {et~al.}(2006)Zou, Hastie, \& Tibshirani}]{zouht04}
+Zou, H., Hastie, T., \& Tibshirani, R. 2006, Journal of Computational and
+  Graphical Statistics, 15, 262
 
 \end{thebibliography}
