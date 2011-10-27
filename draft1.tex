@@ -2,6 +2,33 @@
 \usepackage{epsfig}
 \usepackage{natbib}
 \usepackage{color}
+\usepackage{epstopdf}
+\usepackage{amssymb,amsmath}
+
+\definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+\definecolor{darkblue}{rgb}{0.1,0.1,0.8}
+\usepackage{hyperref}
+\hypersetup{pdftex,  % needed for pdflatex
+  breaklinks=true,  % so long urls are correctly broken across lines
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=darkorange,
+  citecolor=darkgreen,
+  }
+\newcommand{\becker}[1] { \textcolor{darkorange} {
+\ensuremath{\blacksquare} {\bf andy:}  {#1}
+\ensuremath{\blacksquare} } }
+
+\newcommand{\josh}[1] { \textcolor{red} {
+\ensuremath{\bigstar} {\bf josh:}  {#1}
+\ensuremath{\bigstar} } }
+
+\newcommand{\connolly}[1] { \textcolor{darkblue} {
+\ensuremath{\clubsuit} {\bf Connolly:}  {#1}
+\ensuremath{\clubsuit} } }
+
 
 %\usepackage{bibunits}
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{46}
+\begin{thebibliography}{45}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -52,18 +52,12 @@
 \bibitem[{{Becker}(2000)}]{2000PhDT.......258B}
 {Becker}, A.~C. 2000, PhD thesis, University of Washington
 
-\bibitem[{{Becker} {et~al.}(2004{\natexlab{a}}){Becker}, {Wittman}, {Boeshaar},
-  {Clocchiatti}, {Dell'Antonio}, {Frail}, {Halpern}, {Margoniner}, {Norman},
-  {Tyson}, \& {Schommer}}]{Becker04a}
-{Becker}, A.~C., {Wittman}, D.~M., {Boeshaar}, P.~C., {Clocchiatti}, A.,
-  {Dell'Antonio}, I.~P., {Frail}, D.~A., {Halpern}, J., {Margoniner}, V.~E.,
-  {Norman}, D., {Tyson}, J.~A., \& {Schommer}, R.~A. 2004{\natexlab{a}}, \apj,
-  611, 418
-
-\bibitem[{{Becker} {et~al.}(2004{\natexlab{b}}){Becker}, {Wittman}, {Boeshaar},
+\bibitem[{{Becker} {et~al.}(2004){Becker}, {Wittman}, {Boeshaar},
   {Clocchiatti}, {Dell'Antonio}, {Frail}, {Halpern}, {Margoniner}, {Norman},
   {Tyson}, \& {Schommer}}]{2004ApJ...611..418B}
----. 2004{\natexlab{b}}, \apj, 611, 418
+{Becker}, A.~C., {Wittman}, D.~M., {Boeshaar}, P.~C., {Clocchiatti}, A.,
+  {Dell'Antonio}, I.~P., {Frail}, D.~A., {Halpern}, J., {Margoniner}, V.~E.,
+  {Norman}, D., {Tyson}, J.~A., \& {Schommer}, R.~A. 2004, \apj, 611, 418
 
 \bibitem[{{Berk} {et~al.}(1999){Berk}, {Anderson}, {Bernstein}, {Acharya},
   {Dothe}, {Matthew}, {Adler-Golden}, {Chetwynd}, {Richtsmeier}, {Pukall},
