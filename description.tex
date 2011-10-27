@@ -1,9 +1,9 @@
-\centerline{\bf I. Introduction (0.5p)} \smallskip
+\centerline{\bf I. Introduction} \smallskip
 
 The field of time--domain astrophysics is currently experiencing a renaissance,
 driven by the fusion of large datasets, computational infrastructure, and
 astro--statistical tools.  Research efforts may be broadly cast into two types
-of analyses, data--mining efforts (discovery) and follow--up of interesting
+of analyses -- data--mining efforts (discovery) and follow--up of interesting
 events (characterization).  The most ambitious of these efforts utilize
 real--time discovery tools on survey data streams to drive autonomous follow--up
 resources. As these data streams become increasingly more vast and complex, the
@@ -19,29 +19,32 @@ In this proposal, we will expand upon the current state--of--the art in event
 classification to generate astrophysical variability models with the same
 dimensionality as the data being collected. Next generation time--domain data
 streams will provide constraints on a given event at irregular times, and in one
-of several passbands.  The event models themselves must therefore be inherently
-temporal {\it and} spectral, to federate the ensemble of survey and follow--up
-data into a single statistical assessment of event type.  The building of these
-models requires adopting a unifying description of astrophysical variability.
-{\bf We propose sets of spectral--temporal surfaces, generated for all
-astrophysical event types, as this optimal description of variability.}  The
-process will incorporate the diversity of existing data into a single
-statistical model representing the mean behavior of each event class, as well as
-higher--order moments about this mean that reflect the intrinsic dimensionality
-of the phenomena.  These models will be optimal in the sense that they
-incorporate extant multi--passband knowledge (photometric {\it and}
-spectroscopic) into an empirically--derived event model.  They will be optimal
-in these sense that they represent each class of phenomena at all times and
-integrable over any photometric passband, a level of complexity needed to
-evaluate the event streams of next--generation surveys such as LSST. And they
-will be optimal in the sense that they will unify the statistical description of
-astronomical variability from today's heterogeneous standards into a common
-language.  To provide the broadest possible impact from this effort, we will
-build a classification infrastructure incorporating these models into a
-real--time event broker that will be available to the astronomical community.
+of several passbands.  Wide--field time--domain spectroscopic surveys are also
+on the horizon post SDSS-III (Anderson, private communication).  The event
+models themselves must therefore be inherently temporal {\it and} spectral, to
+federate the ensemble of survey and follow--up data into a single statistical
+assessment of event type.  The building of these models requires adopting a
+unifying description of astrophysical variability. {\bf We propose sets of
+spectral--temporal surfaces, generated for all event types, as the optimal
+description of astrophysical variability.}  The process will incorporate the
+diversity of existing data into a single statistical model representing the mean
+behavior of each event class, as well as higher--order moments about this mean
+that reflect the intrinsic dimensionality of the phenomena.  These models will
+be optimal in the sense that they incorporate extant multi--passband knowledge
+(photometric {\it and} spectroscopic) into an empirically--derived event model.
+They will be optimal in these sense that they represent each class of phenomena
+at all times and integrable over any photometric passband, a level of complexity
+needed to evaluate the event streams of next--generation surveys such as LSST.
+And they will be optimal in the sense that they will unify the statistical
+description of astronomical variability from today's heterogeneous standards
+into a common language.  To provide the broadest possible impact from this
+effort, we will build a classification infrastructure incorporating these models
+into a real--time event broker that will be available to the astronomical
+community.
 
 
-\medskip {\centerline{\ub{\sc Time--Domain Astronomy (1p)}}} \smallskip
+\medskip {\centerline{\ub{\sc A Brief History of Time--Domain Astronomy}}}
+\smallskip
 
 The field of time--domain astronomy began in earnest in the 1990s with
 wide--field (10 square degree) microlensing surveys such as MACHO
@@ -120,7 +123,7 @@ curve has been obtained, that the classification errors begin to drop
 significantly \citep{2011ApJ...733...10R} (see \citealt{2011arXiv1104.3142B} for
 a review).
 
-In all surveys mentioned above, the volume of data being collected made the
+In all cases mentioned above, the volume of data being collected made the
 surveys sensitive to new types of astrophysical phenomena, with a rapid response
 component that enabled immediate and early study.  It is also the case that many
 of these efforts designed their event filters based upon the particular survey
@@ -135,69 +138,69 @@ driving the next generation of autonomous follow--up resources, such as LCOGT
 streams to achieve their particular science goals.
 
 \medskip {\centerline{\ub{\sc Strides Towards Spectral--Temporal Event
-Classification (1.5p)}}} \smallskip
+Classification}}} \smallskip
 
 While teams such as the Harvard Time Series Center \citep{} and the Berkeley
 Transients Classification Pipeline \citep{} have made substantial advances in
 automated event classification, their methods remain inherently
 one--dimensional. That is, their models of event behavior are relevant for data
-in a single passband, and do not take into account color evolution during the
+in a single passband, but do not take into account color evolution during the
 events.
 
 One field where there has been substantial progress in spectral--temporal
 modeling is in the field of supernova studies. The pioneering work of
 \cite{2002PASP..114..803N} integrated a large, inhomogeneous sample of
-spectroscopy of Ia supernovae into a single representation of the Ia phenomena.
-This integrated model represented the behavior of a typical "Branch--normal"
-Type Ia supernova, and defined the spectrum of a typical event at all integer
-wavelengths between 1000~\AA~and 25000~\AA, 1 per day for 90 days after
-explosion.  Nugent subsequently expanded his template set to include separate
-models for intrinsically bright and faint Ia, supernovae Type Ib/c, and Types II
-P/L/n. Such templates played a crucial role in real--time event classification
-for the SDSS-II Supernova Survey \citep{2008AJ....135..338F}, and enabled a
-$90\%$ targeting efficiency for Type Ia supernova \citep{2008AJ....135..348S}.
-However, since they only existed for supernova--class events, all events that
-did not conform to the spectral and temporal behavior of these models were
-subsequently ignored.
+spectroscopy of Ia supernovae into a single averaged representation of the Ia
+phenomena. This integrated model represented the behavior of a typical
+"Branch--normal" Type Ia supernova, and defined the spectrum of a typical event
+at all integer wavelengths between 1000~\AA~and 25000~\AA, 1 per day for 90 days
+after explosion.  Nugent subsequently expanded his template set to include
+separate models for intrinsically bright and faint Ia, supernovae Type Ib/c, and
+Types II P/L/n. Such templates played a crucial role in real--time event
+classification for the SDSS-II Supernova Survey \citep{2008AJ....135..338F}, and
+enabled a $90\%$ targeting efficiency for Type Ia supernova
+\citep{2008AJ....135..348S}. However, since they only existed for
+supernova--class events, all events that did not conform to the spectral and
+temporal behavior of these models were subsequently ignored.
 
 This notion of spectral--temporal event representations was expanded upon  by
 \cite{2007A&A...466...11G} in the generation of their SALT--II supernova model
 (see also \cite{2007ApJ...663.1187H}).  This model incorporated spectroscopic
 {\it and} photometric data from low-- and high--redshift supernovae to yield a
 set of lightcurve templates describing the behavior of {\it all} Type Ia
-supernovae. The spectroscopic data constrained the templates coarsely in time
-but finely in wavelength, while the photometric data constrained the templates
-more densely in time, but coarsely in wavelength.  The photometric data were
-also able to be calibrated, in an absolute sense, to a much higher accuracy than
-the spectroscopic data, and were used to bootstrap the overall calibration of
-the model.  These data in combination yielded a highly constrained
-two--dimensional surface in time and wavelength that describes the temporal
-evolution of the rest-frame spectral energy distribution (SED) for SNe Ia.
-Importantly, the SALT--II model yields not just the average behavior of the Type
-Ia sample, equivalent to the \cite{2002PASP..114..803N} data, but also includes
-a first "principal component" about the mean, which captures the
-spectral--temporal behavior of the diversity (intrinsically bright to
-intrinsically faint) of Ia. This single model -- mean surface plus a first
-moment -- fully captures the diversity of behaviors and correlations seen in the
-Ia population such as the $\Delta m_{15}$ brightness--decline
-\citep{1993ApJ...413L.105P} or brightness--stretch \citep{1998AJ....116.1009R}
-relations.  The need for only a single principal component reflects the fact
-that Ia supernova are intrinsically a one--parameter family; the SALT--II model
-captures this in a spectral--temporal representation.
+supernovae. The spectroscopic data constrain the templates sparsely in time
+(being acquired infrequently compared to photometry) but finely in wavelength,
+while the photometric data constrain the templates more densely in time, but
+only coarsely in wavelength.  The photometric data were also able to be
+calibrated, in an absolute sense, to a much higher accuracy than the
+spectroscopic data, and were used to bootstrap the overall calibration of the
+model.  These data in combination yielded a highly constrained two--dimensional
+surface in time and wavelength that describes the temporal evolution of the
+rest-frame spectral energy distribution (SED) for SNe Ia. Importantly, the
+SALT--II model yields not just the average behavior of the Type Ia sample,
+equivalent to the \cite{2002PASP..114..803N} data, but also includes a first
+"principal component" about the mean, which captures the spectral--temporal
+behavior of the diversity (intrinsically bright to intrinsically faint) of Ia.
+This single model -- mean surface plus a first moment -- contains the behaviors
+and correlations seen in the Ia population such as the $\Delta m_{15}$
+brightness--decline \citep{1993ApJ...413L.105P} or brightness--stretch
+\citep{1998AJ....116.1009R} relations.  The need for only a single principal
+component reflects the fact that Ia supernova are intrinsically a one--parameter
+family; the SALT--II model captures this in a spectral--temporal representation.
 
 Figure~\ref{fig:salt2} displays the mean surface ({\it left}) and first
 principal component surface ({\it right}) from the SALT--II model.  The behavior
 for a given Ia lightcurve may be generated by an overall scaling of the mean
 surface (representing distance modulus) with a contribution from the secondary
 surface representing its place within the 1--parameter family of Ia supernovae.
-Importantly, an incoming data stream can be compared to these surfaces, and a
-statistical assessment made whether or not it is behaving in accordance with
-this model.  This likelihood may be generated using the surfaces, the
-photometric uncertainty on the incoming data, and (optionally) priors on the
-amplitude of the second surface indicated by the best--fit.  This is the process
-we envision resulting from this proposal : {\bf an incoming event stream will be
-evaluated against an ensemble of these surfaces to yield a statistical
-likelihood that the event is of each class.}
+Importantly, an incoming spectral--temporal data stream can be compared to these
+surfaces, and a statistical assessment made whether or not it is behaving in
+accordance with this model.  This likelihood may be generated using the
+surfaces, the photometric uncertainty on the incoming data, and (optionally)
+priors on the amplitude of the second surface indicated by the best--fit.  This
+is the process we envision resulting from this proposal : {\bf an incoming event
+stream will be evaluated against an ensemble of these surfaces to yield a
+statistical likelihood that the event is of each class.}
 
 
 \begin{figure}[t]
@@ -257,7 +260,9 @@ epochs and wavelengths into the overall classification scheme.  Below we
 describe in detail each step in this process.
 
 
-\medskip {\centerline{\ub{\sc Aggregation of Data (2p)}}} \smallskip
+\medskip {\centerline{\ub{\sc Aggregation of Data}}} \smallskip
+
+Explore classes.
 
 The first step in this process is to aggregate the diversity of time--domain
 data above phenomena.  Since we will be incorporating data taken on different
@@ -266,7 +271,7 @@ strict set of standards to ensure we can merge these data into a single ST
 model. In practice, this will limit our sources of data to archival resources
 where calibration metadata is included in the data curation.
 
-All incoming photometric data {\it must} be accompanied by a filter profile
+All incoming photometric data must be accompanied by a filter profile
 corresponding to the transmission profile of the filter of observation, as well
 as a time stamp corresponding to the epoch of observation.  We will convert each
 filter profile into an overall atmosphere plus system throughput representing
@@ -290,10 +295,9 @@ requires an instantaneous spectrum of the event, which leads to a
 chicken--and--egg problem since that exact spectrum is expected to result from
 the ST modeling.  This will require a boot--strapping of the cosmological
 K--corrections with an initial ST surface.  However, these K--corrections will
-allow us to build ST surfaces that are well--calibrated in the u--band, where
-ground--based calibration is difficult and has in the past lead to systematics
-in event models \citep{2009ApJS..185...32K}, by using photometry of objects at
-moderate redshift.
+allow us to build ST surfaces that are well--calibrated in the rest--frame
+u--band, where ground--based calibration is difficult, by using photometry of
+objects at moderate redshift.
 
 Identified input data sources include:
 
@@ -339,8 +343,7 @@ available.  These models will be defined in the event rest--frame, and (to the
 best of our ability) above the Earths's atmosphere, meaning the input data will
 need to be calibrated in an absolute sense. Data on a single event will only
 coarsely sample this surface.  However, the phase space will be more densely
-sampled by an ensemble of data on different events of the same class.
-
+sampled by an ensemble of data of different events of the same class.
 
 Between emission and measurement, $F_\nu$ is attenuated by a (typically unknown)
 atmospheric transmission function $T^{atm}(\lambda, t)$, the probability that a
@@ -361,8 +364,8 @@ may vary on the order of $10\%$ per hour \citep{2007PASP..119.1163S}.  So as to
 not fall down the rabbit hole in terms of atmospheric calibration, we will adopt
 fiducial MODTRAN atmospheres \citep{1999SPIE.3756..348B} at the airmass of
 observation (when reported) or adopt a fiducial airmass of 1.3 when not.  We
-note that surveys such as SDSS define their filter profiles with the atmospheric
-component rolled in \citep{2007AJ....134..973I}.
+note that some surveys such as SDSS define their filter profiles with the
+atmospheric component rolled in \citep{2007AJ....134..973I}.
 
 The total counts transmitted through the optical system are: $$F^{obs}_{filt}
 (t) = \int F_\nu(\lambda, t) ~~ T_{filt} (\lambda, t) ~~ \lambda^{-1} d\lambda$$
@@ -377,8 +380,8 @@ surface labelled $f(\lambda, t)$ that constrains the overall model.  Spectral
 data will be rebinned to the wavelength resolution of our model, and photometric
 flux will added to the model across wavelengths with a weighting of
 $T_{filt}(\lambda, t)~\lambda^{-1}$.  To generate the ST model from these data,
-we proceed with the standard assumption that each dataset $f_0(\lambda, t),
-f_1(\lambda, t)~\ldots~f_i(\lambda, t)$ may be recovered from a linear
+we proceed with the standard assumption that each input dataset $f_0(\lambda,
+t), f_1(\lambda, t)~\ldots~f_i(\lambda, t)$ may be recovered from a linear
 combination of (as--yet unknown) basis surfaces $$f_i(\lambda, t) = \sum_{j=0}
 x_{ij} \times {\bf S_j}$$ where $\bf S_j$ are said basis surfaces and $x_{ij}$
 are their weightings, which will be different for each given event.  By choosing
@@ -390,15 +393,17 @@ particular implementation to be used when the inputs sample only a small
 fraction of the model \citep{zouht04}, such as here.  As is standard when using
 PCA decomposition, we will first create a "mean" surface ${\bf S_M}$ and find
 the principal variations about this mean: $$f_i(\lambda, t) = {\bf S_M} +
-\sum_{j=1} x_j \times {\bf S_j}.$$ We emphasize that these basis surfaces (${\bf
-S_M}$,${\bf S_1}$,${\bf S_2}$ $\ldots$ ${\bf S_j}$) are the fundamental products
-of this proposal.
+\sum_{j=1} x_j \times {\bf S_j}.$$
 
-Algorithmically, this process is as follows: accumulate data on each instance of
-the event type to be modelled; for each instance, create a sparse data surface
-$f_i(\lambda, t)$; from the ensemble of $f_i(\lambda, t)$, find the mean ${\bf
-S_M}$; subtract the mean ${\bf S_M}$ from all $f_i(\lambda, t)$; run a
-Karhunen--Loeve decomposition \citep{Karhunen:47,Loeve:48} on the
+\begin{center} {\bf We emphasize that these basis surfaces (${\bf S_M}$,${\bf
+S_1}$,${\bf S_2}$ $\ldots$ ${\bf S_j}$) are the fundamental products of this
+proposal.}q \end{center}
+
+Algorithmically, this process to generate them is as follows: accumulate data on
+each instance of the event type to be modelled; for each instance, create a
+sparse data surface $f(\lambda, t)$; from the ensemble of $f_i(\lambda, t)$,
+find the mean ${\bf S_M}$; subtract the mean ${\bf S_M}$ from all $f_i(\lambda,
+t)$; run a Karhunen--Loeve decomposition \citep{Karhunen:47,Loeve:48} on the
 mean--subtracted $f_i(\lambda, t)$, yielding principal surfaces ${\bf S_j}$;
 find the coefficients $x_{ij}$ for each $f_i(\lambda, t)$ through the dot
 product $x_{ij} = f_i(\lambda, t) \cdot {\bf S_j}$.
@@ -407,23 +412,24 @@ product $x_{ij} = f_i(\lambda, t) \cdot {\bf S_j}$.
 Analysis is fundamentally an eigenvector analysis, with eigenvalues that
 represent the variance in the population that is represented by each surface.
 Surfaces that represent effects that dominate the behavior of the population
-(e.g. the brightness--decline for Supernova Ia) will have large eigenvalues,
-with secondary effects less important and thus having smaller corresponding
-eigenvalues in the PCA.  One can thus derive the intrinsic dimensionality of the
-population from the spectrum of eigenvalues. Correspondingly, one can well
-approximate any event within this population by using the first few bases sorted
-by eigenvalue.  We will use such a truncated expansion when creating our basis
-models; only surfaces representing the top $90\%$ (or $95\%$, or $99\%$,
-depending on the amount of input data) will be retained in the event modeling
-process described above.
+(e.g. the brightness--decline relationship for Supernova Ia) will have large
+eigenvalues, with secondary effects less important and thus having smaller
+corresponding eigenvalues in the PCA.  One can thus derive the intrinsic
+dimensionality of the population from the spectrum of eigenvalues.
+Correspondingly, one can well approximate any event within this population by
+using the first few bases sorted by eigenvalue.  We will use such a truncated
+expansion when creating our basis models; only surfaces representing the
+majority of the variance ($90\%$ to $99\%$, depending on the amount of input
+data) will be retained in the event modeling process described above.
 
-\smallskip {\bf Uncertainties on the Surfaces:} We with to capture excess
-variance in the models that is not represented by the surfaces, e.g. portions of
-large model uncertainty that we will want to deweight when fitting.  This excess
-variance will be modelled using a jackknife resampling procedure: for each input
-event, we will remove it from the training sample and re--create the model.  The
-variance of these residuals across all jackknife resamplings $V(\lambda, t)$
-will be used as an empirical estimate of the excess variance about our model.
+\smallskip {\bf Uncertainties on the Surfaces:} We will additionally capture
+excess variance in the models that is not represented by the surfaces, e.g.
+portions of large model uncertainty that we will want to deweight when fitting. 
+This excess variance will be modelled using a jackknife resampling procedure:
+for each input event, we will remove it from the training sample and re--create
+the model.  The variance of these residuals across all jackknife resamplings
+$V(\lambda, t)$ will be used as an empirical estimate of the excess variance
+about our model.
 
 \smallskip {\bf Variants to this Procedure:} We recognize that for certain
 phenomena, this basic derivation of the surfaces is not sufficient to completely
