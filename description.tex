@@ -179,8 +179,8 @@ a first "principal component" about the mean, which captures the
 spectral--temporal behavior of the diversity (intrinsically bright to
 intrinsically faint) of Ia. This single model -- mean surface plus a first
 moment -- fully captures the diversity of behaviors and correlations seen in the
-Ia population such as the $\delta m_{15}$ brightness--decline
-\cite{1993ApJ...413L.105P} or brightness--stretch \citep{1998AJ....116.1009R}
+Ia population such as the $\Delta m_{15}$ brightness--decline
+\citep{1993ApJ...413L.105P} or brightness--stretch \citep{1998AJ....116.1009R}
 relations.  The need for only a single principal component reflects the fact
 that Ia supernova are intrinsically a one--parameter family; the SALT--II model
 captures this in a spectral--temporal representation.
@@ -439,10 +439,10 @@ and using the product of these likelihood functions in a final period
 assessment; or to use priors on color--evolution derived from our ST surfaces to
 wrap all photometric data into a periodogram analysis.  Other classes of events
 such as supernovae undergo substantial extinction from their host galaxy, which
-will create a color--dependent non--intrinsic reddending of the underlying ST
+will create a color--dependent non--intrinsic reddening of the underlying ST
 surface.  This will require an assessment of the reddening of each input vector,
 and an additional fit parameter on each incoming lightcurve representing the
-degree of extinction \cite[Equation 1][]{2007A&A...466...11G}.
+degree of extinction \cite[e.g. Equation 1,][]{2007A&A...466...11G}.
 
 \smallskip {\bf Previous Work:} We note that this procedure follows very closely
 the SALT--II model of \cite{2007A&A...466...11G}.  In the SALT--II model, the
@@ -451,8 +451,8 @@ represented in the RMS dispersion of the Ia distance moduli in the Hubble
 diagram of $0.16$ magnitudes {\bf SO WHAT}.  In addition, for events where the
 redshift of the event was not known, this extra redshift parameter could be
 included in the $\chi^2$ calculation to provide a photometric redshift estimate.
-\cite{2007A&A...466...11G} finds an RMS dispersion of $\delta~z/(1 + z) =
-0.01--0.02$, which is comparable to the redshift that may be inferred from the
+\cite{2007A&A...466...11G} finds an RMS dispersion of $\Delta z/(1 + z) =
+0.01-0.02$, which is comparable to the redshift that may be inferred from the
 spectra alone \citep[see also][]{2010ApJ...717...40K}. Spectral reconstruction
 in practice \citep{2010ApJ...719.1759A}.
 
@@ -475,10 +475,10 @@ fill--in--the blanks when there are insufficient constraints.} \medskip \hrule
 \medskip {\centerline{\ub{\sc Statistical Infrastructure (2p)}}} \smallskip {\bf
 Berkeley}
 
-An incoming data stream $f_{i+1}(\lambda, t)$ may be modelled as $$f_{i+1} = x_0
-\times ({\bf S_M} + x_1 \times {\bf S_1} + \ldots)$$ with $x_0$ representing the
-inferred distance modulus to the event, and $x_1$ representing its location
-within the family of events.
+An incoming data stream $f_{k}(\lambda, t)$ may be modelled as $$f_{k} = x_{k0}
+\times ({\bf S_M} + x_{k1} \times {\bf S_1} + \ldots)$$ with $x_{k0}$
+representing the inferred distance modulus to the event, and $x_{k1}$
+representing its location within the family of events.
 
 Efficient implementation.  Computational issues.  Portable to LSST code (C++ and
 Python).
@@ -490,7 +490,7 @@ An add-on to what you have running now.  Apply to PTF, Gaia.
 
 
 
-\bigskip \centerline{\bf IIIa. Team Qualifications (1p)} \smallskip
+\bigskip \centerline{\bf IIIa. Team Qualifications} \smallskip
 
 \medskip {\centerline{\ub{\sc Dr. Becker}}} \smallskip
 
@@ -500,13 +500,13 @@ within several time--domain projects, including the MACHO project
 and most recently the SDSS--II Supernova Survey
 \citep{2008AJ....135..338F,2008AJ....135..348S}.  His most relevant work to this
 proposal was in leading the SALT--II cosmology analysis in
-\cite{2009ApJS..185...32K}.  His familiarity with this software provided the
-inspiration to extend these models to all classes of variability. He has been
-aggregating spectral--temporal surfaces for the LSST image simulation effort
-\citep{2010SPIE.7738E..53C} for the purposes of added realistic stellar and
-cosmological variability to the simulations.  He has been working since 2004 on
-the real--time nightly processing pipeline for LSST at the University of
-Washington.
+\cite{2009ApJS..185...32K}.  His familiarity with the SALT--II software provided
+the inspiration to extend these models to all classes of variability, as
+proposed here. He has been aggregating spectral--temporal surfaces for the LSST
+image simulation effort \citep{2010SPIE.7738E..53C} for the purposes of added
+realistic stellar and cosmological variability to the simulations.  He has been
+working since 2004 on the real--time nightly processing pipeline for LSST at the
+University of Washington.
 
 \medskip {\centerline{\ub{\sc Dr. Bloom}}} \smallskip
 
@@ -529,7 +529,7 @@ Locally Linear Embedding, developing and releasing applications for data
 intensive cosmology, and for integrating research and education (e.g. Connolly
 was the technical lead for the development of Sky in Google Earth).
 
-\bigskip \centerline{\bf IIIb. Previous Support (1.5p)} \smallskip
+\bigskip \centerline{\bf IIIb. Previous Support} \smallskip
 
 \medskip {\centerline{\ub{\sc Dr. Becker}}} \smallskip
 
@@ -573,17 +573,84 @@ General event classification.  Understanding the intrinsic dimensionality of
 astronomical variability. Photo--z event estimates for things without
 spectroscopy.  Note we need a data plan here.
 
-\bigskip \centerline{\bf V. Project Development Plan (1p)} \smallskip
+
+\bigskip \centerline{\bf V. Project Management and Development Plan (1p)}
+\smallskip
+
+PI Becker will serve as the lead for supervision of a research associate (at the
+post--doctoral level) at UW.  This postdoc ideally will have expertise in the
+calibration and management of survey--level volumes of astrophysical data.
+Co--PI Bloom will serve as the lead for supervision of a second research
+associate (at the post--doctoral level) at UCB.  This postdoc ideally will have
+expertise in the application of statistical tools in the field of astronomy.  We
+require RAs at the postdoctoral level because the technical challenges posed by
+this problem require individuals with immediate expertise, and who have fought
+through such issues before at (at least) the graduate student level. This
+includes minutiae such as the role of the underling spectral energy distribution
+on the calibration of photometry (there is no "one" zeropoint per astronomical
+image, it is source dependent), and the efficient implementation (memory
+management, disk access, scaling relations) of statistical algorithms on compute
+hardware. PI Becker will serve as the technical lead for the project, and will
+contribute in all arenas astronomical and statistical at the level of 25\% of
+his time.
+
+Having a distributed team requires a commensurate level of interaction to
+maintain the group focus.  We plan on having weekly phone or video--conferences,
+moderated by Becker and Bloom, outlining the current state of the project,
+addressing problems that arise, and setting goals and expectations for future
+work.  We will also arrange a quarterly trip for each postdoc to visit the
+other's institution, with a rotating host institution, for direct interaction
+and camaraderie. We budget for 3 domestic trips per year per institution in this
+proposal, 2 of which will be used for these collaborative meetings.  We budget
+for one domestic and one international trip per institution for the postdocs to
+advertise our work at appropriate conferences in the fields of Astronomy and
+Computer Science. This type of model, mixing regular weekly phone conferences
+with biannual collaboration meetings, has served Becker and Connolly well in
+working within the distributed LSST Data Management group.
+
+We outline the yearly responsibilities for the PIs, the UW postdoc (PD1), and
+the USB postdoc (PD2) below.
 
 \medskip {\centerline{\ub{\sc Year 1}}} \smallskip
 
-Aggregation and calibration of data
+The first year of the project will require the enumeration of the astrophysical
+phenomena we will model in this project (Bloom), the aggregation and calibration
+of data on these events from extant data archives (PD1 + Becker), the
+development of the statistical infrastructure to build the ST models from these
+input data (PD2 + Bloom + Becker), and importantly the staging of the input data
+for the Principal Component Analyses (PD1 + PD2).
 
 \medskip {\centerline{\ub{\sc Year 2}}} \smallskip
 
-Development of models and statistical infrastructure
+In the second year we come to the meat of the project, where we must build
+viable models from the aggregate input data.  Details such as the model
+resolution in wavelength and time, and the number of principal components that
+can be meaningfully extracted from the data, will be highly input--data
+dependent.  The input data themselves will be inhomogeneous, meaning we will
+have to converge on the optimal configuration of each ST surface dynamically.
+PD1 will be responsible for understanding how the input data may effectively be
+translated into output models (surface resolution in $\lambda, t$; number of
+principal components the data will support w/Connolly), and PD2 will be
+responsible for understanding how to effectively implement a sparse PCA with
+these data, and how the sparsity impacts our understanding of the surface at
+each $\lambda, t$ bin. Becker will actively participate in both of these efforts
+using as reference his understanding of the SALT--II algorithm and its
+implementation details.
+
 
 \medskip {\centerline{\ub{\sc Year 3}}} \smallskip
 
-Service implementation and verification of models on event streams
-
+The final year of the project will include validation of the models, and
+incorporation of the models into a classification service.  PD1 will be
+responsible for developing a fitting infrastructure that takes as inputs a new
+data stream and returns the best--fit parameters from each surface ($x_{ij}$ and
+period or redshift).  PD2 will be responsible for taking the results of this
+fitting process and returning statistical likelihoods that the event is of each
+class.  PD2 will also be responsible for incorporating the overall ST
+infrastructure into an on--line classification resource that is available to the
+astronomical community. PD1 will be responsible for enforcing validation of the
+input data to this service, while PD2 will be responsible for validating that
+the probabilities that are returned from this fitting process are accurate
+representations of our knowledge of the system (through monte--carlo simulations
+and using sources of vetted data that were not input to the models). {\bf Becker
+should do what?  Does Bloom want summer salary for this part of the project?}
