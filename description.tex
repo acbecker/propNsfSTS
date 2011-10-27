@@ -65,7 +65,21 @@ to waste precious follow--up resources on non--Ia events.  Contextual clues were
 used to assist in event classification, including proximity to host galaxy and
 host galaxy type.
 
-Gamma-ray bursts, intense but evanescent flashes from exploding and colliding stars, are observable across the electromagnetic spectrum but only if discovered, disseminated, and followed up rapidly. Intense multi-color imaging coupled with synoptic spectroscopy in the minutes to hours after events are the state-of-the-art in the field. The most precious (scientifically) tend to be those events from the lowest and highest redshift, providing vistas on star formation, dust obscuration, and potentially serving as the bridge between the electromagnetic and gravity wave landscapes. However, at a discovery rate of $\sim$100/yr (primarily from NASA/Swift), the community cannot adequately followup all events with the available resources for target of opportunity observations. Knowing a priori which GRBs are likely to have the largest return given substantial telescope investment is crucial. We \citep{morgan} have begun to using machine learning tools to try to predict high-redshift events from immediately available burst data, couching the prediction as a resource maximization problem.
+Gamma-ray bursts, intense but evanescent flashes from exploding and colliding
+stars, are observable across the electromagnetic spectrum but only if
+discovered, disseminated, and followed up rapidly. Intense multi-color imaging
+coupled with synoptic spectroscopy in the minutes to hours after events are the
+state-of-the-art in the field. The most precious (scientifically) tend to be
+those events from the lowest and highest redshift, providing vistas on star
+formation, dust obscuration, and potentially serving as the bridge between the
+electromagnetic and gravity wave landscapes. However, at a discovery rate of
+$\sim$100/yr (primarily from NASA/Swift), the community cannot adequately
+followup all events with the available resources for target of opportunity
+observations. Knowing a priori which GRBs are likely to have the largest return
+given substantial telescope investment is crucial. We \citep{morgan} have begun
+to using machine learning tools to try to predict high-redshift events from
+immediately available burst data, couching the prediction as a resource
+maximization problem.
 
 %morgan: http://qmorgan.org.org/rategrbz/paper.html
 
@@ -87,11 +101,23 @@ information regarding the location of the variability
 used in these classification schemes, but {\it not} the time--varying color of
 the variable flux.
 
-%Kepler classification? \citep{2010ApJ...713L.204B}
-In the NSF-sponsored Palomar Transient Factory, we have begun to use machine learning techniques to discover new events through image differencing, identifying roughly 1000 variable stars and transients out of 1.5 million candidates per night. These events are, in real-time, classified with an ML classifier that makes use of contextual information (such as color of the nearest galaxy) and temporal metrics (such as difference in magnitude between the event and the quiescent counterpart brightness). We have shown \citep{bloom}  the ability to  distinguish between transients and variable stars with a 3.8\% overall error rate (with 1.7\% errors for imaging within the Sloan Digital Sky Survey footprint). At $>$96\% classification efficiency, the samples achieve 90\% purity. Determing just what sort of transient is found (e.g. supernova, nova, QSO event) has proven more challenging. Only with retrospective analysis, once sufficient data on a light curve has been obtained, that the classification errors begin to drop significantly \citep{rs} (see \citealt{rb} for a review).
+%Kepler classification? \citep{2010ApJ...713L.204B} In the NSF-sponsored Palomar
+Transient Factory, we have begun to use machine learning techniques to discover
+new events through image differencing, identifying roughly 1000 variable stars
+and transients out of 1.5 million candidates per night. These events are, in
+real-time, classified with an ML classifier that makes use of contextual
+information (such as color of the nearest galaxy) and temporal metrics (such as
+difference in magnitude between the event and the quiescent counterpart
+brightness). We have shown \citep{bloom}  the ability to  distinguish between
+transients and variable stars with a 3.8\% overall error rate (with 1.7\% errors
+for imaging within the Sloan Digital Sky Survey footprint). At $>$96\%
+classification efficiency, the samples achieve 90\% purity. Determing just what
+sort of transient is found (e.g. supernova, nova, QSO event) has proven more
+challenging. Only with retrospective analysis, once sufficient data on a light
+curve has been obtained, that the classification errors begin to drop
+significantly \citep{rs} (see \citealt{rb} for a review).
 
-% rs http://arxiv.org/abs/1101.1959
-% rb http://arxiv.org/abs/1104.3142
+% rs http://arxiv.org/abs/1101.1959 % rb http://arxiv.org/abs/1104.3142
 
 % bloom http://arxiv.org/abs/1106.5491
 
@@ -427,8 +453,8 @@ redshfit of the event was not known, this extra redshfit parameter could be
 included in the $\chi^2$ calculation to provide a photometric redshift estimate.
 \cite{2007A&A...466...11G} finds an RMS dispersion of $\delta~z/(1 + z) =
 0.01--0.02$, which is comparable to the redshift that may be inferred from the
-spectra alone \citep[see also][]{2010ApJ...717...40K}.
-Spectral reconstruction in practice \citep{2010ApJ...719.1759A}.
+spectra alone \citep[see also][]{2010ApJ...717...40K}. Spectral reconstruction
+in practice \citep{2010ApJ...719.1759A}.
 
 \begin{figure}[t]
 \centerline{\psfig{figure=figures/fall_blowd.eps,width=0.5\textwidth} \hfil
@@ -473,54 +499,72 @@ within several time--domain projects, including the MACHO project
 \citep{2000PhDT.......258B}, the Deep Lens Survey \citep{2004ApJ...611..418B},
 and most recently the SDSS--II Supernova Survey
 \citep{2008AJ....135..338F,2008AJ....135..348S}.  His most relevant work to this
-proposal was in leading one of the two cosmology analyses in
-\cite{2009ApJS..185...32K}, using the SALT--II lightcurve fitter.  His
-familiarity with this software provided the inspiration to extend these models
-to all classes of variability. He has been aggregating spectral--temporal
-surfaces for the LSST image simulation effort \citep{2010SPIE.7738E..53C} for
-the purposes of added realistic stellar and cosmological variability to the
-simulations.  He has been working since 2004 on the real--time nightly
-processing pipeline for LSST at the University of Washington, and anticipates
-being intimately involved in designing and operating the LSST alert stream
-during construction and operations.
+proposal was in leading the SALT--II cosmology analysis in
+\cite{2009ApJS..185...32K}.  His familiarity with this software provided the
+inspiration to extend these models to all classes of variability. He has been
+aggregating spectral--temporal surfaces for the LSST image simulation effort
+\citep{2010SPIE.7738E..53C} for the purposes of added realistic stellar and
+cosmological variability to the simulations.  He has been working since 2004 on
+the real--time nightly processing pipeline for LSST at the University of
+Washington.
 
 \medskip {\centerline{\ub{\sc Dr. Bloom}}} \smallskip
 
-Co-PI Bloom is director of the Berkeley Center for Time-Domain Informatics, which focuses statisticians, computer scientists, and astronomers on matters of classification and regression on astronomical time-series.  The primary focus has been on the real-time and retrospective classification of the Palomar Transient Factory survey and other public datasets (e.g., Stripe 82). He has also worked on efficient discovery techniques of quasars through time variability and fast implementation of Lomb-Scargle periodograms with Bayesian cross validation. He has worked extensively on gamma-ray burst followup and characterization, predating the start of the GRB afterglow error in 1997.
+Co--PI Bloom is director of the Berkeley Center for Time--Domain Informatics,
+which focuses statisticians, computer scientists, and astronomers on matters of
+classification and regression on astronomical time--series.  The primary focus
+has been on the real-time and retrospective classification of the Palomar
+Transient Factory survey and other public datasets (e.g., Stripe 82). He has
+also worked on efficient discovery techniques of quasars through time
+variability and fast implementation of Lomb-Scargle periodograms with Bayesian
+cross validation. He has worked extensively on gamma--ray burst followup and
+characterization, predating the start of the GRB afterglow era in 1997.
 
 \medskip {\centerline{\ub{\sc Dr. Connolly}}} \smallskip
 
-{\bf Co-PI Connolly is:}
+Co-PI Connolly is simulation scientist for the Large Synoptic Survey Telescope,
+and lead of the UW Data Management group.  His previous work includes
+investigating the dimensionality of large astronomical data sets using PCA and
+Locally Linear Embedding, developing and releasing applications for data
+intensive cosmology, and for integrating research and education (e.g. Connolly
+was the technical lead for the development of Sky in Google Earth).
 
 \bigskip \centerline{\bf IIIb. Previous Support (1.5p)} \smallskip
 
-\medskip {\centerline{\ub{\sc Dr. Becker, Co-I : NSF proposal AST-0827601}}}
-\smallskip
+\medskip {\centerline{\ub{\sc Dr. Becker}}} \smallskip
 
-This proposal, ``The LSST FaST Program : Expanding Participation of
-Underrepresented Minorities in LSST'', was funded through Specific Program Order
-9 (AST-0551161) to the NSF-AURA (Association of Universities for Research in
-Astronomy) Cooperative Agreement AST-0132798.  The project involved simulating
-tens of millions of RR Lyrae lightcurves to investigate LSST's ability to
-recognize the periods and types of these events, as a function of distance
-(faintness) and survey duration.  This team delivered a technical report to the
-LSST Transients and Variable Stars working group at the LSST Fall 2009 ``All
-Hands'' meeting and has submitted a paper to the Astrophysical Journal on the
-final results \citep{RRLyrae}.  Importantly, three of the six students funded by
-this proposal successfully applied to graduate school, with a fourth expected to
-apply this next year.
+``The LSST FaST Program : Expanding Participation of Underrepresented Minorities
+in LSST'', funded through Specific Program Order 9 (AST-0551161) to the NSF-AURA
+(Association of Universities for Research in Astronomy) Cooperative Agreement
+AST-0132798.  The project involved simulating tens of millions of RR Lyrae
+lightcurves to investigate LSST's ability to recognize the periods and types of
+these events, as a function of distance (faintness) and survey duration.  This
+team delivered a technical report to the LSST Transients and Variable Stars
+working group at the LSST Fall 2009 ``All Hands'' meeting and has submitted a
+paper to the Astrophysical Journal on the final results \citep{RRLyrae}.
+Importantly, three of the six students funded by this proposal successfully
+applied to graduate school, with a fourth expected to apply this next year.
 
-\medskip {\centerline{\ub{\sc Dr. Bloom, PI : NSF grant No 0941742}}} \smallskip
+\medskip {\centerline{\ub{\sc Dr. Bloom}}} \smallskip
 
 ``Real-time Classification of Massive Time-series Data Streams'' (PI, J. Bloom;
-amount \$1,573,550; expires 07/12).  Three postdocs, six graduate students, and
-several undergraduates have been supported as part of that project, resulting in
-more than 10 publications to date.  The classification framework built as part
-of this proposal is used in the real-time pipeline of the Palomar Transient
-Factory, and has been responsible for the discovery of more than 15,000 new
-variable stars and transients.
+NSF grant No 0941742; amount \$1,573,550; expires 07/12).  Three postdocs, six
+graduate students, and several undergraduates have been supported as part of
+that project, resulting in more than 10 publications to date.  The
+classification framework built as part of this proposal is used in the real-time
+pipeline of the Palomar Transient Factory, and has been responsible for the
+discovery of more than 15,000 new variable stars and transients.
 
-\medskip {\centerline{\ub{\sc Dr. Connolly:}}} \smallskip
+\medskip {\centerline{\ub{\sc Dr. Connolly}}} \smallskip
+
+"Image Coaddition, Subtraction and Source Detection in the Era of Terabyte Data
+Streams" (PI, A. Connolly; NSF grant AST-0709394; amount \$427,933; expires
+8/31/2011) is the most closely related grant.  Outcomes from this work include:
+the development of non--parametric techniques for the detection of sources
+within sequences of astronomical images through the use of image coaddition and
+subtraction, and algorithms for measuring the clustering of galaxies using
+n-point correlations functions that scale to high-performance parallel
+architectures.
 
 \bigskip \centerline{\bf IV. Broader Impacts (1p)} \smallskip \smallskip {\bf
 UW}
