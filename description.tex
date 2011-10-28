@@ -432,7 +432,7 @@ data) will be retained in the event modeling process described above.
 
 \smallskip {\bf Uncertainties on the Surfaces:} We will additionally capture
 excess variance in the models that is not represented by the surfaces, e.g.
-portions of large model uncertainty that we will want to deweight when fitting.
+portions of large model uncertainty that we will want to de-weight when fitting.
 This excess variance will be modelled using a jackknife resampling procedure:
 for each input event, we will remove it from the training sample and re--create
 the model.  The variance of these residuals across all jackknife resamplings
@@ -552,7 +552,7 @@ information (through either simple tree-based distances or more involved
 Laplacian-based ideas), going beyond the standard 0--1 loss described above.
 (Under 0--1 loss, the cost of misclassifying an RR Lyrae as a Cepheid is the
 same as failing to distinguish between two types of RR Lyrae.) Another approach
-addresses the taxonomy by doing a ``multiscale" or ``multi-resolution"
+addresses the taxonomy by doing a ``multi-scale" or ``multi-resolution"
 classification. Much of the exploration will be in finding various metrics on
 the tree (e.g. \cite{ChungSpectralGraphTheoryBook97}).
 
@@ -611,7 +611,7 @@ An especially intriguing and challenging aspect of  real-time lightcurve classif
 
 Members of our collaboration are already running a discovery and classification engine for the Palomar Transient Factory and will soon be adding the Dark Energy Survey and La Silla Supernova Search as part of the input streams.  This service, now private, is highly trained to PTF cadences and peculiarities, making use of light curve and context information when available. The ${\cal D}_k$ metrics on each source will serve as additional features for the classification engine.
 
-Both DES and La Silla are expected to run during much of the lifetime of the proposed work, allowing us to expand the classification effort with this additional input. In addition, as new surveys start producing public streams (e.g., PTF2 and Gaia) we intend to add a classification engine for those sources as well.  For all non-proprietary data streams we propose to build a public classification service, allowing subscribers to receive (via push and pull mechanisms) real-time classification statements about each source that match certain criteria. This webservice will be operated out at UC Berkeley and make use of best practices for web front ends, database architecture (e.g., postgresql, Hadoop), push mechanisms (e.g., Jabber), and astronomical event packaging (e.g., VOEvent and other VO tools).
+Both DES and La Silla are expected to run during much of the lifetime of the proposed work, allowing us to expand the classification effort with this additional input. In addition, as new surveys start producing public streams (e.g., PTF2 and Gaia) we intend to add a classification engine for those sources as well.  For all non-proprietary data streams we propose to build a public classification service, allowing subscribers to receive (via push and pull mechanisms) real-time classification statements about each source that match certain criteria. This web service will be operated out at UC Berkeley and make use of best practices for web front ends, database architecture (e.g., postgresql, Hadoop), push mechanisms (e.g., Jabber), and astronomical event packaging (e.g., VOEvent and other VO tools).
 
 \bigskip \centerline{\bf IIIa. Team Qualifications} \smallskip
 
