@@ -152,7 +152,7 @@ modeling is in the field of supernova studies. The pioneering work of
 \cite{2002PASP..114..803N} integrated a large, inhomogeneous sample of
 spectroscopy of Ia supernovae into a single averaged representation of the Ia
 phenomena. This integrated model represented the behavior of a typical
-"Branch--normal" Type Ia supernova, and defined the spectrum of a typical event
+``Branch--normal'' Type Ia supernova, and defined the spectrum of a typical event
 at all integer wavelengths between 1000~\AA~and 25000~\AA, 1 per day for 90 days
 after explosion.  Nugent subsequently expanded his template set to include
 separate models for intrinsically bright and faint Ia, supernovae Type Ib/c, and
@@ -179,7 +179,7 @@ surface in time and wavelength that describes the temporal evolution of the
 rest-frame spectral energy distribution (SED) for SNe Ia. Importantly, the
 SALT--II model yields not just the average behavior of the Type Ia sample,
 equivalent to the \cite{2002PASP..114..803N} data, but also includes a first
-"principal component" about the mean, which captures the spectral--temporal
+``principal component'' about the mean, which captures the spectral--temporal
 behavior of the diversity (intrinsically bright to intrinsically faint) of Ia.
 This single model -- mean surface plus a first moment -- contains the behaviors
 and correlations seen in the Ia population such as the $\Delta m_{15}$
@@ -495,13 +495,7 @@ fill--in--the blanks when there are insufficient constraints.} \medskip \hrule
 
 \medskip {\centerline{\ub{\sc Statistical Infrastructure}}} \smallskip
 
-
-An incoming data stream $f_{k}(\lambda, t)$ may be modelled as $$f_{k} = x_{k0}
-\times ({\bf S_M} + x_{k1} \times {\bf S_1} + \ldots)$$ with $x_{k0}$
-representing the inferred distance modulus to the event, and $x_{k1}$
-representing its location within the family of events.
-
-We expect to construct a the set of  $\cal S_k = ({\bf S_M},{\bf S_M})$ for $k$
+We expect to construct a the set of  ${\cal S}_k = \{({\bf S_M},{\bf S_M})\}_k$ for $k$
 classes of variables and transients. While the actual number of classes will
 ultimately be subject to availability and quality of the input data streams (\S
 XXX), we expect $k \approx 100$ and may be much more if we include a variety of
@@ -522,7 +516,7 @@ more complex approach is required: in particular, there must be some notion of a
 minimal distance subject to likelihood of having observed the particular
 dataset. That is, each spectral–temporal surfaces sets the effective priors on
 $t_0$ and $\phi_0$. We will explore such a Bayesian approach to distance
-minimization.
+minimization. Software tools (written in Python and C++) used to determine {\cal D}$_k(f_{i+1})$ will be made open source.
 
 The lightcurve classification problem raises a very interesting statistical
 question: how can we account for the taxonometric (hierarchical, tree-like)
@@ -533,7 +527,7 @@ Cepheid or an RR Lyrae? What kind of RR Lyrae is it?  With limited data it may
 be possible to make highly probable classifications at the high levels of the
 taxonomy but not at the lowest levels.
 
-The General Catalog of Variable Stars (GCVS; \citep{ksf+96}) has developed a
+The General Catalog of Variable Stars (GCVS; \citealt{ksf+96}) has developed a
 classification tree based upon an admixture of observed properties (e.g.,
 ``slow'' and ``red'') and inferred physical characteristics (e.g.,
 ``eclipsing'').  While it is not crucial for our purposes that a taxonomy be
@@ -551,7 +545,7 @@ Making robust probabilistic statements based on a graphical structure has
 received some attention in the statistics literature
 \citep{DBLP:conf/icml/KollerS97,DBLP:conf/icdm/SunL01,DBLP:conf/icml/DekelKS04,
 CesaBianchi06,  bcmt-lmmsc-04}, with much of the interest spurred by the
-problems of identifying text (e.g., \cite{593971}). We propose to explore two
+problems of identifying text (e.g., \citealt{593971}). We propose to explore two
 general ways of attacking this problem. One approach is to incorporate a fixed
 (e.g. GCVS) taxonomy by changing our measures of loss to reflect taxonomic
 information (through either simple tree-based distances or more involved
@@ -565,7 +559,7 @@ the tree (e.g. \cite{ChungSpectralGraphTheoryBook97}).
 Another approach to incorporating taxonomy into classification, which we
 proposed to explore, could make use of recent work on statistical phylogenetics,
 where the taxonomy is provided by a phylogenetic tree.  The idea
-\cite{elithesis} is to use the taxonomy to induce a taxonomically meaningful
+\citep{elithesis} is to use the taxonomy to induce a taxonomically meaningful
 inner-product between observations. This is done by, for instance, using the
 Laplacian of the graph and its spectral decomposition to find a taxonomically
 meaningful way of representing functions on the graph, which for us are really
@@ -575,7 +569,7 @@ multivariate statistical techniques \cite{PurdomAnalyzingDataWithGraphs08}. A
 natural question is to investigate whether a similar idea can be used in the
 context of max-margin classifiers, though there are classification-specific
 problems that need to be addressed. We note that ideas from structured
-classification work \cite{bcmt-lmmsc-04} might become helpful in our context. In
+classification work \citep{bcmt-lmmsc-04} might become helpful in our context. In
 this line of inquiry, one might also ask if one can derive linear combinations
 of features that are taxonomically-meaningful and use those in growing decision
 trees.
@@ -589,7 +583,7 @@ T}_1^{(i)}\}_{i=1}^k$ the corresponding subtrees. We could then fit a random
 forest in the same fashion to classify the observations assigned to each of
 these new trees into their first level of categorization. A procedure like this
 one clearly takes into account the taxonomy information (cf.\
-\cite{CesaBianchi06}).  We note that this sequence of classifiers could be
+\citealt{CesaBianchi06}).  We note that this sequence of classifiers could be
 constructed with a sequence of distance-based loss functions described above
 which assign edge lengths equal to zero for lower levels of the tree.
 
@@ -598,7 +592,7 @@ This has long been a concern in probabilistic weather forecasting---does it rain
 on 30\% of the days for which the forecast probability of rain was 30\%?  The
 ``probabilities'' a classifier produces may not correspond to the actual
 relative frequencies in the training set on which it was based
-\cite{niculescu05:obtaining}.  In our context it would be desirable that the
+\citep{niculescu05:obtaining}.  In our context it would be desirable that the
 proportion of objects labeled as pulsating variables is a good estimate of the
 actual proportion of such variables in the data set.  For example, we seek  to
 meaningfully combine  the reported probabilities of the various types of
@@ -606,15 +600,18 @@ pulsating variables to obtain the marginal probability that an object is of this
 type.  We plan to investigate the issue of calibration within a taxonomic
 structure.
 
-\josh{Efficient implementation.  Computational issues.  Portable to LSST code
-(C++ and Python).}
+The nexus of statistical methods, modern computational resources, and massive data sets is leading to revised notions of statistical efficiency that take into account computational constraints \citep{MeinBickRice2008}.  Convex surrogates for 0--1 loss as mentioned above are but one of a growing number of examples.  Mindful of the importance of computational efficiency in the LSST era, {\it  we expect that the methods we develop to meet the unique challenges posed by lightcurve classification will contribute to this evolving literature.} 
+
+Computational constraints are less important during the learning/training phase than at other stages.  A decision tree would clearly be preferable to a Bayesian method that required expensive Markov Chain Monte Carlo (MCMC) runs for every object. Constraining a classification procedure by a computational cost would amount to adding a Lagrange multiplier times the computational cost to the statistical loss function.  The key is that the resulting optimization problem be computationally tractable.   \citet{MeinBickRice2008} that by using dynamic programming,  tree searches from the top node downward  could produce enormous gains in computation with very little loss of statistical efficiency.
+
+An especially intriguing and challenging aspect of  real-time lightcurve classification is that the ${\cal D}_k$ of each object potentially
+\emph{change} with every new data time-series data point. Here the taxonomic approach can be used to advantage. For example, some strategies arise naturally for an approach, such as that described above, which composes classification procedures at every vertex of the tree. For a given object it may not be too important to classify more finely in the taxonomy at every new observation.  On the other hand, if there is some non-negligible probability of an event belonging to a rare class or a never-observed phenomena, it would be crucial to update frequently.  Thus, updating policies can vary among the vertices and the updating choices will depend dynamically on the availability of computational resources. We propose to explore this technique both at the theoretical level and by example.
 
 \medskip {\centerline{\ub{\sc Event Classification Service}}} \smallskip
 
+Members of our collaboration are already running a discovery and classification engine for the Palomar Transient Factory and will soon be adding the Dark Energy Survey and La Silla Supernova Search as part of the input streams.  This service, now private, is highly trained to PTF cadences and peculiarities, making use of light curve and context information when available. The ${\cal D}_k$ metrics on each source will serve as additional features for the classification engine.
 
-\josh{An add-on to what you have running now.  Apply to PTF, Gaia.}
-
-
+Both DES and La Silla are expected to run during much of the lifetime of the proposed work, allowing us to expand the classification effort with this additional input. In addition, as new surveys start producing public streams (e.g., PTF2 and Gaia) we intend to add a classification engine for those sources as well.  For all non-proprietary data streams we propose to build a public classification service, allowing subscribers to receive (via push and pull mechanisms) real-time classification statements about each source that match certain criteria. This webservice will be operated out at UC Berkeley and make use of best practices for web front ends, database architecture (e.g., postgresql, Hadoop), push mechanisms (e.g., Jabber), and astronomical event packaging (e.g., VOEvent and other VO tools).
 
 \bigskip \centerline{\bf IIIa. Team Qualifications} \smallskip
 
@@ -644,7 +641,8 @@ Transient Factory survey and other public datasets (e.g., Stripe 82). He has
 also worked on efficient discovery techniques of quasars through time
 variability and fast implementation of Lomb-Scargle periodograms with Bayesian
 cross validation. He has worked extensively on gamma--ray burst followup and
-characterization, predating the start of the GRB afterglow era in 1997.
+characterization. He is co-chair of the LSST science working group on transients and variable stars. VOEvent, the IVOA standard for astronomical event publication, was his brainchild.
+
 
 \medskip {\centerline{\ub{\sc Dr. Connolly}}} \smallskip
 
