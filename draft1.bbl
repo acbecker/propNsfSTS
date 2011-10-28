@@ -1,4 +1,4 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{55}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -49,6 +49,12 @@
 {Bailey}, S., {Aragon}, C., {Romano}, R., {Thomas}, R.~C., {Weaver}, B.~A., \&
   {Wong}, D. 2007, \apj, 665, 1246
 
+\bibitem[{{Bartlett} {et~al.}(2005){Bartlett}, {Collins}, {Taskar}, \&
+  {McAllester}}]{bcmt-lmmsc-04}
+{Bartlett}, P.~L., {Collins}, M., {Taskar}, B., \& {McAllester}, D. 2005, in
+  Advances in Neural Information Processing Systems 17, ed. L.~K. Saul,
+  Y.~Weiss, \& L.~Bottou (Cambridge, MA: MIT Press), 113--120
+
 \bibitem[{{Becker}(2000)}]{2000PhDT.......258B}
 {Becker}, A.~C. 2000, PhD thesis, University of Washington
 
@@ -80,6 +86,16 @@
   S.~B., {Butler}, N.~R., {Kulkarni}, S.~R., {Gal-Yam}, A., \& {Law}, N. 2011,
   ArXiv e-prints
 
+\bibitem[{Cesa-Bianchi {et~al.}(2006)Cesa-Bianchi, Gentile, \&
+  Zaniboni}]{CesaBianchi06}
+Cesa-Bianchi, N., Gentile, C., \& Zaniboni, L. 2006, Journal of Machine
+  Learning Research, 7, 31
+
+\bibitem[{Chung(1997)}]{ChungSpectralGraphTheoryBook97}
+Chung, F. R.~K. 1997, CBMS Regional Conference Series in Mathematics, Vol.~92,
+  Spectral graph theory (Published for the Conference Board of the Mathematical
+  Sciences, Washington, DC), xii+207
+
 \bibitem[{{Connolly} {et~al.}(2010){Connolly}, {Peterson}, {Jernigan}, {Abel},
   {Bankert}, {Chang}, {Claver}, {Gibson}, {Gilmore}, {Grace}, {Jones},
   {Ivezic}, {Jee}, {Juric}, {Kahn}, {Krabbendam}, {Krughoff}, {Lorenz},
@@ -102,6 +118,11 @@
   {Vandenbussche}, {Garrido}, \& {Solano}}]{2007A&A...475.1159D}
 {Debosscher}, J., {Sarro}, L.~M., {Aerts}, C., {Cuypers}, J., {Vandenbussche},
   B., {Garrido}, R., \& {Solano}, E. 2007, \aap, 475, 1159
+
+\bibitem[{Dekel {et~al.}(2004)Dekel, Keshet, \&
+  Singer}]{DBLP:conf/icml/DekelKS04}
+Dekel, O., Keshet, J., \& Singer, Y. 2004, in ACM International Conference
+  Proceeding Series, Vol.~69, ICML, ed. C.~E. Brodley (ACM)
 
 \bibitem[{{Djorgovski} {et~al.}(2008){Djorgovski}, {Baltay}, {Mahabal},
   {Drake}, {Williams}, {Rabinowitz}, {Graham}, {Donalek}, {Glikman}, {Bauer},
@@ -271,6 +292,17 @@ Karhunen, K. 1947, Ann. Acad. Sci. Fenn., Ser. A.1.: Math.-Phys., 37, 3
   {Smith}, M., {Bernstein}, J.~P., {Bizyaev}, D., {Goobar}, A., {Kuhlmann}, S.,
   {Schneider}, D.~P., \& {Stritzinger}, M. 2010, \apj, 717, 40
 
+\bibitem[{{Kholopov} {et~al.}(1996){Kholopov}, {Samus'}, {Frolov}, {Goranskij},
+  {Gorynya}, {Kireeva}, {Kukarkina}, {Kurochkin}, {Medvedeva}, \&
+  {Perova}}]{ksf+96}
+{Kholopov}, P.~N., {Samus'}, N.~N., {Frolov}, M.~S., {Goranskij}, V.~P.,
+  {Gorynya}, N.~A., {Kireeva}, N.~N., {Kukarkina}, N.~P., {Kurochkin}, N.~E.,
+  {Medvedeva}, G.~I., \& {Perova}, N.~B. 1996, VizieR Online Data Catalog, 2139
+
+\bibitem[{Koller \& Sahami(1997)}]{DBLP:conf/icml/KollerS97}
+Koller, D. \& Sahami, M. 1997, in ICML, ed. D.~H. Fisher (Morgan Kaufmann),
+  170--178
+
 \bibitem[{Lo\`eve(1948)}]{Loeve:48}
 Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
   (Gauthier-Villars)
@@ -282,6 +314,10 @@ Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
   Society of the Pacific Conference Series, Vol. 434, Astronomical Data
   Analysis Software and Systems XIX, ed. {Y.~Mizumoto, K.-I.~Morita, \&
   M.~Ohishi}, 115--+
+
+\bibitem[{{Niculescu-Mizil} \& {Caruana}(2005)}]{niculescu05:obtaining}
+{Niculescu-Mizil}, A. \& {Caruana}, R. 2005, in Proc. 21st Conference on
+  Uncertainty in Artificial Intelligence (UAI '05) (AUAI Press)
 
 \bibitem[{{Nugent} {et~al.}(2002){Nugent}, {Kim}, \&
   {Perlmutter}}]{2002PASP..114..803N}
@@ -312,6 +348,9 @@ Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
 
 \bibitem[{{Phillips}(1993)}]{1993ApJ...413L.105P}
 {Phillips}, M.~M. 1993, \apjl, 413, L105
+
+\bibitem[{Purdom(2008)}]{PurdomAnalyzingDataWithGraphs08}
+Purdom, E. 2008, Submitted to Annals of Applied Statistics
 
 \bibitem[{{Richards} {et~al.}(2011){Richards}, {Starr}, {Butler}, {Bloom},
   {Brewer}, {Crellin-Quick}, {Higgins}, {Kennedy}, \&
@@ -371,10 +410,17 @@ Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
 \bibitem[{{Stubbs} \& {Tonry}(2006)}]{2006ApJ...646.1436S}
 {Stubbs}, C.~W. \& {Tonry}, J.~L. 2006, \apj, 646, 1436
 
+\bibitem[{Sun \& Lim(2001)}]{DBLP:conf/icdm/SunL01}
+Sun, A. \& Lim, E.-P. 2001, in ICDM, ed. N.~Cercone, T.~Y. Lin, \& X.~Wu (IEEE
+  Computer Society), 521--528
+
 \bibitem[{{Udalski} {et~al.}(1994){Udalski}, {Szymanski}, {Kaluzny}, {Kubiak},
   {Mateo}, {Krzeminski}, \& {Paczynski}}]{1994AcA....44..227U}
 {Udalski}, A., {Szymanski}, M., {Kaluzny}, J., {Kubiak}, M., {Mateo}, M.,
   {Krzeminski}, W., \& {Paczynski}, B. 1994, \actaa, 44, 227
+
+\bibitem[{Weigend {et~al.}(1999)Weigend, Wiener, \& Pedersen}]{593971}
+Weigend, A.~S., Wiener, E.~D., \& Pedersen, J.~O. 1999, Inf. Retr., 1, 193
 
 \bibitem[{{Zechmeister} \& {K{\"u}rster}(2009)}]{2009A&A...496..577Z}
 {Zechmeister}, M. \& {K{\"u}rster}, M. 2009, \aap, 496, 577

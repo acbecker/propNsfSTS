@@ -500,6 +500,111 @@ An incoming data stream $f_{k}(\lambda, t)$ may be modelled as $$f_{k} = x_{k0}
 representing the inferred distance modulus to the event, and $x_{k1}$
 representing its location within the family of events.
 
+We expect to construct a the set of  $\cal S_k = ({\bf S_M},{\bf S_M})$ for $k$
+classes of variables and transients. While the actual number of classes will
+ultimately be subject to availability and quality of the input data streams (\S
+XXX), we expect $k \approx 100$ and may be much more if we include a variety of
+theoretical curves. The fundamental question we wish to answer is: {\it given a
+new light curve, $f_{i+1}(\lambda, t)$, what is the probability that it arises
+from class $k$?}
+
+A straight forward approach is to represent a notion of distance of the
+lightcurve from each of the $k$ templates as {\cal D}$_k(f_{i+1})$, where the
+normalization and start time $t_0$ (or phase offset $\phi_0$) are varied so as
+to minimize the $\chi^2$ for each $({\bf S_M},{\bf S_M})$. The most likely class
+is then that which minimizes {\cal D} [we will explore both parametric and
+non-parametric interpolations of the surfaces to facilitate this distance
+measure]. In the limit with well-sampled and multicolor light curves, this
+approach should be sufficient for class {\it selection}. However, for
+probabilistic lightcurve classification, especially in the few-data limit, a
+more complex approach is required: in particular, there must be some notion of a
+minimal distance subject to likelihood of having observed the particular
+dataset. That is, each spectral–temporal surfaces sets the effective priors on
+$t_0$ and $\phi_0$. We will explore such a Bayesian approach to distance
+minimization.
+
+The lightcurve classification problem raises a very interesting statistical
+question: how can we account for the taxonometric (hierarchical, tree-like)
+structure of the landscape of astronomical events? A increasingly more detailed
+set of questions may be asked about such an event: is it variable or
+non-variable? Is it a pulsating variable or an eclipsing binary?  Is it a
+Cepheid or an RR Lyrae? What kind of RR Lyrae is it?  With limited data it may
+be possible to make highly probable classifications at the high levels of the
+taxonomy but not at the lowest levels.
+
+The General Catalog of Variable Stars (GCVS; \citep{ksf+96}) has developed a
+classification tree based upon an admixture of observed properties (e.g.,
+``slow'' and ``red'') and inferred physical characteristics (e.g.,
+``eclipsing'').  While it is not crucial for our purposes that a taxonomy be
+based on intrinsic physical properties alone, the lack of a coherent
+taxonometric structure for variable sources presents a challenge when one of the
+goals is to make a  probabilistic statements about nature of an unknown event.
+We proposed to {\it explore possible taxonomies with particular attention to
+their computational consequences}.  The existing taxonometric structure is
+certainly relevant to training a classifier based upon $\cal S_k$, since not all
+lightcurves in the training database will be confidently identified at the leaf
+level, but may contain valuable information about the relationships of features
+to higher level vertices in the taxonomy.
+
+Making robust probabilistic statements based on a graphical structure has
+received some attention in the statistics literature
+\citep{DBLP:conf/icml/KollerS97,DBLP:conf/icdm/SunL01,DBLP:conf/icml/DekelKS04,
+1088722,CesaBianchi06,  bcmt-lmmsc-04}, with much of the interest spurred by the
+problems of identifying text (e.g., \cite{593971}). We propose to explore two
+general ways of attacking this problem. One approach is to incorporate a fixed
+(e.g. GCVS) taxonomy by changing our measures of loss to reflect taxonomic
+information (through either simple tree-based distances or more involved
+Laplacian-based ideas), going beyond the standard 0--1 loss described above. 
+(Under 0--1 loss, the cost of misclassifying an RR Lyrae as a Cepheid is the
+same as failing to distinguish between two types of RR Lyrae.) Another approach
+addresses the taxonomy by doing a ``multiscale" or ``multi-resolution"
+classification. Much of the exploration will be in finding various metrics on
+the tree (e.g. \cite{ChungSpectralGraphTheoryBook97}).
+
+Another approach to incorporating taxonomy into classification, which we
+proposed to explore, could make use of recent work on statistical phylogenetics,
+where the taxonomy is provided by a phylogenetic tree.  The idea
+\cite{elithesis} is to use the taxonomy to induce a taxonomically meaningful
+inner-product between observations. This is done by, for instance, using the
+Laplacian of the graph and its spectral decomposition to find a taxonomically
+meaningful way of representing functions on the graph, which for us are really
+vectors of observations on the graph. For instance, when using Principal
+Component Analysis, one can then incorporate graph information into classical
+multivariate statistical techniques \cite{PurdomAnalyzingDataWithGraphs08}. A
+natural question is to investigate whether a similar idea can be used in the
+context of max-margin classifiers, though there are classification-specific
+problems that need to be addressed. We note that ideas from structured
+classification work \cite{bcmt-lmmsc-04} might become helpful in our context. In
+this line of inquiry, one might also ask if one can derive linear combinations
+of features that are taxonomically-meaningful and use those in growing decision
+trees.
+
+Another possible approach that takes  into account the tree structure of the
+problem would consist of pruning the tree ${\cal T}_0$ at different levels and
+constructing recursively classifiers for each level.  For example, we could
+first construct a random forest that would classify the observations into the
+first level of categorizations of the tree ${\cal T}_0$. Call $\{{\cal
+T}_1^{(i)}\}_{i=1}^k$ the corresponding subtrees. We could then fit a random
+forest in the same fashion to classify the observations assigned to each of
+these new trees into their first level of categorization. A procedure like this
+one clearly takes into account the taxonomy information (cf.\
+\cite{CesaBianchi06}).  We note that this sequence of classifiers could be
+constructed with a sequence of distance-based loss functions described above
+which assign edge lengths equal to zero for lower levels of the tree.
+
+The notion of a classifier being ``calibrated'' is a relevant line of inquiry.
+This has long been a concern in probabilistic weather forecasting---does it rain
+on 30\% of the days for which the forecast probability of rain was 30\%?  The
+``probabilities'' a classifier produces may not correspond to the actual
+relative frequencies in the training set on which it was based 
+\cite{niculescu05:obtaining}.  In our context it would be desirable that the
+proportion of objects labeled as pulsating variables is a good estimate of the
+actual proportion of such variables in the data set.  For example, we seek  to
+meaningfully combine  the reported probabilities of the various types of
+pulsating variables to obtain the marginal probability that an object is of this
+type.  We plan to investigate the issue of calibration within a taxonomic
+structure.
+
 \josh{Efficient implementation.  Computational issues.  Portable to LSST code
 (C++ and Python).}
 
