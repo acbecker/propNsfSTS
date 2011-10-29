@@ -338,7 +338,7 @@ kilonovae, etc. These will be important to find.}
 \end{itemize}
 
 
-\medskip {\centerline{\ub{\sc Generation of Spectral--Temporal Surfaces (2p)}}}
+\medskip {\centerline{\ub{\sc Generation of Spectral--Temporal Surfaces}}}
 \smallskip
 
 We proceed using the following underlying model for astrophysical variability:
@@ -401,8 +401,11 @@ spectra]{1995AJ....110.1071C}, and "sparse" or "gappy" PCA is a particular
 implementation to be used when the inputs sample only a small fraction of the
 model \citep{zouht04}, such as here.  As is standard when using PCA
 decomposition, we will first create a "mean" surface ${\bf S_M}(\lambda, t)$ and
-find the principal variations about this mean: $$f_i(\lambda, t) = {\bf
-S_M}(\lambda, t) + \sum_{j=1} x_j \times {\bf S_j}(\lambda, t).$$
+find the principal variations about this mean, yielding the model:
+$$f_i(\lambda, t) = x_0 \times \left( {\bf S_M}(\lambda, t) + \sum_{j=1} x_j
+\times {\bf S_j}(\lambda, t) \right)$$ where $x_0$ represents an overall
+brightness scaling (i.e. distance modulus), and $x_j$ represents the location of
+the phenomena within the family of events.
 
 \begin{center} {\bf We emphasize that these basis surfaces (${\bf S_M}(\lambda,
 t)$,${\bf S_1}(\lambda, t)$,${\bf S_2}(\lambda, t)$ $\ldots$ ${\bf S_j}(\lambda,
@@ -495,7 +498,7 @@ fill--in--the blanks when there are insufficient constraints.} \medskip \hrule
 
 \medskip {\centerline{\ub{\sc Statistical Infrastructure}}} \smallskip
 
-We expect to construct a the set of  ${\cal S}_k = \{({\bf S_M},{\bf S_M})\}_k$
+We expect to construct the set of  ${\cal S}_k = \{({\bf S_M},{\bf S_j})\}_k$
 for $k$ classes of variables and transients. While the actual number of classes
 will ultimately be subject to availability and quality of the input data streams
 (\S XXX), we expect $k \approx 100$ and may be much more if we include a variety
@@ -505,19 +508,21 @@ from class $k$?}
 
 A straight forward approach is to represent a notion of distance of the
 lightcurve from each of the $k$ templates as {\cal D}$_k(f_{i+1})$, where the
-normalization and start time $t_0$ (or phase offset $\phi_0$) are varied so as
-to minimize the $\chi^2$ for each $({\bf S_M},{\bf S_M})$. The most likely class
-is then that which minimizes {\cal D} [we will explore both parametric and
-non-parametric interpolations of the surfaces to facilitate this distance
-measure]. In the limit with well-sampled and multicolor light curves, this
-approach should be sufficient for class {\it selection}. However, for
-probabilistic lightcurve classification, especially in the few-data limit, a
+normalization and start time $t_0$ (or phase offset $\phi_0$, or redshift $z$)
+are varied so as to minimize the $\chi^2$ for each $({\bf S_M},{\bf S_j})$. The
+most likely class is then that which minimizes {\cal D} [we will explore both
+parametric and non-parametric interpolations of the surfaces to facilitate this
+distance measure]. In the limit with well--sampled and multicolor light curves,
+this approach should be sufficient for class {\it selection}. However, for
+probabilistic lightcurve classification, especially in the few--data limit, a
 more complex approach is required: in particular, there must be some notion of a
 minimal distance subject to likelihood of having observed the particular
-dataset. That is, each spectral–temporal surfaces sets the effective priors on
-$t_0$ and $\phi_0$. We will explore such a Bayesian approach to distance
-minimization. Software tools (written in Python and C++) used to determine {\cal
-D}$_k(f_{i+1})$ will be made open source.
+dataset.  In particular, each spectral--temporal training set yields the
+expected range of contributions from the secondary (tertiary, etc.) surfaces,
+which may be used as priors when doing absolute classification. We will explore
+such a Bayesian approach to distance minimization.  All software tools (written
+in Python and C++) used to determine {\cal D}$_k(f_{i+1})$, as well as the
+surfaces themselves,  will be made open source.
 
 The lightcurve classification problem raises a very interesting statistical
 question: how can we account for the taxonometric (hierarchical, tree-like)
@@ -535,12 +540,12 @@ classification tree based upon an admixture of observed properties (e.g.,
 based on intrinsic physical properties alone, the lack of a coherent
 taxonometric structure for variable sources presents a challenge when one of the
 goals is to make a  probabilistic statements about nature of an unknown event.
-We proposed to {\it explore possible taxonomies with particular attention to
+We propose to {\it explore possible taxonomies with particular attention to
 their computational consequences}.  The existing taxonometric structure is
-certainly relevant to training a classifier based upon $\cal S_k$, since not all
-lightcurves in the training database will be confidently identified at the leaf
-level, but may contain valuable information about the relationships of features
-to higher level vertices in the taxonomy.
+certainly relevant to training a classifier based upon ${\cal S}_k$, since not
+all lightcurves in the training database will be confidently identified at the
+leaf level, but may contain valuable information about the relationships of
+features to higher level vertices in the taxonomy.
 
 Making robust probabilistic statements based on a graphical structure has
 received some attention in the statistics literature
@@ -553,27 +558,26 @@ information (through either simple tree-based distances or more involved
 Laplacian-based ideas), going beyond the standard 0--1 loss described above.
 (Under 0--1 loss, the cost of misclassifying an RR Lyrae as a Cepheid is the
 same as failing to distinguish between two types of RR Lyrae.) Another approach
-addresses the taxonomy by doing a ``multi-scale" or ``multi-resolution"
+addresses the taxonomy by doing a ``multi--scale" or ``multi--resolution"
 classification. Much of the exploration will be in finding various metrics on
-the tree (e.g. \cite{ChungSpectralGraphTheoryBook97}).
+the tree (e.g. \citealt{ChungSpectralGraphTheoryBook97}).
 
-Another approach to incorporating taxonomy into classification, which we
-proposed to explore, could make use of recent work on statistical phylogenetics,
-where the taxonomy is provided by a phylogenetic tree.  The idea
-\citep{elithesis} is to use the taxonomy to induce a taxonomically meaningful
-inner-product between observations. This is done by, for instance, using the
-Laplacian of the graph and its spectral decomposition to find a taxonomically
-meaningful way of representing functions on the graph, which for us are really
-vectors of observations on the graph. For instance, when using Principal
-Component Analysis, one can then incorporate graph information into classical
-multivariate statistical techniques \cite{PurdomAnalyzingDataWithGraphs08}. A
-natural question is to investigate whether a similar idea can be used in the
-context of max-margin classifiers, though there are classification-specific
-problems that need to be addressed. We note that ideas from structured
-classification work \citep{bcmt-lmmsc-04} might become helpful in our context.
-In this line of inquiry, one might also ask if one can derive linear
-combinations of features that are taxonomically-meaningful and use those in
-growing decision trees.
+Another approach to incorporating taxonomy into classification, which we propose
+to explore, could make use of recent work on statistical phylogenetics, where
+the taxonomy is provided by a phylogenetic tree.  The idea \citep{elithesis} is
+to use the taxonomy to induce a taxonomically meaningful inner--product between
+observations. This is done by, for instance, using the Laplacian of the graph
+and its spectral decomposition to find a taxonomically meaningful way of
+representing functions on the graph, which for us are really vectors of
+observations on the graph. For instance, when using Principal Component
+Analysis, one can then incorporate graph information into classical multivariate
+statistical techniques \cite{PurdomAnalyzingDataWithGraphs08}. A natural
+question is to investigate whether a similar idea can be used in the context of
+max--margin classifiers, though there are classification--specific problems that
+need to be addressed. We note that ideas from structured classification work
+\citep{bcmt-lmmsc-04} might become helpful in our context. In this line of
+inquiry, one might also ask if one can derive linear combinations of features
+that are taxonomically--meaningful and use those in growing decision trees.
 
 Another possible approach that takes  into account the tree structure of the
 problem would consist of pruning the tree ${\cal T}_0$ at different levels and
@@ -598,13 +602,13 @@ proportion of objects labeled as pulsating variables is a good estimate of the
 actual proportion of such variables in the data set.  For example, we seek  to
 meaningfully combine  the reported probabilities of the various types of
 pulsating variables to obtain the marginal probability that an object is of this
-type.  We plan to investigate the issue of calibration within a taxonomic
+type.  We plan to investigate this issue of calibration within a taxonomic
 structure.
 
 The nexus of statistical methods, modern computational resources, and massive
 data sets is leading to revised notions of statistical efficiency that take into
 account computational constraints \citep{MeinBickRice2008}.  Convex surrogates
-for 0--1 loss as mentioned above are but one of a growing number of examples. 
+for 0--1 loss as mentioned above are but one of a growing number of examples.
 Mindful of the importance of computational efficiency in the LSST era, {\it  we
 expect that the methods we develop to meet the unique challenges posed by
 lightcurve classification will contribute to this evolving literature.}
@@ -615,19 +619,19 @@ method that required expensive Markov Chain Monte Carlo (MCMC) runs for every
 object. Constraining a classification procedure by a computational cost would
 amount to adding a Lagrange multiplier times the computational cost to the
 statistical loss function.  The key is that the resulting optimization problem
-be computationally tractable.   \citet{MeinBickRice2008} that by using dynamic
-programming,  tree searches from the top node downward  could produce enormous
-gains in computation with very little loss of statistical efficiency.
+be computationally tractable.   \citet{MeinBickRice2008} show that by using
+dynamic programming,  tree searches from the top node downward  could produce
+enormous gains in computation with very little loss of statistical efficiency.
 
 An especially intriguing and challenging aspect of  real-time lightcurve
-classification is that the ${\cal D}_k$ of each object potentially \emph{change}
-with every new data time-series data point. Here the taxonomic approach can be
-used to advantage. For example, some strategies arise naturally for an approach,
-such as that described above, which composes classification procedures at every
-vertex of the tree. For a given object it may not be too important to classify
-more finely in the taxonomy at every new observation.  On the other hand, if
-there is some non-negligible probability of an event belonging to a rare class
-or a never-observed phenomena, it would be crucial to update frequently.  Thus,
+classification is that the ${\cal D}_k$ of each object \emph{changes} with every
+new data time--series data point. Here the taxonomic approach can be used to
+advantage. For example, some strategies arise naturally for an approach, such as
+that described above, which composes classification procedures at every vertex
+of the tree. For a given object it may not be too important to classify more
+finely in the taxonomy at every new observation.  On the other hand, if there is
+some non--negligible probability of an event belonging to a rare class or a
+never--observed phenomena, it would be crucial to update frequently.  Thus,
 updating policies can vary among the vertices and the updating choices will
 depend dynamically on the availability of computational resources. We propose to
 explore this technique both at the theoretical level and by example.
@@ -646,9 +650,9 @@ Both DES and La Silla are expected to run during much of the lifetime of the
 proposed work, allowing us to expand the classification effort with this
 additional input. In addition, as new surveys start producing public streams
 (e.g., PTF2 and Gaia) we intend to add a classification engine for those sources
-as well.  For all non-proprietary data streams we propose to build a public
+as well.  For all non--proprietary data streams we propose to build a public
 classification service, allowing subscribers to receive (via push and pull
-mechanisms) real-time classification statements about each source that match
+mechanisms) real--time classification statements about each source that match
 certain criteria. This web service will be operated out at UC Berkeley and make
 use of best practices for web front ends, database architecture (e.g.,
 postgresql, Hadoop), push mechanisms (e.g., Jabber), and astronomical event
@@ -733,15 +737,35 @@ subtraction, and algorithms for measuring the clustering of galaxies using
 n-point correlations functions that scale to high-performance parallel
 architectures.
 
-\bigskip \centerline{\bf IV. Broader Impacts (1p)} \smallskip \smallskip
+\bigskip \centerline{\bf IV. Broader Impacts} \smallskip
 
-\becker{ General event classification.  Understanding the intrinsic
-dimensionality of astronomical variability. Photo--z event estimates for things
-without spectroscopy.  Note we need a data plan here.}
+The proposal will build and strengthen collaboration between current producers
+and consumers of real--time event data (UCB with PTF) and future producers of
+same (UW with LSST).  It will bring needed statistical rigor to the
+multidimensional description and interpretation of astrophysical phenomena; this
+type of interdisciplinary effort typically pays dividends by fostering advances
+in both fields.  In statistics this will occur in the application of sparse PCA
+on a two--dimensional surface of information, and in the innovation that it will
+require to operate robustly.  In astronomy, it will result in the understanding
+of the intrinsic dimensionality of all classes of astronomical variability, how
+the classes may be interrelated, and what sort of observations (in time and
+wavelength) are optimal for nailing down the class of a given event.  These
+models will also enable photometric redshift estimates for the event types
+\citep[e.g.][]{2010ApJ...717...40K}, which may be used in conjunction with
+photometric redshifts of any host galaxy \citep[e.g.][]{1962IAUS...15..390B} to
+provide a more certain estimate of event redshift without spectroscopic
+observations, which are expensive to obtain.
+
+Our participation in current and future time--domain surveys will also ensure
+that these models are not generated in a vacuum, and that they will be developed
+with practicality in mind.  We plan to advertise this project at multiple
+conferences per year, which will allow for collaboration with other producers
+and consumers of time--domain data we may have not included here. Importantly,
+our planned inclusion of these models into extant classification services will
+ensure that they achieve broad application and relevance in a burgeoning field.
 
 
-\bigskip \centerline{\bf V. Project Management and Development Plan (1p)}
-\smallskip
+\bigskip \centerline{\bf V. Project Management and Development Plan} \smallskip
 
 PI Becker will serve as the lead for supervision of a research associate (at the
 post--doctoral level) at UW.  This postdoc ideally will have expertise in the

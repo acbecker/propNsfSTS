@@ -1,4 +1,4 @@
-\begin{thebibliography}{55}
+\begin{thebibliography}{56}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -54,6 +54,10 @@
 {Bartlett}, P.~L., {Collins}, M., {Taskar}, B., \& {McAllester}, D. 2005, in
   Advances in Neural Information Processing Systems 17, ed. L.~K. Saul,
   Y.~Weiss, \& L.~Bottou (Cambridge, MA: MIT Press), 113--120
+
+\bibitem[{{Baum}(1962)}]{1962IAUS...15..390B}
+{Baum}, W.~A. 1962, in IAU Symposium, Vol.~15, Problems of Extra-Galactic
+  Research, ed. {G.~C.~McVittie}, 390--+
 
 \bibitem[{{Becker}(2000)}]{2000PhDT.......258B}
 {Becker}, A.~C. 2000, PhD thesis, University of Washington
