@@ -1,4 +1,4 @@
-\begin{thebibliography}{56}
+\begin{thebibliography}{70}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -69,6 +69,9 @@
   {Dell'Antonio}, I.~P., {Frail}, D.~A., {Halpern}, J., {Margoniner}, V.~E.,
   {Norman}, D., {Tyson}, J.~A., \& {Schommer}, R.~A. 2004, \apj, 611, 418
 
+\bibitem[{{Berdnikov}(2008)}]{2008yCat.2285....0B}
+{Berdnikov}, L.~N. 2008, VizieR Online Data Catalog, 2285, 0
+
 \bibitem[{{Berk} {et~al.}(1999){Berk}, {Anderson}, {Bernstein}, {Acharya},
   {Dothe}, {Matthew}, {Adler-Golden}, {Chetwynd}, {Richtsmeier}, {Pukall},
   {Allred}, {Jeong}, \& {Hoke}}]{1999SPIE.3756..348B}
@@ -118,6 +121,17 @@ Chung, F. R.~K. 1997, CBMS Regional Conference Series in Mathematics, Vol.~92,
 {Connolly}, A.~J., {Szalay}, A.~S., {Bershady}, M.~A., {Kinney}, A.~L., \&
   {Calzetti}, D. 1995, \aj, 110, 1071
 
+\bibitem[{{Contreras} {et~al.}(2010){Contreras}, {Hamuy}, {Phillips},
+  {Folatelli}, {Suntzeff}, {Persson}, {Stritzinger}, {Boldt}, {Gonz{\'a}lez},
+  {Krzeminski}, {Morrell}, {Roth}, {Salgado}, {Jos{\'e} Maureira}, {Burns},
+  {Freedman}, {Madore}, {Murphy}, {Wyatt}, {Li}, \&
+  {Filippenko}}]{2010AJ....139..519C}
+{Contreras}, C., {Hamuy}, M., {Phillips}, M.~M., {Folatelli}, G., {Suntzeff},
+  N.~B., {Persson}, S.~E., {Stritzinger}, M., {Boldt}, L., {Gonz{\'a}lez}, S.,
+  {Krzeminski}, W., {Morrell}, N., {Roth}, M., {Salgado}, F., {Jos{\'e}
+  Maureira}, M., {Burns}, C.~R., {Freedman}, W.~L., {Madore}, B.~F., {Murphy},
+  D., {Wyatt}, P., {Li}, W., \& {Filippenko}, A.~V. 2010, \aj, 139, 519
+
 \bibitem[{{Debosscher} {et~al.}(2007){Debosscher}, {Sarro}, {Aerts}, {Cuypers},
   {Vandenbussche}, {Garrido}, \& {Solano}}]{2007A&A...475.1159D}
 {Debosscher}, J., {Sarro}, L.~M., {Aerts}, C., {Cuypers}, J., {Vandenbussche},
@@ -161,6 +175,13 @@ Dekel, O., Keshet, J., \& Singer, Y. 2004, in ACM International Conference
 \bibitem[{{Eastman} {et~al.}(2010){Eastman}, {Siverd}, \&
   {Gaudi}}]{2010PASP..122..935E}
 {Eastman}, J., {Siverd}, R., \& {Gaudi}, B.~S. 2010, \pasp, 122, 935
+
+\bibitem[{{Eyer} \& {Mowlavi}(2008)}]{2008JPhCS.118a2010E}
+{Eyer}, L. \& {Mowlavi}, N. 2008, Journal of Physics Conference Series, 118,
+  012010
+
+\bibitem[{{Filippenko}(1982)}]{1982PASP...94..715F}
+{Filippenko}, A.~V. 1982, \pasp, 94, 715
 
 \bibitem[{{Frieman} {et~al.}(2008){Frieman}, {Bassett}, {Becker}, {Choi},
   {Cinabro}, {DeJongh}, {Depoy}, {Dilday}, {Doi}, {Garnavich}, {Hogan},
@@ -244,6 +265,21 @@ Dekel, O., Keshet, J., \& Singer, Y. 2004, in ACM International Conference
 {Hogg}, D.~W., {Baldry}, I.~K., {Blanton}, M.~R., \& {Eisenstein}, D.~J. 2002,
   ArXiv Astrophysics e-prints
 
+\bibitem[{{Holtzman} {et~al.}(2008){Holtzman}, {Marriner}, {Kessler}, {Sako},
+  {Dilday}, {Frieman}, {Schneider}, {Bassett}, {Becker}, {Cinabro}, {DeJongh},
+  {Depoy}, {Doi}, {Garnavich}, {Hogan}, {Jha}, {Konishi}, {Lampeitl},
+  {Marshall}, {McGinnis}, {Miknaitis}, {Nichol}, {Prieto}, {Riess}, {Richmond},
+  {Romani}, {Smith}, {Takanashi}, {Tokita}, {van der Heyden}, {Yasuda}, \&
+  {Zheng}}]{2008AJ....136.2306H}
+{Holtzman}, J.~A., {Marriner}, J., {Kessler}, R., {Sako}, M., {Dilday}, B.,
+  {Frieman}, J.~A., {Schneider}, D.~P., {Bassett}, B., {Becker}, A., {Cinabro},
+  D., {DeJongh}, F., {Depoy}, D.~L., {Doi}, M., {Garnavich}, P.~M., {Hogan},
+  C.~J., {Jha}, S., {Konishi}, K., {Lampeitl}, H., {Marshall}, J.~L.,
+  {McGinnis}, D., {Miknaitis}, G., {Nichol}, R.~C., {Prieto}, J.~L., {Riess},
+  A.~G., {Richmond}, M.~W., {Romani}, R., {Smith}, M., {Takanashi}, N.,
+  {Tokita}, K., {van der Heyden}, K., {Yasuda}, N., \& {Zheng}, C. 2008, \aj,
+  136, 2306
+
 \bibitem[{{Hsiao} {et~al.}(2007){Hsiao}, {Conley}, {Howell}, {Sullivan},
   {Pritchet}, {Carlberg}, {Nugent}, \& {Phillips}}]{2007ApJ...663.1187H}
 {Hsiao}, E.~Y., {Conley}, A., {Howell}, D.~A., {Sullivan}, M., {Pritchet},
@@ -264,8 +300,68 @@ Dekel, O., Keshet, J., \& Singer, Y. 2004, in ACM International Conference
   {Jester}, S., {Harris}, H., {Harding}, P., {Morrison}, H., {Brinkmann}, J.,
   {Schneider}, D.~P., \& {York}, D. 2007, \aj, 134, 973
 
+\bibitem[{{Jha} {et~al.}(2006){Jha}, {Kirshner}, {Challis}, {Garnavich},
+  {Matheson}, {Soderberg}, {Graves}, {Hicken}, {Alves}, {Arce}, {Balog},
+  {Barmby}, {Barton}, {Berlind}, {Bragg}, {Brice{\~n}o}, {Brown}, {Buckley},
+  {Caldwell}, {Calkins}, {Carter}, {Concannon}, {Donnelly}, {Eriksen},
+  {Fabricant}, {Falco}, {Fiore}, {Garcia}, {G{\'o}mez}, {Grogin}, {Groner},
+  {Groot}, {Haisch}, {Hartmann}, {Hergenrother}, {Holman}, {Huchra},
+  {Jayawardhana}, {Jerius}, {Kannappan}, {Kim}, {Kleyna}, {Kochanek},
+  {Koranyi}, {Krockenberger}, {Lada}, {Luhman}, {Luu}, {Macri}, {Mader},
+  {Mahdavi}, {Marengo}, {Marsden}, {McLeod}, {McNamara}, {Megeath}, {Moraru},
+  {Mossman}, {Muench}, {Mu{\~n}oz}, {Muzerolle}, {Naranjo}, {Nelson-Patel},
+  {Pahre}, {Patten}, {Peters}, {Peters}, {Raymond}, {Rines}, {Schild},
+  {Sobczak}, {Spahr}, {Stauffer}, {Stefanik}, {Szentgyorgyi}, {Tollestrup},
+  {V{\"a}is{\"a}nen}, {Vikhlinin}, {Wang}, {Willner}, {Wolk}, {Zajac}, {Zhao},
+  \& {Stanek}}]{2006AJ....131..527J}
+{Jha}, S., {Kirshner}, R.~P., {Challis}, P., {Garnavich}, P.~M., {Matheson},
+  T., {Soderberg}, A.~M., {Graves}, G.~J.~M., {Hicken}, M., {Alves}, J.~F.,
+  {Arce}, H.~G., {Balog}, Z., {Barmby}, P., {Barton}, E.~J., {Berlind}, P.,
+  {Bragg}, A.~E., {Brice{\~n}o}, C., {Brown}, W.~R., {Buckley}, J.~H.,
+  {Caldwell}, N., {Calkins}, M.~L., {Carter}, B.~J., {Concannon}, K.~D.,
+  {Donnelly}, R.~H., {Eriksen}, K.~A., {Fabricant}, D.~G., {Falco}, E.~E.,
+  {Fiore}, F., {Garcia}, M.~R., {G{\'o}mez}, M., {Grogin}, N.~A., {Groner}, T.,
+  {Groot}, P.~J., {Haisch}, Jr., K.~E., {Hartmann}, L., {Hergenrother}, C.~W.,
+  {Holman}, M.~J., {Huchra}, J.~P., {Jayawardhana}, R., {Jerius}, D.,
+  {Kannappan}, S.~J., {Kim}, D.-W., {Kleyna}, J.~T., {Kochanek}, C.~S.,
+  {Koranyi}, D.~M., {Krockenberger}, M., {Lada}, C.~J., {Luhman}, K.~L., {Luu},
+  J.~X., {Macri}, L.~M., {Mader}, J.~A., {Mahdavi}, A., {Marengo}, M.,
+  {Marsden}, B.~G., {McLeod}, B.~A., {McNamara}, B.~R., {Megeath}, S.~T.,
+  {Moraru}, D., {Mossman}, A.~E., {Muench}, A.~A., {Mu{\~n}oz}, J.~A.,
+  {Muzerolle}, J., {Naranjo}, O., {Nelson-Patel}, K., {Pahre}, M.~A., {Patten},
+  B.~M., {Peters}, J., {Peters}, W., {Raymond}, J.~C., {Rines}, K., {Schild},
+  R.~E., {Sobczak}, G.~J., {Spahr}, T.~B., {Stauffer}, J.~R., {Stefanik},
+  R.~P., {Szentgyorgyi}, A.~H., {Tollestrup}, E.~V., {V{\"a}is{\"a}nen}, P.,
+  {Vikhlinin}, A., {Wang}, Z., {Willner}, S.~P., {Wolk}, S.~J., {Zajac}, J.~M.,
+  {Zhao}, P., \& {Stanek}, K.~Z. 2006, \aj, 131, 527
+
+\bibitem[{{Jurcsik} \& {Kovacs}(1996)}]{1996A&A...312..111J}
+{Jurcsik}, J. \& {Kovacs}, G. 1996, \aap, 312, 111
+
 \bibitem[{Karhunen(1947)}]{Karhunen:47}
 Karhunen, K. 1947, Ann. Acad. Sci. Fenn., Ser. A.1.: Math.-Phys., 37, 3
+
+\bibitem[{{Kasliwal} {et~al.}(2011{\natexlab{a}}){Kasliwal}, {Cenko},
+  {Kulkarni}, {Ofek}, {Quimby}, \& {Rau}}]{2011ApJ...735...94K}
+{Kasliwal}, M.~M., {Cenko}, S.~B., {Kulkarni}, S.~R., {Ofek}, E.~O., {Quimby},
+  R., \& {Rau}, A. 2011{\natexlab{a}}, \apj, 735, 94
+
+\bibitem[{{Kasliwal} {et~al.}(2011{\natexlab{b}}){Kasliwal}, {Kulkarni},
+  {Arcavi}, {Quimby}, {Ofek}, {Nugent}, {Jacobsen}, {Gal-Yam}, {Green},
+  {Yaron}, {Fox}, {Howell}, {Cenko}, {Kleiser}, {Bloom}, {Miller}, {Li},
+  {Filippenko}, {Starr}, {Poznanski}, {Law}, {Helou}, {Frail}, {Neill},
+  {Forster}, {Martin}, {Tendulkar}, {Gehrels}, {Kennea}, {Sullivan},
+  {Bildsten}, {Dekany}, {Rahmer}, {Hale}, {Smith}, {Zolkower}, {Velur},
+  {Walters}, {Henning}, {Bui}, {McKenna}, \& {Blake}}]{2011ApJ...730..134K}
+{Kasliwal}, M.~M., {Kulkarni}, S.~R., {Arcavi}, I., {Quimby}, R.~M., {Ofek},
+  E.~O., {Nugent}, P., {Jacobsen}, J., {Gal-Yam}, A., {Green}, Y., {Yaron}, O.,
+  {Fox}, D.~B., {Howell}, J.~L., {Cenko}, S.~B., {Kleiser}, I., {Bloom}, J.~S.,
+  {Miller}, A., {Li}, W., {Filippenko}, A.~V., {Starr}, D., {Poznanski}, D.,
+  {Law}, N.~M., {Helou}, G., {Frail}, D.~A., {Neill}, J.~D., {Forster}, K.,
+  {Martin}, D.~C., {Tendulkar}, S.~P., {Gehrels}, N., {Kennea}, J., {Sullivan},
+  M., {Bildsten}, L., {Dekany}, R., {Rahmer}, G., {Hale}, D., {Smith}, R.,
+  {Zolkower}, J., {Velur}, V., {Walters}, R., {Henning}, J., {Bui}, K.,
+  {McKenna}, D., \& {Blake}, C. 2011{\natexlab{b}}, \apj, 730, 134
 
 \bibitem[{{Kessler} {et~al.}(2009){Kessler}, {Becker}, {Cinabro}, {Vanderplas},
   {Frieman}, {Marriner}, {Davis}, {Dilday}, {Holtzman}, {Jha}, {Lampeitl},
@@ -311,6 +407,11 @@ Koller, D. \& Sahami, M. 1997, in ICML, ed. D.~H. Fisher (Morgan Kaufmann),
 Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
   (Gauthier-Villars)
 
+\bibitem[{{Macri} {et~al.}(2001){Macri}, {Stanek}, {Sasselov}, {Krockenberger},
+  \& {Kaluzny}}]{2001AJ....121..870M}
+{Macri}, L.~M., {Stanek}, K.~Z., {Sasselov}, D.~D., {Krockenberger}, M., \&
+  {Kaluzny}, J. 2001, \aj, 121, 870
+
 \bibitem[{{Mahabal} {et~al.}(2010){Mahabal}, {Djorgovski}, {Donalek}, {Drake},
   {Graham}, {Williams}, {Moghaddam}, \& {Turmon}}]{2010ASPC..434..115M}
 {Mahabal}, A., {Djorgovski}, S.~G., {Donalek}, C., {Drake}, A., {Graham}, M.,
@@ -318,6 +419,11 @@ Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
   Society of the Pacific Conference Series, Vol. 434, Astronomical Data
   Analysis Software and Systems XIX, ed. {Y.~Mizumoto, K.-I.~Morita, \&
   M.~Ohishi}, 115--+
+
+\bibitem[{{McGurk} {et~al.}(2010){McGurk}, {Kimball}, \&
+  {Ivezi{\'c}}}]{2010AJ....139.1261M}
+{McGurk}, R.~C., {Kimball}, A.~E., \& {Ivezi{\'c}}, {\v Z}. 2010, \aj, 139,
+  1261
 
 \bibitem[{{Niculescu-Mizil} \& {Caruana}(2005)}]{niculescu05:obtaining}
 {Niculescu-Mizil}, A. \& {Caruana}, R. 2005, in Proc. 21st Conference on
@@ -396,6 +502,14 @@ Purdom, E. 2008, Submitted to Annals of Applied Statistics
   {Nitta}, A., {Pan}, K., {Saurage}, G., \& {Snedden}, S.~A. 2008, \aj, 135,
   348
 
+\bibitem[{{Sako} {et~al.}(2011){Sako}, {Bassett}, {Connolly}, {Dilday},
+  {Cambell}, {Frieman}, {Gladney}, {Kessler}, {Lampeitl}, {Marriner}, {Miquel},
+  {Nichol}, {Schneider}, {Smith}, \& {Sollerman}}]{2011ApJ...738..162S}
+{Sako}, M., {Bassett}, B., {Connolly}, B., {Dilday}, B., {Cambell}, H.,
+  {Frieman}, J.~A., {Gladney}, L., {Kessler}, R., {Lampeitl}, H., {Marriner},
+  J., {Miquel}, R., {Nichol}, R.~C., {Schneider}, D.~P., {Smith}, M., \&
+  {Sollerman}, J. 2011, \apj, 738, 162
+
 \bibitem[{{Sesar} {et~al.}(2010){Sesar}, {Ivezi{\'c}}, {Grammer}, {Morgan},
   {Becker}, {Juri{\'c}}, {De Lee}, {Annis}, {Beers}, {Fan}, {Lupton}, {Gunn},
   {Knapp}, {Jiang}, {Jester}, {Johnston}, \& {Lampeitl}}]{2010ApJ...708..717S}
@@ -403,6 +517,11 @@ Purdom, E. 2008, Submitted to Annals of Applied Statistics
   {Becker}, A.~C., {Juri{\'c}}, M., {De Lee}, N., {Annis}, J., {Beers}, T.~C.,
   {Fan}, X., {Lupton}, R.~H., {Gunn}, J.~E., {Knapp}, G.~R., {Jiang}, L.,
   {Jester}, S., {Johnston}, D.~E., \& {Lampeitl}, H. 2010, \apj, 708, 717
+
+\bibitem[{{Shen} {et~al.}(2010){Shen}, {Kasen}, {Weinberg}, {Bildsten}, \&
+  {Scannapieco}}]{2010ApJ...715..767S}
+{Shen}, K.~J., {Kasen}, D., {Weinberg}, N.~N., {Bildsten}, L., \&
+  {Scannapieco}, E. 2010, \apj, 715, 767
 
 \bibitem[{{Stubbs} {et~al.}(2007){Stubbs}, {High}, {George}, {DeRose},
   {Blondin}, {Tonry}, {Chambers}, {Granett}, {Burke}, \&
@@ -422,6 +541,19 @@ Sun, A. \& Lim, E.-P. 2001, in ICDM, ed. N.~Cercone, T.~Y. Lin, \& X.~Wu (IEEE
   {Mateo}, {Krzeminski}, \& {Paczynski}}]{1994AcA....44..227U}
 {Udalski}, A., {Szymanski}, M., {Kaluzny}, J., {Kubiak}, M., {Mateo}, M.,
   {Krzeminski}, W., \& {Paczynski}, B. 1994, \actaa, 44, 227
+
+\bibitem[{{Walker} {et~al.}(2011){Walker}, {Hook}, {Sullivan}, {Howell},
+  {Astier}, {Balland}, {Basa}, {Bronder}, {Carlberg}, {Conley}, {Fouchez},
+  {Guy}, {Hardin}, {Pain}, {Perrett}, {Pritchet}, {Regnault}, {Rich},
+  {Aldering}, {Fakhouri}, {Kronborg}, {Palanque-Delabrouille}, {Perlmutter},
+  {Ruhlmann-Kleider}, \& {Zhang}}]{2011yCat..74101262W}
+{Walker}, E.~S., {Hook}, I.~M., {Sullivan}, M., {Howell}, D.~A., {Astier}, P.,
+  {Balland}, C., {Basa}, S., {Bronder}, T.~J., {Carlberg}, R., {Conley}, A.,
+  {Fouchez}, D., {Guy}, J., {Hardin}, D., {Pain}, R., {Perrett}, K.,
+  {Pritchet}, C., {Regnault}, N., {Rich}, J., {Aldering}, G., {Fakhouri},
+  H.~K., {Kronborg}, T., {Palanque-Delabrouille}, N., {Perlmutter}, S.,
+  {Ruhlmann-Kleider}, V., \& {Zhang}, T. 2011, VizieR Online Data Catalog,
+  7410, 1262
 
 \bibitem[{Weigend {et~al.}(1999)Weigend, Wiener, \& Pedersen}]{593971}
 Weigend, A.~S., Wiener, E.~D., \& Pedersen, J.~O. 1999, Inf. Retr., 1, 193
