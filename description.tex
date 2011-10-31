@@ -40,7 +40,7 @@ sense that they will unify the statistical description of astronomical
 variability from today's heterogeneous standards into a common language.  To
 provide the broadest possible impact from this effort, we will build a
 classification infrastructure incorporating these models into a real--time event
-broker that will be available to the astronomical community.
+broker available to the astronomical community.
 
 
 \medskip {\centerline{\ub{\sc A Brief History of Time--Domain Astronomy}}}
@@ -51,11 +51,11 @@ wide--field (10 square degree) microlensing surveys such as MACHO
 \citep{2000ApJ...542..281A}, OGLE \citep{1994AcA....44..227U}, and EROS
 \citep{2003A&A...400..951A}.   Early on, team members recognized that there was
 value in a quick concerted response to on--going events: followup after the
-event completed would yield none of the exotic effects such as parallax,
+event completed would yield none of the second--order effects such as parallax,
 resolution of the lensed star's disk, or lens or source binarity.  The
-microlensing surveys implemented rapid alert streams that fed (through emails or
-phone calls) into follow--up networks such as GMAN \citep{2000PhDT.......258B}
-and PLANET \citep{1998ApJ...509..687A}, which resolved for the first time many
+microlensing surveys implemented alert streams that fed (through emails or phone
+calls) into follow--up networks such as GMAN \citep{2000PhDT.......258B} and
+PLANET \citep{1998ApJ...509..687A}, and which resolved for the first time many
 of the exotica expected of complex gravitational lens systems.
 
 Subsequent time--domain efforts turned their focus to precision cosmology
@@ -86,23 +86,23 @@ burst data, couching the prediction as a resource maximization problem.
 
 %morgan: http://qmorgan.org.org/rategrbz/paper.html
 
-In the early 2000s surveys began to categorize and release {\it all} types of
-events found in their data, in near real--time. This includes the Deep Lens
-Survey \citep{2004ApJ...611..418B} and the Faint Sky Variability Survey
-\citep{2003MNRAS.339..427G}.  In these cases, coarse attempts were made at event
-classification for all objects displaying astrometric or photometric
-variability. Primarily contextual information was used (e.g. ecliptic latitude,
-distance from host galaxy) and classifications were done by humans at the
-telescope or remotely using web--based visual classification tools.  More recent
-time--domain surveys such as the Palomar--Quest survey
-\citep{2008AN....329..263D} and Catalina Real-Time Transient Survey
-\citep{2011arXiv1102.5004D} have begun to adopt modern statistical techniques to
-classify events.  This includes morphological classification of the pixel--level
-flux that triggered the event \citep{2008AIPC.1082..252D}, as well as contextual
-information regarding the location of the variability
-\citep{2010ASPC..434..115M}.  We note that colors of the quiescent objects are
-used in these classification schemes, but {\it not} the time--varying color of
-the variable flux.
+With increasing computational resources, surveys are now able to categorize and
+release {\it all} types of events found in their data, in real--time. Early
+adopters included the Deep Lens Survey \citep{2004ApJ...611..418B} and the Faint
+Sky Variability Survey \citep{2003MNRAS.339..427G}.  In these cases, coarse
+attempts were made at event classification for all objects displaying
+astrometric or photometric variability. Primarily contextual information was
+used (e.g. ecliptic latitude, distance from host galaxy) and classifications
+were done by humans at the telescope or remotely using web--based visual
+classification tools.  More recent time--domain surveys such as the
+Palomar--Quest survey \citep{2008AN....329..263D} and Catalina Real-Time
+Transient Survey \citep{2011arXiv1102.5004D} have begun to adopt modern
+statistical techniques to classify events.  This includes morphological
+classification of the pixel--level flux that triggered the event
+\citep{2008AIPC.1082..252D}, as well as contextual information regarding the
+location of the variability \citep{2010ASPC..434..115M}.  We note that colors of
+the quiescent objects are used in these classification schemes, but {\it not}
+the time--varying color of the variable flux.
 
 %Kepler classification? \citep{2010ApJ...713L.204B}
 
@@ -131,10 +131,7 @@ design they were being applied to.  To continue this trend into the future,
 where surveys such as Gaia\footnote{\url{http://gaia.esa.int}} and LSST will
 report on {\it all} classes of variability, a class of models needs to be
 generated that match the ambitious designs of the surveys (massive data rates,
-sparse sampling in time, inhomogeneous sampling in wavelength).  This is
-particularly important for driving the next generation of autonomous follow--up
-resources, such as LCOGT \citep{2008AN....329..269H}, that must algorithmically
-sift through the data streams to achieve their particular science goals.
+sampling sparse in time and inhomogeneous in wavelength).
 
 \medskip {\centerline{\ub{\sc Strides Towards Spectral--Temporal Event
 Classification}}} \smallskip
@@ -144,9 +141,8 @@ Center\footnote{\url{http://timemachine.iic.harvard.edu/}} and the Berkeley
 Transients Classification
 Pipeline\footnote{\url{http://dotastro.org/about/tcp.php}} have made substantial
 advances in automated event classification, their methods remain inherently
-one--dimensional. That is, their models of event behavior are relevant for data
-in a single passband, but do not yet take into account color evolution during
-the events.
+one--dimensional. That is, their models of event behavior do not yet take into
+account color evolution during the events.
 
 One field where there has been substantial progress in spectral--temporal
 modeling is in the field of supernova studies. The pioneering work of
@@ -180,14 +176,14 @@ surface in time and wavelength that describes the temporal evolution of the
 rest-frame spectral energy distribution (SED) for SNe Ia. Importantly, the
 SALT--II model yields not just the average behavior of the Type Ia sample,
 equivalent to the \cite{2002PASP..114..803N} data, but also includes a first
-``principal component'' about the mean, which captures the spectral--temporal
-behavior of the diversity (intrinsically bright to intrinsically faint) of Ia.
-This single model -- mean surface plus a first moment -- contains the behaviors
-and correlations seen in the Ia population such as the $\Delta m_{15}$
-brightness--decline \citep{1993ApJ...413L.105P} or brightness--stretch
-\citep{1998AJ....116.1009R} relations.  The need for only a single principal
-component reflects the fact that Ia supernova are intrinsically a one--parameter
-family; the SALT--II model captures this in a spectral--temporal representation.
+``principal component'' about the mean, which models the diversity
+(intrinsically bright to intrinsically faint) of Ia. This single representation
+-- mean surface plus a first moment -- contains the behaviors and correlations
+seen in the Ia population such as the $\Delta m_{15}$ brightness--decline
+\citep{1993ApJ...413L.105P} or brightness--stretch \citep{1998AJ....116.1009R}
+relations.  The need for only a single principal component reflects the fact
+that Ia supernova are intrinsically a one--parameter family; the SALT--II model
+captures this in a spectral--temporal representation.
 
 Figure~\ref{fig:salt2} displays the mean surface ({\it left}) and first
 principal component surface ({\it right}) from the SALT--II model.  The behavior
@@ -198,7 +194,7 @@ Importantly, an incoming spectral--temporal data stream can be compared to these
 surfaces, and a statistical assessment made whether or not it is behaving in
 accordance with this model.  This likelihood may be generated using the
 surfaces, the photometric uncertainty on the incoming data, and (optionally)
-priors on the amplitude of the second surface indicated by the best--fit.  This
+priors on the amplitude of the second surface indicated by the best fit.  This
 is the process we envision resulting from this proposal : {\bf an incoming event
 stream will be evaluated against an ensemble of these surfaces to yield a
 statistical likelihood that the event is of each class.}
@@ -218,8 +214,7 @@ derived using principal component analysis.  The diversity of Ia lightcurves
 (across all passbands and at all times) can be represented by a scaled addition
 of this secondary surface to the primary surface, reflecting the observation
 that Ia are intrinsically a 1--parameter family.  {\bf We propose here to make
-similar models for {\it all} classes of astronomical variability, which will
-serve as the common currency in general event classification efforts.}} \medskip
+similar models for {\it all} classes of astronomical variability.}} \medskip
 \hrule \label{fig:salt2} \end{figure}
 
 \bigskip \centerline{\bf II. Proposed Work} \smallskip
@@ -264,23 +259,21 @@ describe in detail each step in this process.
 \medskip {\centerline{\ub{\sc Aggregation of Data}}} \smallskip
 
 The first step in this process is to identify and aggregate the diversity of
-time--domain data.  A first pass at this effort has been taken by the Berkeley
-Time Domain Center with results aggregated on the website \url{
-http://dotastro.org/lightcurves/classes.php}, including data from Galactic and
-extra--Galactic variable star catalogs such as \cite{2008yCat.2285....0B},
-\cite{2001AJ....121..870M}, etc.  In all, 137 subclasses of variable objects
-have been defined.  This may be visualized in Figure~\ref{fig:var}.
+time--domain data.  We will use as an initial resource data that have been
+aggregated by the Berkeley Time Domain Center\footnote{\url{
+http://dotastro.org/lightcurves/classes.php}}.  This includes data from Galactic
+and extra--Galactic variable star catalogs such as \cite{2008yCat.2285....0B},
+\cite{2001AJ....121..870M}, etc., 137 subclasses of variable objects in all.
 
 \begin{figure}[t]
 \centerline{\psfig{figure=figures/vartree.eps,width=1.0\textwidth}} \smallskip
-\caption[]{\footnotesize Example tree--based representation of astronomical
-variability, from \cite{2008JPhCS.118a2010E}.  We anticipate building
-spectral--temporal models for many of these phenomena, as well as their
-subclasses, from vetted data sources.} \medskip \hrule \label{fig:var}
-\end{figure}
+\caption[]{\footnotesize A tree--based representation of astronomical
+variability, from \cite{2008JPhCS.118a2010E}.  We will build spectral--temporal
+models for these phenomena, as well as their subclasses, from vetted data
+sources.} \medskip \hrule \label{fig:var} \end{figure}
 
-Additional input data sources will include but not be limited to: re--calibrated
-data from SDSS Stripe 82 on variable stars \citep{2010ApJ...708..717S} and
+Additional input data will include but not be limited to: re--calibrated
+photometry from SDSS Stripe 82 on variable stars \citep{2010ApJ...708..717S} and
 supernovae \citep{2008AJ....136.2306H,2011ApJ...738..162S}, including
 per--camera filter profiles of \cite{2007AJ....134..973I}; variable stars from
 the OGLE and Hipparcos surveys cataloged by \cite{2007A&A...475.1159D};
@@ -288,33 +281,38 @@ photometric and spectroscopic data from the Carnegie Supernova Project
 \citep[e.g.][]{2010AJ....139..519C} and Supernova Legacy Survey
 \citep[e.g.][]{2011yCat..74101262W}; the Suspect Supernova Spectrum
 Archive\footnote{\url{http://suspect.nhn.ou.edu/~suspect/}}; low--redshift
-supernova data from \cite{2006AJ....131..527J}; classes of novae including
+supernova data from \cite{2006AJ....131..527J}; and classes of novae including
 recently discovered faint--fast novae \citep{2011ApJ...735...94K} and luminous
-red novae \citep{2011ApJ...730..134K}.  While this list is not exhaustive, it
-does given an idea of the scope of the effort we wish to undertake.  In
-addition, many of the "known unknown" classes of variability have theoretical
-models which we must incorporate into the spectral--temporal paradigm.  This
-includes quite a large variety of super-- and sub--luminous transient events
+red novae \citep{2011ApJ...730..134K}.  The Co--Is are also involved in
+proposals for time--domain spectroscopic surveys, with source selection based
+upon variability catalogs such as from SDSS Stripe 82 and
+Pan--STARRS\footnote{\url{http://pan-starrs.ifa.hawaii.edu/public/}}; while
+these would be optimal spectral inputs to our models, we do not require them for
+this effort to be a success.  Although this list is not exhaustive, it does give
+an idea of the scope of the effort we wish to undertake -- Figure~\ref{fig:var}
+provides a representation of this variable menagerie. In addition, many of the
+''known unknown`` classes of variability have theoretical models which we must
+incorporate into the spectral--temporal paradigm.  This includes quite a large
+variety of super-- and sub--luminous transient events
 \citep[e.g.][]{2010ApJ...715..767S,2009ApJ...707..193F}.  It will be especially
 important to recognize an instance of these classes of events from the more
 common transients, since early observations will be key to testing
-currently--unconstrained theoretical models.  Example model lightcurves that
-have already been aggregated are included in Figure~\ref{fig:sts}.
+currently--unconstrained theoretical models.  Example model lightcurves are
+shown in Figure~\ref{fig:sts}.
 
 \begin{figure}[t]
 \centerline{\psfig{figure=figures/fall_blowd.eps,width=0.5\textwidth} \hfil
 \psfig{figure=figures/rrlyare.eps,width=0.5\textwidth}} \smallskip
 \caption[]{\footnotesize Example theoretical spectral--temporal surfaces of
 astronomical phenomena.  The {\it left} panel shows the lightcurve of a failed
-"fallback" supernovae from \cite{2009ApJ...707..193F}, with total energy of $1.7
-\times 10^{51}$ erg, $^{56}$NI yield of $1.0 \times 10^{-13} \msun$ and total
-ejecta mass of $3 \msun$.  The {\it right} panel shows a 5--band RR Lyrae
+``fallback'' supernovae from \cite{2009ApJ...707..193F}, with total energy of
+$1.7 \times 10^{51}$ erg, $^{56}$NI yield of $1.0 \times 10^{-13} \msun$ and
+total ejecta mass of $3 \msun$.  The {\it right} panel shows a 5--band RR Lyrae
 lightcurve template from \cite{2010ApJ...708..717S}.  While these phenomena are
 intrinsically quite different, they may be represented in the same
 spectral--temporal fashion.  While we anticipate building our surfaces primarily
-from experimental data, models like the ones shown here will be used to
-fill--in--the blanks when there are insufficient constraints.} \medskip \hrule
-\label{fig:sts} \end{figure}
+from experimental data, theoretical models will be used to fill--in--the blanks
+when there are insufficient data.} \medskip \hrule \label{fig:sts} \end{figure}
 
 As we will be incorporating experimental data taken on different instruments, in
 different filters, and at different epochs, we must enforce a strict set of
@@ -335,7 +333,7 @@ the same requirement on epoch of observation, with the additional requirement
 that it has been spectrophotometrically calibrated (or is able to be calibrated
 using near--concurrent photometric data).  In practice, this is very difficult
 to accomplish, and will limit the amount of spectral data we are able to use
-(i.e. "one--off" spectra of events to determine redshift are not necessarily
+(i.e. ``one--off'' spectra of events to determine redshift are not necessarily
 taken in the appropriate configuration for spectrophotometric calibration, with
 the slit position angle aligned with the parallactic angle;
 \citealt{1982PASP...94..715F}).
@@ -347,7 +345,7 @@ disadvantage that K--correction of the photometry \citep{2002astro.ph.10394H}
 requires an instantaneous spectrum of the event, which leads to a
 chicken--and--egg problem since that exact spectrum is expected to result from
 the ST modeling.  This will require a boot--strapping of the cosmological
-K--corrections with an initial ST surface.  However, these K--corrections will
+K--corrections with an initial ST surface.  However, the redshift effect will
 allow us to build ST surfaces that are well--calibrated in the rest--frame
 u--band, where ground--based calibration is difficult, by using photometry of
 objects at moderate redshift.
@@ -394,9 +392,9 @@ The total counts transmitted through the optical system are: $$F^{obs}_{filt}
 (t) = \int F_\nu(\lambda, t) ~~ T_{filt} (\lambda, t) ~~ \lambda^{-1} d\lambda$$
 where $T_{filt}(\lambda, t)$ is the overall transmission probability per unit
 photon \footnote{The term $\lambda^{-1}$ comes from the conversion of energy per
-unit frequency into the number of photons per unit wavelength}. To place the
-final flux measurement on the AB magnitude system, this integral is normalized
-by $F_{AB} = 3631$ Jy.
+unit frequency into the number of photons per unit wavelength}. To place a flux
+measurement on the AB magnitude system, flux is normalized by $F_{AB} = 3631$
+Jy.
 
 From the available data on each input training event, we will create a sparse
 surface labelled $f(\lambda, t)$ that constrains the overall model.  Spectral
@@ -412,15 +410,15 @@ each given event.  By choosing the right basis, we may approximate each event
 with a finite number of surfaces ${\bf S_j}(\lambda, t)$. Principal Component
 Analysis (PCA) is an optimal way to select this basis from a ensemble of input
 data \cite[e.g.][for astrophysical application to galaxy
-spectra]{1995AJ....110.1071C}, and "sparse" or "gappy" PCA is a particular
+spectra]{1995AJ....110.1071C}, and ``sparse'' or ``gappy'' PCA is a particular
 implementation to be used when the inputs sample only a small fraction of the
 model \citep[e.g.][]{zouht04}, such as here.  As is standard when using PCA
-decomposition, we will first create a "mean" surface ${\bf S_M}(\lambda, t)$ and
-find the principal variations about this mean, yielding the model: $$f(\lambda,
-t) = x_0 \times \left( {\bf S_M}(\lambda, t) + \sum_{j=1} x_j \times {\bf
-S_j}(\lambda, t) \right)$$ where $x_0$ represents an overall brightness scaling
-(i.e. distance modulus), and $x_j$ represents the location of the phenomena
-within the family of events.
+decomposition, we will first create a ``mean'' surface ${\bf S_M}(\lambda, t)$
+and find the principal variations about this mean, yielding the model:
+$$f(\lambda, t) = x_0 \times \left( {\bf S_M}(\lambda, t) + \sum_{j=1} x_j
+\times {\bf S_j}(\lambda, t) \right)$$ where $x_0$ represents an overall
+brightness scaling (i.e. distance modulus), and $x_j$ represents the location of
+the phenomena within the family of events.
 
 \begin{center} {\bf We emphasize that these basis surfaces (${\bf S_M}(\lambda,
 t)$,${\bf S_1}(\lambda, t)$,${\bf S_2}(\lambda, t)$ $\ldots$ ${\bf S_j}(\lambda,
@@ -436,28 +434,28 @@ principal surfaces ${\bf S_j}(\lambda, t)$.
 
 \smallskip {\bf Intrinsic Dimensionality of each Basis:} The Principal Component
 Analysis is fundamentally an eigenvector analysis, with eigenvalues that
-represent the variance in the population that is represented by each surface.
-Surfaces that represent effects that dominate the behavior of the population
-(e.g. the brightness--decline relationship for Supernova Ia) will have large
-eigenvalues, with secondary effects less important and thus having smaller
-corresponding eigenvalues in the PCA.  One can thus derive the intrinsic
-dimensionality of the population from the spectrum of eigenvalues.
-Correspondingly, one can well approximate any event within this population by
-using the first few bases (sorted by eigenvalue).  We will use such a truncated
-expansion when creating our basis models; only surfaces representing the
-majority of the variance ($90\%$ to $99\%$, depending on the amount of input
-data) will be retained in the event modeling process described above.
+represent the variance in the population represented by each surface. Surfaces
+that represent effects that dominate the behavior of the population (e.g. the
+brightness--decline relationship for Supernova Ia) will have large eigenvalues,
+with secondary effects less important and therefore having smaller corresponding
+eigenvalues in the PCA.  One can thus derive the intrinsic dimensionality of the
+population from the spectrum of eigenvalues. Correspondingly, one can well
+approximate any event within this population by using the first few bases
+(sorted by eigenvalue).  We will use such a truncated expansion when creating
+our basis models; only surfaces representing the majority of the variance
+($90\%$ to $99\%$, depending on the amount of input data) will be retained in
+the event modeling process described above.
 
 \smallskip {\bf Uncertainties on the Surfaces:} We will additionally identify
 excess variance in the models that is not represented by the surfaces, e.g.
-portions of large model uncertainty that we will want to de-weight when fitting.
-This excess variance will be modelled using a jackknife resampling procedure:
-for each input event, we will remove it from the training sample and re--create
-the model.  The variance of the models and  residuals across all jackknife
-resamplings will be used as an empirical estimate of the excess variance about
-our model.  For theoretical surfaces, we may generate uncertainties by ranging
-over plausible combinations of input parameters used to generate the models,
-although we will have to be careful to not make the surfaces too exclusive.
+portions of large model uncertainty that we will want to de--weight when
+fitting. This excess variance will be modelled using a jackknife resampling
+procedure: for each input event, we will remove it from the training sample and
+re--create the model.  The variance of the models and  residuals across all
+jackknife resamplings will be used as an empirical estimate of the model
+uncertainty.  For theoretical surfaces, we may generate uncertainties by ranging
+over plausible combinations of input parameters, although we will have to be
+careful to not make the surfaces too exclusive.
 
 \smallskip {\bf Variants to this Procedure:} We recognize that for certain
 phenomena, this basic derivation of the surfaces is not sufficient to completely
@@ -478,28 +476,25 @@ This will require an assessment of the reddening of each input vector, and an
 additional fit parameter on each incoming lightcurve representing the degree of
 extinction \cite[e.g. Equation 1,][]{2007A&A...466...11G}.  Finally, the
 evolution of objects at cosmological distances will behave like a stretched
-spectral--temporal surface.  When fitting such classes of events, we will be
-comparing the observed data to the ST models with an extra degree of freedom in
-the redshift $z$: $$f(\lambda, t) = x_0 \times \left( {\bf S_M}(\lambda/(1 + z),
-t/(1 + z)) + \sum_{j=1} x_j \times {\bf S_j}(\lambda/(1 + z), t/(1 + z))
-\right).$$
+spectral--temporal surface.  When fitting such classes of events, we will
+compare the observed data to ST models with an extra degree of freedom in the
+redshift $z$, e.g. $f(\lambda, t)$ vs. ${\bf S_M}(\lambda/(1+z), t/(1+z))$.
 
 \smallskip {\bf Previous Work:} We note that this procedure follows very closely
 the SALT--II model of \cite{2007A&A...466...11G}.  In the SALT--II model, the
 degree to which the process captured the behavior of the training data is
-represented in the RMS dispersion of the Ia distance moduli in the Hubble
-diagram of $0.16$ magnitudes \citep{2007A&A...466...11G}.  This compares
-favorably to an RMS $\sim 0.2$ magnitudes for competing methods
-\citep{2009ApJS..185...32K}, indicating the model is able to advance the
-state--of--the--art even the developed field of supernova cosmology. In
-addition, for events where the redshift of the event was not known, this extra
-redshift parameter could be included as a degree of freedom in the $\chi^2$
-minimization to provide a photometric redshift estimate.
+represented in the RMS about the Hubble diagram of $0.16$ magnitudes
+\citep{2007A&A...466...11G}.  This compares favorably to an RMS $\sim 0.2$
+magnitudes for competing methods \citep{2009ApJS..185...32K}, indicating the
+model is able to advance the state--of--the--art even in the competitive field
+of supernova cosmology. In addition, for events where the redshift of the event
+was not known, this extra redshift parameter was included as a degree of freedom
+in the $\chi^2$ minimization to provide a photometric redshift estimate.
 \cite{2007A&A...466...11G} finds an RMS dispersion of $\Delta z/(1 + z) =
 0.01-0.02$, which is comparable to the redshift that may be inferred from the
 spectra alone \citep[see also][]{2010ApJ...717...40K}.  A slightly different
-implementation of this process is described in \citep{2010ApJ...719.1759A},
-where they are able to reconstruct stellar spectra by comparing 3 broad--band
+implementation of this process is described in \cite{2010ApJ...719.1759A}, where
+they are able to reconstruct stellar spectra by comparing 3 broad--band
 magnitudes to a set of spectral basis functions derived using PCA
 \citep{2010AJ....139.1261M}.  Obviously, PCA is a powerful diagnostic when
 applied to spectral data; we intend to expand this utility to the
@@ -510,37 +505,34 @@ spectral--temporal regime.
 We expect to construct the set of  ${\cal S}_k \equiv \{({\bf S_M},{\bf
 S_j})\}_k$ for $k$ classes of variables and transients. While the actual number
 of classes will ultimately be subject to availability and quality of the input
-data streams (\S XXX), we expect $k \approx 100$ and may be much more if we
-include a variety of theoretical curves. The fundamental question we wish to
-answer is: {\it given a new light curve, $f_{i+1}(\lambda, t)$, what is the
-probability that it arises from class $k$?}
+data streams, we expect $k \approx 100$ and may be much more if we include a
+variety of theoretical curves. The fundamental question we wish to answer is:
+{\it given a new light curve, $f_{i+1}(\lambda, t)$, what is the probability
+that it arises from class $k$?}
 
 A straight forward approach is to represent a notion of distance of the
 lightcurve from each of the $k$ templates as ${\cal D}_k(f_{i+1})$, where the
 normalization and start time $t_0$ (or phase offset $\phi_0$, or extinction, or
 redshift $z$) are varied so as to minimize the $\chi^2$ for each ${\cal S}_k$.
-The most likely class is then that which minimizes {\cal D} [we will explore
-both parametric and non--parametric interpolations of the surfaces to facilitate
-this distance measure]. In the limit with well--sampled and multicolor light
-curves, this approach should be sufficient for class {\it selection}. However,
-for probabilistic lightcurve classification, especially in the few--data limit,
-a more complex approach is required: in particular, there must be some notion of
-a minimal distance subject to likelihood of having observed the particular
-dataset.  In particular, each spectral--temporal training set yields the
-expected range of contributions from the secondary (tertiary, etc.) surfaces
-$x_j$, which may be used as priors when doing absolute classification. We will
-explore such a Bayesian approach to distance minimization.  All software tools
-(written in Python and C++) used to determine ${\cal D}_k(f_{i+1})$, as well as
-the surfaces themselves,  will be made open source.
+The most likely class is then that which minimizes ${\cal D}$. In the limit with
+well--sampled and multicolor light curves, this approach should be sufficient
+for class {\it selection}. However, for probabilistic lightcurve classification,
+especially in the few--data limit, a more complex approach is required: in
+particular, there must be some notion of a minimal distance subject to
+likelihood of having observed the particular dataset.  In particular, each
+spectral--temporal training set yields the expected range of contributions from
+the secondary (tertiary, etc.) surfaces $x_j$, which may be used as priors when
+doing absolute classification. We will explore such a Bayesian approach to
+distance minimization.
 
 The lightcurve classification problem raises a very interesting statistical
-question: how can we account for the taxonometric (hierarchical, tree--like)
-structure of the landscape of astronomical events? A increasingly more detailed
-set of questions may be asked about such an event: is it variable or
-non--variable? Is it a pulsating variable or an eclipsing binary?  Is it a
-Cepheid or an RR Lyrae? What kind of RR Lyrae is it?  With limited data it may
-be possible to make highly probable classifications at the high levels of the
-taxonomy but not at the lowest levels.
+question: how can we account for the taxonometric (hierarchical, tree--like,
+Figure~\ref{fig:var}) structure of the landscape of astronomical events? A
+increasingly more detailed set of questions may be asked about such an event: is
+it variable or non--variable? Is it a pulsating variable or an eclipsing binary?
+Is it a Cepheid or an RR Lyrae? What kind of RR Lyrae is it?  With limited data
+it may be possible to make highly probable classifications at the high levels of
+the taxonomy but not at the lowest levels.
 
 The General Catalog of Variable Stars (GCVS; \citealt{ksf+96}) has developed a
 classification tree based upon an admixture of observed properties (e.g.,
@@ -564,29 +556,28 @@ problems of identifying text (e.g., \citealt{593971}). We propose to explore two
 general ways of attacking this problem. One approach is to incorporate a fixed
 (e.g. GCVS) taxonomy by changing our measures of loss to reflect taxonomic
 information (through either simple tree--based distances or more involved
-Laplacian--based ideas), going beyond the standard 0--1 loss described above
-(under 0--1 loss, the cost of misclassifying an RR Lyrae as a Cepheid is the
-same as failing to distinguish between two types of RR Lyrae.) Another approach
-addresses the taxonomy by doing a ``multi--scale" or ``multi--resolution"
-classification.  Much of the exploration here will be in finding the optimal
-metrics on the tree (e.g. \citealt{ChungSpectralGraphTheoryBook97}).
+Laplacian--based ideas), going beyond the standard ``0--1'' loss (where the cost
+of misclassifying an RR Lyrae as a Cepheid is the same as failing to distinguish
+between two types of RR Lyrae).  Another approach addresses the taxonomy by
+doing a ``multi--scale'' or ``multi--resolution'' classification.  Much of the
+exploration here will be in finding the optimal metrics on the tree (e.g.
+\citealt{ChungSpectralGraphTheoryBook97}).
 
 Another approach to incorporating taxonomy into classification, which we propose
 to explore, would make use of recent work on statistical phylogenetics, where
 the taxonomy is provided by a phylogenetic tree\citep{elithesis}.  The idea is
-to use the taxonomy to induce a taxonomically meaningful inner--product between
-observations. This is done by, for instance, using the Laplacian of the graph
-and its spectral decomposition to find a taxonomically meaningful way of
-representing functions on the graph, which for us are really vectors of
-observations on the graph. For instance, when using PCA one can then incorporate
-graph information into classical multivariate statistical techniques
-\cite{PurdomAnalyzingDataWithGraphs08}.  A natural question is to investigate
-whether a similar idea can be used in the context of max--margin classifiers,
-though there are classification--specific problems that need to be addressed. We
-note that ideas from structured classification work \citep{bcmt-lmmsc-04} might
-become helpful in our context. In this line of inquiry, one might also ask if
-one can derive linear combinations of features that are
-taxonomically--meaningful and use those in growing decision trees.
+to use the taxonomy to induce a meaningful inner--product between observations.
+This is done by, for instance, using the Laplacian of the graph and its spectral
+decomposition to find a taxonomically meaningful way of representing functions
+on the graph, which for us are really vectors of observations on the graph. For
+instance, when using PCA one can then incorporate graph information into
+classical multivariate statistical techniques
+\citep{PurdomAnalyzingDataWithGraphs08}.  A natural question is to investigate
+whether a similar idea can be used in the context of ``max--margin''
+classifiers. We note that ideas from structured classification work
+\citep{bcmt-lmmsc-04} might become helpful in our context. In this line of
+inquiry, we might also ask if one can derive linear combinations of features
+that are taxonomically--meaningful and use those in growing decision trees.
 
 Another possible approach that takes into account the tree structure of the
 problem would consist of pruning the tree ${\cal T}_0$ of ST surfaces at
@@ -602,9 +593,9 @@ constructed with a sequence of distance--based loss functions described above
 which assign edge lengths equal to zero for lower levels of the tree.
 
 The notion of a classifier being ``calibrated'' is a relevant line of inquiry.
-This has long been a concern in probabilistic weather forecasting---does it rain
-on 30\% of the days for which the forecast probability of rain was 30\%?  The
-``probabilities'' a classifier produces may not correspond to the actual
+This has long been a concern in probabilistic weather forecasting -- does it
+rain on 30\% of the days for which the forecast probability of rain was 30\%?
+The ``probabilities'' a classifier produces may not correspond to the actual
 relative frequencies in the training set on which it was based
 \citep{niculescu05:obtaining}.  In our context it would be desirable that the
 proportion of objects labeled as pulsating variables is a good estimate of the
@@ -617,10 +608,10 @@ structure.
 The nexus of statistical methods, modern computational resources, and massive
 data sets is leading to revised notions of statistical efficiency that take into
 account computational constraints \citep{MeinBickRice2008}.  Convex surrogates
-for 0--1 loss as mentioned above are but one of a growing number of examples.
-Mindful of the importance of computational efficiency in the LSST era, {\it we
-expect that the methods we develop to meet the unique challenges posed by
-lightcurve classification will contribute to this evolving literature.}
+for the 0--1 loss function as mentioned above are but one of a growing number of
+examples. Mindful of the importance of computational efficiency in the LSST era,
+{\it we expect that the methods we develop to meet the unique challenges posed
+by lightcurve classification will contribute to this evolving literature.}
 
 Computational constraints are less important during the learning/training phase
 than at other stages.  A decision tree would clearly be preferable to a Bayesian
@@ -635,15 +626,15 @@ enormous gains in computation with very little loss of statistical efficiency.
 An especially intriguing and challenging aspect of  real-time lightcurve
 classification is that the ${\cal D}_k$ of each object \emph{changes} with every
 new data time--series data point. Here the taxonomic approach can be used to
-advantage. For example, some strategies arise naturally for an approach, such as
-that described above, which composes classification procedures at every vertex
-of the tree. For a given object it may not be too important to classify more
-finely in the taxonomy at every new observation.  On the other hand, if there is
-some non--negligible probability of an event belonging to a rare class or a
-never--observed phenomena, it would be crucial to update frequently.  Thus,
-updating policies can vary among the vertices and the updating choices will
-depend dynamically on the availability of computational resources. We propose to
-explore this technique both at the theoretical level and by example.
+advantage. For example, some strategies arise naturally for an approach that
+composes classification procedures at every vertex of the tree. For a given
+object it may not be too important to classify more finely in the taxonomy at
+every new observation.  On the other hand, if there is some non--negligible
+probability of an event belonging to a rare class or a never--observed
+phenomena, it would be crucial to update frequently.  Thus, updating policies
+can vary among the vertices and the updating choices will depend dynamically on
+the availability of computational resources. We propose to explore this
+technique both at the theoretical level and by example.
 
 \medskip {\centerline{\ub{\sc Event Classification Service}}} \smallskip
 
@@ -695,7 +686,8 @@ our planned inclusion of these models into extant classification services will
 ensure that they achieve broad application and relevance in a burgeoning field.
 
 
-\bigskip \centerline{\bf IVa. Team Qualifications} \smallskip
+\bigskip \centerline{\bf IV. Team Qualifications and Previous Support}
+\smallskip
 
 \medskip {\centerline{\ub{\sc Dr. Becker}}} \smallskip
 
@@ -713,6 +705,19 @@ realistic stellar and cosmological variability to the simulations.  He has been
 working since 2004 on the real--time nightly processing pipeline for LSST at the
 University of Washington.
 
+{\bf Previous Support:} ``The LSST FaST Program : Expanding Participation of
+Underrepresented Minorities in LSST'', funded through Specific Program Order 9
+(AST-0551161) to the NSF-AURA (Association of Universities for Research in
+Astronomy) Cooperative Agreement AST-0132798.  The project involved simulating
+tens of millions of RR Lyrae lightcurves to investigate LSST's ability to
+recognize the periods and types of these events, as a function of distance
+(faintness) and survey duration.  This team delivered a technical report to the
+LSST Transients and Variable Stars working group at the LSST Fall 2009 ``All
+Hands'' meeting and has submitted a paper to the Astrophysical Journal on the
+final results \citep{RRLyrae}. Importantly, three of the six students funded by
+this proposal successfully applied to graduate school, with a fourth expected to
+apply this next year.
+
 \medskip {\centerline{\ub{\sc Dr. Bloom}}} \smallskip
 
 Co--PI Bloom is director of the Berkeley Center for Time--Domain Informatics,
@@ -727,6 +732,14 @@ characterization. He is co--chair of the LSST science working group on
 transients and variable stars. VOEvent, the IVOA standard for astronomical event
 publication, was his brainchild.
 
+{\bf Previous Support:} ``Real-time Classification of Massive Time-series Data
+Streams'' (PI, J. Bloom; NSF grant No 0941742; amount \$1,573,550; expires
+07/12).  Three postdocs, six graduate students, and several undergraduates have
+been supported as part of that project, resulting in more than 10 publications
+to date.  The classification framework built as part of this proposal is used in
+the real-time pipeline of the Palomar Transient Factory, and has been
+responsible for the discovery of more than 15,000 new variable stars and
+transients.
 
 \medskip {\centerline{\ub{\sc Dr. Connolly}}} \smallskip
 
@@ -737,43 +750,14 @@ Locally Linear Embedding, developing and releasing applications for data
 intensive cosmology, and for integrating research and education (e.g. Connolly
 was the technical lead for the development of Sky in Google Earth).
 
-\bigskip \centerline{\bf IVb. Previous Support} \smallskip
-
-\medskip {\centerline{\ub{\sc Dr. Becker}}} \smallskip
-
-``The LSST FaST Program : Expanding Participation of Underrepresented Minorities
-in LSST'', funded through Specific Program Order 9 (AST-0551161) to the NSF-AURA
-(Association of Universities for Research in Astronomy) Cooperative Agreement
-AST-0132798.  The project involved simulating tens of millions of RR Lyrae
-lightcurves to investigate LSST's ability to recognize the periods and types of
-these events, as a function of distance (faintness) and survey duration.  This
-team delivered a technical report to the LSST Transients and Variable Stars
-working group at the LSST Fall 2009 ``All Hands'' meeting and has submitted a
-paper to the Astrophysical Journal on the final results \citep{RRLyrae}.
-Importantly, three of the six students funded by this proposal successfully
-applied to graduate school, with a fourth expected to apply this next year.
-
-\medskip {\centerline{\ub{\sc Dr. Bloom}}} \smallskip
-
-``Real-time Classification of Massive Time-series Data Streams'' (PI, J. Bloom;
-NSF grant No 0941742; amount \$1,573,550; expires 07/12).  Three postdocs, six
-graduate students, and several undergraduates have been supported as part of
-that project, resulting in more than 10 publications to date.  The
-classification framework built as part of this proposal is used in the real-time
-pipeline of the Palomar Transient Factory, and has been responsible for the
-discovery of more than 15,000 new variable stars and transients.
-
-\medskip {\centerline{\ub{\sc Dr. Connolly}}} \smallskip
-
-"Image Coaddition, Subtraction and Source Detection in the Era of Terabyte Data
-Streams" (PI, A. Connolly; NSF grant AST-0709394; amount \$427,933; expires
-8/31/2011) is the most closely related grant.  Outcomes from this work include:
-the development of non--parametric techniques for the detection of sources
-within sequences of astronomical images through the use of image coaddition and
-subtraction, and algorithms for measuring the clustering of galaxies using
-n-point correlations functions that scale to high-performance parallel
-architectures.
-
+{\bf Previous Support:} ``Image Coaddition, Subtraction and Source Detection in
+the Era of Terabyte Data Streams'' (PI, A. Connolly; NSF grant AST-0709394;
+amount \$427,933; expires 8/31/2011) is the most closely related grant. 
+Outcomes from this work include: the development of non--parametric techniques
+for the detection of sources within sequences of astronomical images through the
+use of image coaddition and subtraction, and algorithms for measuring the
+clustering of galaxies using n-point correlations functions that scale to
+high-performance parallel architectures.
 
 \bigskip \centerline{\bf V. Project Management and Development Plan} \smallskip
 
@@ -784,15 +768,11 @@ Co--PI Bloom will serve as the lead for supervision of a second research
 associate (at the post--doctoral level) at UCB.  This postdoc ideally will have
 expertise in the application of statistical tools in the field of astronomy.  We
 require RAs at the postdoctoral level because the technical challenges posed by
-this problem require individuals with immediate expertise, and who have fought
-through such issues before at (at least) the graduate student level. This
-includes minutiae such as the role of the underling spectral energy distribution
-on the calibration of photometry (there is no "one" zeropoint per astronomical
-image, it is source dependent), and the efficient implementation (memory
-management, disk access, scaling relations) of statistical algorithms on compute
-hardware. PI Becker will serve as the technical lead for the project, and will
-contribute in all arenas astronomical and statistical at the level of 25\% of
-his time.
+this problem (data calibration, computational implementation) require
+individuals with immediate expertise, and who have fought through such issues
+before at (at least) the graduate student level. PI Becker will serve as the
+technical lead for the project, and will contribute at the level of 25\% of his
+time.
 
 The difficulties in having a geographically distributed team require a
 commensurate level of interaction to maintain the group focus.  We plan on
@@ -804,13 +784,9 @@ rotating host institution, for direct interaction and camaraderie. We budget for
 3 domestic trips per year per institution in this proposal, 2 of which will be
 used for these collaborative meetings.  We budget for one domestic and one
 international trip per institution for the postdocs to advertise our work at
-appropriate conferences in the fields of Astronomy and Computer Science. This
-type of model -- mixing regular weekly phone conferences with biannual or
-quarterly collaboration meetings -- has served Becker and Connolly well in
-working within the distributed LSST Data Management group.
-
-We outline the yearly responsibilities for the PIs, the UW postdoc (PD1), and
-the USB postdoc (PD2) below.
+appropriate conferences in the fields of Astronomy and Computer Science. We
+outline the yearly responsibilities for the PIs, the UW postdoc (PD1), and the
+USB postdoc (PD2) below.
 
 \medskip {\centerline{\ub{\sc Year 1}}} \smallskip
 
@@ -824,19 +800,16 @@ for the Principal Component Analyses (PD1 + PD2).
 \medskip {\centerline{\ub{\sc Year 2}}} \smallskip
 
 In the second year we come to the meat of the project, where we must build
-viable models from the aggregate input data.  Details such as the model
-resolution in wavelength and time, and the number of principal components that
-can be meaningfully extracted from the data, will be highly input
-data--dependent.  The input data themselves will be inhomogeneous, meaning we
-will have to converge on the optimal configuration of each ST surface
-dynamically. PD1 will be responsible for understanding how the input data may
-effectively be translated into output models ${\cal S}_k$ (surface resolution in
-$\lambda, t$; number of principal components the data will support w/Connolly),
-and PD2 will be responsible for understanding how to effectively implement a
-sparse PCA with these data, and how sparsity impacts the uncertainties of the
-surface at each $\lambda, t$ bin. Becker will actively participate in both of
-these efforts using as reference his understanding of the SALT--II algorithm and
-its implementation details.
+viable models from the aggregate input data.  The input data themselves will be
+inhomogeneous, meaning we will have to converge on the optimal configuration of
+each ST surface dynamically. PD1 will be responsible for understanding how the
+input data may effectively be translated into output models ${\cal S}_k$
+(surface resolution in $\lambda, t$; number of principal components the data
+will support w/Connolly), and PD2 will be responsible for understanding how to
+effectively implement a sparse PCA with these data, and how sparsity impacts the
+uncertainties of the surface at each $\lambda, t$ bin. Becker will actively
+participate in both of these efforts using as reference his understanding of the
+SALT--II algorithm and its implementation details.
 
 
 \medskip {\centerline{\ub{\sc Year 3}}} \smallskip
@@ -851,11 +824,11 @@ class using ${\cal D}_k$.  PD2 will also be responsible for incorporating the
 overall ST infrastructure into an on--line classification resource that is
 available to the astronomical community. PD1 will be responsible for enforcing
 validation of the input data to this service, while PD2 will be responsible for
-validating that the probabilities that are returned from this fitting process
-are accurate representations of our knowledge of the system (through
+validating the probabilities returned from this fitting process (through
 monte--carlo simulations and using sources of vetted data that were not input to
 the models). The PIs will examine the results of this training process including
 the intrinsic dimensionality of each ${\cal S}_k$ (e.g. is there a component
 that allows to estimate RR Lyrae metallicity from lightcurve shape;
-\citealt{1996A&A...312..111J}) and the computational trade--offs in the
-calculation of  ${\cal D}_k$.
+\citealt{1996A&A...312..111J}) and the computational vs. scientific trade--offs
+in the calculation of ${\cal D}_k$.
+
