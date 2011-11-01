@@ -212,8 +212,7 @@ intervals from -20 days from B--band peak brightness to +50 days.  The right
 figure displays the first moment of these data about the mean distribution,
 derived using principal component analysis.  The diversity of Ia lightcurves
 (across all passbands and at all times) can be represented by a scaled addition
-of this secondary surface to the primary surface, reflecting the observation
-that Ia are intrinsically a 1--parameter family.  {\bf We propose here to make
+of this secondary surface to the primary surface.  {\bf We propose here to make
 similar models for {\it all} classes of astronomical variability.}} \medskip
 \hrule \label{fig:salt2} \end{figure}
 
@@ -276,24 +275,24 @@ Additional input data will include but not be limited to: re--calibrated
 photometry from SDSS Stripe 82 on variable stars \citep{2010ApJ...708..717S} and
 supernovae \citep{2008AJ....136.2306H,2011ApJ...738..162S}, including
 per--camera filter profiles of \cite{2007AJ....134..973I}; variable stars from
-the OGLE and Hipparcos surveys cataloged by \cite{2007A&A...475.1159D};
-photometric and spectroscopic data from the Carnegie Supernova Project
+the OGLE and Hipparcos surveys \citep{2007A&A...475.1159D}; photometric and
+spectroscopic data from the Carnegie Supernova Project
 \citep[e.g.][]{2010AJ....139..519C} and Supernova Legacy Survey
 \citep[e.g.][]{2011yCat..74101262W}; the Suspect Supernova Spectrum
 Archive\footnote{\url{http://suspect.nhn.ou.edu/~suspect/}}; low--redshift
 supernova data from \cite{2006AJ....131..527J}; and classes of novae including
-recently discovered faint--fast novae \citep{2011ApJ...735...94K} and luminous
-red novae \citep{2011ApJ...730..134K}.  The Co--Is are also involved in
-proposals for time--domain spectroscopic surveys, with source selection based
-upon variability catalogs such as from SDSS Stripe 82 and
+recently discovered faint--fast \citep{2011ApJ...735...94K} and luminous red
+novae \citep{2011ApJ...730..134K}.  The Co--Is are also involved in proposals
+for time--domain spectroscopic surveys, with source selection based upon
+variability catalogs from e.g. SDSS Stripe 82 and
 Pan--STARRS\footnote{\url{http://pan-starrs.ifa.hawaii.edu/public/}}; while
 these would be optimal spectral inputs to our models, we do not require them for
-this effort to be a success.  Although this list is not exhaustive, it does give
-an idea of the scope of the effort we wish to undertake -- Figure~\ref{fig:var}
-provides a representation of this variable menagerie. In addition, many of the
-''known unknown`` classes of variability have theoretical models which we must
-incorporate into the spectral--temporal paradigm.  This includes quite a large
-variety of super-- and sub--luminous transient events
+this effort to be a success.  Although the above list is not exhaustive, it does
+give an idea of the scope of the effort we intend to undertake --
+Figure~\ref{fig:var} provides a representation of this variable menagerie. In
+addition, many of the ''known unknown`` classes of variability have theoretical
+models we must incorporate into the spectral--temporal paradigm.  This includes
+a large variety of super-- and sub--luminous transient events
 \citep[e.g.][]{2010ApJ...715..767S,2009ApJ...707..193F}.  It will be especially
 important to recognize an instance of these classes of events from the more
 common transients, since early observations will be key to testing
@@ -314,28 +313,26 @@ spectral--temporal fashion.  While we anticipate building our surfaces primarily
 from experimental data, theoretical models will be used to fill--in--the blanks
 when there are insufficient data.} \medskip \hrule \label{fig:sts} \end{figure}
 
-As we will be incorporating experimental data taken on different instruments, in
+As we will be combining experimental data taken on different instruments, in
 different filters, and at different epochs, we must enforce a strict set of
 standards to ensure we can merge these data into a single ST model. In practice,
-this will limit our sources of data to archival resources where calibration
-metadata is included in the data curation. All incoming photometric data must be
-accompanied by a filter profile corresponding to the transmission profile of the
-filter of observation, as well as a time stamp corresponding to the epoch of
-observation.  We will convert each filter profile into an overall atmosphere
-plus system throughput representing the dimensionless probability that a photon
-of wavelength $\lambda$ reaches the detector.  This filter profile will be used
-to weight each data point's contribution to the ST surface.  We will also use
-each filter profile to convert (if necessary) the flux into the AB magnitude
-system.  We will convert each input time stamp to correspond to the mid--point
-of observation, in Barycentric Julian Date in the Barycentric Dynamical Time
-standard \citep{2010PASP..122..935E}. All incoming spectroscopic data will have
-the same requirement on epoch of observation, with the additional requirement
-that it has been spectrophotometrically calibrated (or is able to be calibrated
-using near--concurrent photometric data).  In practice, this is very difficult
-to accomplish, and will limit the amount of spectral data we are able to use
-(i.e. ``one--off'' spectra of events to determine redshift are not necessarily
-taken in the appropriate configuration for spectrophotometric calibration, with
-the slit position angle aligned with the parallactic angle;
+this will limit our sources of data to archives where calibration metadata is
+part of the data curation. All incoming photometric data must be accompanied by
+a filter profile corresponding to the transmission profile of the filter of
+observation, as well as a time stamp corresponding to the epoch of observation.
+We will convert each filter profile into an overall atmosphere plus system
+throughput representing the dimensionless probability that a photon of
+wavelength $\lambda$ reaches the detector.  This filter profile will be used to
+weight each data point's contribution to the ST surface.  We will also use each
+filter profile to convert (if necessary) the flux into the AB magnitude system.
+We will convert each  time stamp to correspond to the mid--point of observation,
+in Barycentric Julian Date in the Barycentric Dynamical Time standard
+\citep{2010PASP..122..935E}. All incoming spectroscopic data will have the
+additional requirement that it has been spectro--photometrically calibrated (or
+is able to be calibrated using near--concurrent photometric data).  In practice,
+this is very difficult to accomplish, and will limit the amount of spectral data
+we are able to use (i.e. ``one--off'' spectra of events to determine redshift
+are not necessarily taken with the slit aligned with the parallactic angle;
 \citealt{1982PASP...94..715F}).
 
 An additional requirement for objects at cosmological distances is that any
@@ -374,25 +371,13 @@ $T^{sys}_{filt}(\lambda, t)$.  This latter term should include the wavelength
 dependence of the mirror reflectivity, lens and filter transmission, and
 detection sensitivity.  The product of these two defines the overall
 transmission profile of a given observation in a given filter $T_{filt}(\lambda,
-t)$.
-
-Many surveys provide only measurements of $T^{sys}_{filt}(\lambda, t)$
-\citep[e.g.][]{2006ApJ...646.1436S} meaning we must synthesize the atmospheric
-transmission function for a given observation.  This is a difficult task, since
-the atmospheric components that contribute to $T^{atm}(\lambda, t)$ (including
-water vapor, aerosol scattering, Rayleigh scattering and molecular absorption)
-may vary on the order of $10\%$ per hour \citep{2007PASP..119.1163S}.  So as to
-not fall down the rabbit hole in terms of atmospheric calibration, we will adopt
-fiducial MODTRAN atmospheres \citep{1999SPIE.3756..348B} at the airmass of
-observation (when reported) or adopt a fiducial airmass of 1.3 when not.  We
-note that some surveys such as SDSS define their filter profiles with the
-atmospheric component rolled in \citep{2007AJ....134..973I}.
-
-The total counts transmitted through the optical system are: $$F^{obs}_{filt}
-(t) = \int F_\nu(\lambda, t) ~~ T_{filt} (\lambda, t) ~~ \lambda^{-1} d\lambda$$
-where $T_{filt}(\lambda, t)$ is the overall transmission probability per unit
-photon \footnote{The term $\lambda^{-1}$ comes from the conversion of energy per
-unit frequency into the number of photons per unit wavelength}. To place a flux
+t)$.  We note that some surveys such as SDSS define their filter profiles with
+the atmospheric component rolled in \citep{2007AJ....134..973I}. The total
+counts transmitted through the optical system are: $$F^{obs}_{filt} (t) = \int
+F_\nu(\lambda, t) ~~ T_{filt} (\lambda, t) ~~ \lambda^{-1} d\lambda$$ with
+$T_{filt}(\lambda, t)$  the overall transmission probability per unit photon
+\footnote{The term $\lambda^{-1}$ comes from the conversion of energy per unit
+frequency into the number of photons per unit wavelength}. To place a flux
 measurement on the AB magnitude system, flux is normalized by $F_{AB} = 3631$
 Jy.
 
@@ -658,6 +643,8 @@ use of best practices for web front ends, database architecture (e.g.,
 postgresql, Hadoop), push mechanisms (e.g., Jabber), and astronomical event
 packaging (e.g., VOEvent and other VO tools).
 
+\smallskip % hack to get stuff to line up
+
 \bigskip \centerline{\bf III. Broader Impacts} \smallskip
 
 The proposal will build and strengthen collaboration between current producers
@@ -752,12 +739,12 @@ was the technical lead for the development of Sky in Google Earth).
 
 {\bf Previous Support:} ``Image Coaddition, Subtraction and Source Detection in
 the Era of Terabyte Data Streams'' (PI, A. Connolly; NSF grant AST-0709394;
-amount \$427,933; expires 8/31/2011) is the most closely related grant. 
-Outcomes from this work include: the development of non--parametric techniques
-for the detection of sources within sequences of astronomical images through the
-use of image coaddition and subtraction, and algorithms for measuring the
-clustering of galaxies using n-point correlations functions that scale to
-high-performance parallel architectures.
+amount \$427,933; expires 8/31/2011) is the most closely related grant. Outcomes
+from this work include: the development of non--parametric techniques for the
+detection of sources within sequences of astronomical images through the use of
+image coaddition and subtraction, and algorithms for measuring the clustering of
+galaxies using n-point correlations functions that scale to high-performance
+parallel architectures.
 
 \bigskip \centerline{\bf V. Project Management and Development Plan} \smallskip
 

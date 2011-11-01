@@ -1,4 +1,4 @@
-\begin{thebibliography}{69}
+\begin{thebibliography}{66}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -71,16 +71,6 @@
 
 \bibitem[{{Berdnikov}(2008)}]{2008yCat.2285....0B}
 {Berdnikov}, L.~N. 2008, VizieR Online Data Catalog, 2285, 0
-
-\bibitem[{{Berk} {et~al.}(1999){Berk}, {Anderson}, {Bernstein}, {Acharya},
-  {Dothe}, {Matthew}, {Adler-Golden}, {Chetwynd}, {Richtsmeier}, {Pukall},
-  {Allred}, {Jeong}, \& {Hoke}}]{1999SPIE.3756..348B}
-{Berk}, A., {Anderson}, G.~P., {Bernstein}, L.~S., {Acharya}, P.~K., {Dothe},
-  H., {Matthew}, M.~W., {Adler-Golden}, S.~M., {Chetwynd}, J.~H.,
-  {Richtsmeier}, S.~C., {Pukall}, B., {Allred}, C.~L., {Jeong}, L.~S., \&
-  {Hoke}, M.~L. 1999, in Society of Photo-Optical Instrumentation Engineers
-  (SPIE) Conference Series, Vol. 3756, Society of Photo-Optical Instrumentation
-  Engineers (SPIE) Conference Series, ed. {A.~M.~Larar}, 348--353
 
 \bibitem[{{Bloom} \& {Richards}(2011)}]{2011arXiv1104.3142B}
 {Bloom}, J.~S. \& {Richards}, J.~W. 2011, ArXiv e-prints
@@ -517,16 +507,6 @@ Purdom, E. 2008, Submitted to Annals of Applied Statistics
   {Scannapieco}}]{2010ApJ...715..767S}
 {Shen}, K.~J., {Kasen}, D., {Weinberg}, N.~N., {Bildsten}, L., \&
   {Scannapieco}, E. 2010, \apj, 715, 767
-
-\bibitem[{{Stubbs} {et~al.}(2007){Stubbs}, {High}, {George}, {DeRose},
-  {Blondin}, {Tonry}, {Chambers}, {Granett}, {Burke}, \&
-  {Smith}}]{2007PASP..119.1163S}
-{Stubbs}, C.~W., {High}, F.~W., {George}, M.~R., {DeRose}, K.~L., {Blondin},
-  S., {Tonry}, J.~L., {Chambers}, K.~C., {Granett}, B.~R., {Burke}, D.~L., \&
-  {Smith}, R.~C. 2007, \pasp, 119, 1163
-
-\bibitem[{{Stubbs} \& {Tonry}(2006)}]{2006ApJ...646.1436S}
-{Stubbs}, C.~W. \& {Tonry}, J.~L. 2006, \apj, 646, 1436
 
 \bibitem[{Sun \& Lim(2001)}]{DBLP:conf/icdm/SunL01}
 Sun, A. \& Lim, E.-P. 2001, in ICDM, ed. N.~Cercone, T.~Y. Lin, \& X.~Wu (IEEE
