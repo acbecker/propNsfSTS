@@ -1,4 +1,4 @@
-\begin{thebibliography}{66}
+\begin{thebibliography}{68}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Afonso} {et~al.}(2003){Afonso}, {Albert}, {Andersen}, {Ansari},
@@ -410,6 +410,11 @@ Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
 {McGurk}, R.~C., {Kimball}, A.~E., \& {Ivezi{\'c}}, {\v Z}. 2010, \aj, 139,
   1261
 
+\bibitem[{Meinshausen {et~al.}(2007)Meinshausen, Bickel, \&
+  Rice}]{MeinBickRice2008}
+Meinshausen, N., Bickel, P., \& Rice, J. 2007, annals of Applied Statistics;
+  arxiv:0712.1663
+
 \bibitem[{{Niculescu-Mizil} \& {Caruana}(2005)}]{niculescu05:obtaining}
 {Niculescu-Mizil}, A. \& {Caruana}, R. 2005, in Proc. 21st Conference on
   Uncertainty in Artificial Intelligence (UAI '05) (AUAI Press)
@@ -444,8 +449,11 @@ Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
 \bibitem[{{Phillips}(1993)}]{1993ApJ...413L.105P}
 {Phillips}, M.~M. 1993, \apjl, 413, L105
 
+\bibitem[{Purdom(2006)}]{elithesis}
+Purdom, E. 2006, PhD thesis, Stanford University
+
 \bibitem[{Purdom(2008)}]{PurdomAnalyzingDataWithGraphs08}
-Purdom, E. 2008, Submitted to Annals of Applied Statistics
+---. 2008, Submitted to Annals of Applied Statistics
 
 \bibitem[{{Richards} {et~al.}(2011){Richards}, {Starr}, {Butler}, {Bloom},
   {Brewer}, {Crellin-Quick}, {Higgins}, {Kennedy}, \&
