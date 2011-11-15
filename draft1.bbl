@@ -57,7 +57,7 @@
 
 \bibitem[{{Baum}(1962)}]{1962IAUS...15..390B}
 {Baum}, W.~A. 1962, in IAU Symposium, Vol.~15, Problems of Extra-Galactic
-  Research, ed. {G.~C.~McVittie}, 390--+
+  Research, ed. {G.~C.~McVittie}, 390
 
 \bibitem[{{Becker}(2000)}]{2000PhDT.......258B}
 {Becker}, A.~C. 2000, PhD thesis, University of Washington
@@ -70,10 +70,10 @@
   {Norman}, D., {Tyson}, J.~A., \& {Schommer}, R.~A. 2004, \apj, 611, 418
 
 \bibitem[{{Berdnikov}(2008)}]{2008yCat.2285....0B}
-{Berdnikov}, L.~N. 2008, VizieR Online Data Catalog, 2285, 0
+{Berdnikov}, L.~N. 2008, VizieR Online Data Catalog, 2285
 
 \bibitem[{{Bloom} \& {Richards}(2011)}]{2011arXiv1104.3142B}
-{Bloom}, J.~S. \& {Richards}, J.~W. 2011, ArXiv e-prints
+{Bloom}, J.~S. \& {Richards}, J.~W. 2011, arXiv/1104.3142
 
 \bibitem[{{Bloom} {et~al.}(2011){Bloom}, {Richards}, {Nugent}, {Quimby},
   {Kasliwal}, {Starr}, {Poznanski}, {Ofek}, {Cenko}, {Butler}, {Kulkarni},
@@ -81,7 +81,7 @@
 {Bloom}, J.~S., {Richards}, J.~W., {Nugent}, P.~E., {Quimby}, R.~M.,
   {Kasliwal}, M.~M., {Starr}, D.~L., {Poznanski}, D., {Ofek}, E.~O., {Cenko},
   S.~B., {Butler}, N.~R., {Kulkarni}, S.~R., {Gal-Yam}, A., \& {Law}, N. 2011,
-  ArXiv e-prints
+  {arXiv/1106.5491}
 
 \bibitem[{Cesa-Bianchi {et~al.}(2006)Cesa-Bianchi, Gentile, \&
   Zaniboni}]{CesaBianchi06}
@@ -103,8 +103,7 @@ Chung, F. R.~K. 1997, CBMS Regional Conference Series in Mathematics, Vol.~92,
   {Krabbendam}, V.~L., {Krughoff}, S., {Lorenz}, S., {Pizagno}, J.,
   {Rasmussen}, A., {Todd}, N., {Tyson}, J.~A., \& {Young}, M. 2010, in Society
   of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol.
-  7738, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference
-  Series
+  7738
 
 \bibitem[{{Connolly} {et~al.}(1995){Connolly}, {Szalay}, {Bershady}, {Kinney},
   \& {Calzetti}}]{1995AJ....110.1071C}
@@ -145,7 +144,7 @@ Dekel, O., Keshet, J., \& Singer, Y. 2004, in ACM International Conference
   {Chen}}]{2011arXiv1110.4655D}
 {Djorgovski}, S.~G., {Donalek}, C., {Mahabal}, A., {Moghaddam}, B., {Turmon},
   M., {Graham}, M., {Drake}, A., {Sharma}, N., \& {Chen}, Y.
-  2011{\natexlab{a}}, ArXiv e-prints
+  2011{\natexlab{a}}, {arXiv/1110.4655}
 
 \bibitem[{{Djorgovski} {et~al.}(2011{\natexlab{b}}){Djorgovski}, {Drake},
   {Mahabal}, {Graham}, {Donalek}, {Williams}, {Beshore}, {Larson}, {Prieto},
@@ -153,7 +152,7 @@ Dekel, O., Keshet, J., \& Singer, Y. 2004, in ACM International Conference
 {Djorgovski}, S.~G., {Drake}, A.~J., {Mahabal}, A.~A., {Graham}, M.~J.,
   {Donalek}, C., {Williams}, R., {Beshore}, E.~C., {Larson}, S.~M., {Prieto},
   J., {Catelan}, M., {Christensen}, E., \& {McNaught}, R.~H.
-  2011{\natexlab{b}}, ArXiv e-prints
+  2011{\natexlab{b}}, {arXiv/1102.5004}
 
 \bibitem[{{Donalek} {et~al.}(2008){Donalek}, {Mahabal}, {Djorgovski}, {Marney},
   {Drake}, {Glikman}, {Graham}, \& {Williams}}]{2008AIPC.1082..252D}
@@ -248,7 +247,7 @@ Dekel, O., Keshet, J., \& Singer, Y. 2004, in ACM International Conference
 \bibitem[{{Hogg} {et~al.}(2002){Hogg}, {Baldry}, {Blanton}, \&
   {Eisenstein}}]{2002astro.ph.10394H}
 {Hogg}, D.~W., {Baldry}, I.~K., {Blanton}, M.~R., \& {Eisenstein}, D.~J. 2002,
-  ArXiv Astrophysics e-prints
+  arXiv:astro-ph/0210394
 
 \bibitem[{{Holtzman} {et~al.}(2008){Holtzman}, {Marriner}, {Kessler}, {Sako},
   {Dilday}, {Frieman}, {Schneider}, {Bassett}, {Becker}, {Cinabro}, {DeJongh},
@@ -400,10 +399,9 @@ Lo\`eve, M. 1948, in Processus Stochastiques et Mouvement Brownien, ed. P.~Levy
 \bibitem[{{Mahabal} {et~al.}(2010){Mahabal}, {Djorgovski}, {Donalek}, {Drake},
   {Graham}, {Williams}, {Moghaddam}, \& {Turmon}}]{2010ASPC..434..115M}
 {Mahabal}, A., {Djorgovski}, S.~G., {Donalek}, C., {Drake}, A., {Graham}, M.,
-  {Williams}, R., {Moghaddam}, B., \& {Turmon}, M. 2010, in Astronomical
-  Society of the Pacific Conference Series, Vol. 434, Astronomical Data
+  {Williams}, R., {Moghaddam}, B., \& {Turmon}, M. 2010, in Astronomical Data
   Analysis Software and Systems XIX, ed. {Y.~Mizumoto, K.-I.~Morita, \&
-  M.~Ohishi}, 115--+
+  M.~Ohishi}, Vol. 434, 115
 
 \bibitem[{{McGurk} {et~al.}(2010){McGurk}, {Kimball}, \&
   {Ivezi{\'c}}}]{2010AJ....139.1261M}
